@@ -17,11 +17,13 @@ go-to: start_menu_2
 
 
 @start
-on-arrival: {!
+on-arrival: 
+
+{!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
+Q.year = 2020;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -502,7 +504,7 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_election_year = 1928;
+Q.next_election_year = 2020;
 Q.next_election_month = 5;
 Q.next_election_time = 5;
 // government affairs timers
@@ -531,13 +533,17 @@ Q.sh_ban_timer = 0;
 Q.kpd_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 
+// NPP - R
+Q.barnabus_advisor = 1; //BARNABUSS
+Q.macalintal_advisor = 1; //MACALINTALLL 
 
-// all the initial advisors are centrists.
-Q.wels_advisor = 1; // Otto Wels
+// NPP - C
+Q.wels_advisor = 1; // Remmacaronie
+
+
+// all the initial advisors are centrists. - OLD ADVISORS BELOW
 Q.muller_advisor = 0; // Hermann Müller
 Q.muller_dead = 0;
-Q.barnabus_advisor = 1; //BARNABUSS 
-Q.macalintal_advisor = 1; //MACALINTALLL 
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
 Q.hilferding_advisor = 0; // Rudolf Hilferding
@@ -576,8 +582,7 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
-set-bg: img/map_2.jpg
-new-page: true
+
 
 > *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
 

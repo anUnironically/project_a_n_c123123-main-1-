@@ -5,39 +5,59 @@ card-image: img/portraits/Macalintal.jpg
 new-page: true
 view-if: macalintal_advisor = 1
 
-= Herman Müller
+= Leon Macalintal
 
 
-Müller is a former [? if chancellor = "Müller": and current ?] Chancellor, and is a long-time Social Democratic leader.
+Leon Macalintal is the current Gucklandian Interior Minister and is part of the original party trio of McGucket, Macalintal, and Remma. A member of the NPP-Radikal, he believes in no compromise with any bourgeois parties in contrast to the NPP-Center. Instead, he supports building up our support base of the urban proletariat and making grassroots organization more expansive.
 
-- @coalition
-- @toleration
+He cooperates closely with the NPP-Anarchists, and has a close working relations with its caucus leader: Clueless Partisan. Macalintal is known to be scheming and is expert with realpolitik in Ateneocord. As one of the more dominant older personalities of the NPP, he has clashed with Yuuto and Blooky in the past, making Davaoenos slightly negative towards him.
+
+After Yuuto's ousting, Macalintal does not oppose the TKDP coalition plans unlike many in his caucus like McGucket who calls them "Yuuto's lapdogs" as they were instrumental in keeping him in power. He is not, however, fully accepting yet until the TKDP can shrug off its Yuutoist past properly.
+
+
+- @realpolitik
+- @left_organization
+- @strategy_meet
 - @snap_election
 - @root: Return to main
 
-@coalition
-title: Negotiating with the Coalition
-subtitle: Müller can improve our relationships with our coalition partners.
-choose-if: advisor_action_timer <= 0 and spd_in_government = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The SPD is not in government. ?]
+@realpolitik
+title: Realpolitik
+subtitle: Decreases bourgeois support. Macalintal's strategic positioning allows us to compromise with local state-level governments.
+choose-if: advisor_action_timer <= 0 
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 5; ddp_relation += 5; dvp_relation += 5
 
 We have improved our relations with the Z, [+ ddp_name +], and DVP, and reduced tensions with the coalition.
 
 
-@toleration
-title: Defending Toleration
-subtitle: Müller supports the toleration arrangement with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The SPD is not in toleration. ?]
-choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
+@left_organization
+title: Grassroot Organizations
+subtitle: Increases support within Proletarians. While this angers the NPP-C and NPP-U factions, Macalintal will work with the NPP-R and the NPP-A to expand more "radical" grassroot organizing.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
 
 We have reduced dissent among the anti-toleration factions. 
 
+@strategy_meet
+title: Strategy Meeting
+subtitle: Removes all cards from the hand. Macalintal will organize a party meeting to align and get our priorities fixed.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: {!
+Q.advisor_action_timer = 6;
+if (Q.difficulty >= 0) {
+    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
+} else {
+    window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
+}
+!}
+
 @snap_election
 title: Snap Election
 subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Müller" : Müller must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if chancellor != "Macalintal" : Macalintal must be Parliament Speaker. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0 and chancellor == "Müller"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
