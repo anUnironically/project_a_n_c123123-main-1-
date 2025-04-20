@@ -536,13 +536,10 @@ Q.barnabus_advisor = 1; //BARNABUSS
 Q.macalintal_advisor = 1; //MACALINTALLL 
 
 // NPP - C
-Q.wels_advisor = 1; // Otto Wels
+Q.wels_advisor = 1; // Remmacaronie
 
-/////////////////////
-/// OLD ADVISORS
-/////////////////////
 
-// all the initial advisors are centrists.
+// all the initial advisors are centrists. - OLD ADVISORS BELOW
 Q.muller_advisor = 0; // Hermann Müller
 Q.muller_dead = 0;
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
