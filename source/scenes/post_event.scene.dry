@@ -295,7 +295,7 @@ if (Q.month_actions >= 1) {
     }
 
     ////////////////////////// annual support changes
-    if (Q.year == 1929) {
+    if (Q.year == 2021) {
         Q.unemployed += 3/12;
         Q.inflation -= 1/12;
         // increase NSDAP vote share
@@ -309,7 +309,7 @@ if (Q.month_actions >= 1) {
         Q.rural_dnvp -= 15/12;
         Q.rural_nsdap += 10/12;
         Q.unemployed_nsdap += 18/12;
-    } else if (Q.year == 1930) {
+    } else if (Q.year == 2022) {
         Q.rural_nsdap += 10/12;
         Q.rural_dnvp -= 15/12;
         Q.new_middle_dvp -= 5/12;
@@ -335,7 +335,7 @@ if (Q.month_actions >= 1) {
         }
         Q.sa_strength += 100/12;
         Q.sh_strength += 100/12;
-    } else if (Q.year == 1931) {
+    } else if (Q.year == 2023) {
         Q.catholics_z += 2/12;
         Q.rural_dvp -= 8/12;
         Q.old_middle_dvp -= 8/12;
@@ -373,7 +373,7 @@ if (Q.month_actions >= 1) {
             Q.new_middle_nsdap += 4/12;
             Q.rural_nsdap += 4/12;
         }
-    } else if (Q.year == 1932) {
+    } else if (Q.year == 2024) {
         Q.old_middle_other -= 7/12;
         Q.rural_other -= 7/12;
         Q.old_middle_nsdap += 7/12;
@@ -410,7 +410,7 @@ if (Q.month_actions >= 1) {
             Q.old_middle_nsdap += 3/12;
             Q.new_middle_nsdap += 2/12;
         }
-    } else if (Q.year >= 1933) {
+    } else if (Q.year >= 2025) {
         if (Q.return_to_normalcy) {
             // return to normalcy -> voters return to the base
             if (Q.new_middle_ddp_normalized < 40) {
@@ -440,7 +440,7 @@ if (Q.month_actions >= 1) {
         }
     }
     // prevent forever support if the economy is bad
-    if (Q.year >= 1934 && (Q.inflation >= 8 || Q.unemployed >= 20) && Q.pro_republic <= 45 && Q.spd_in_government) {
+    if (Q.year >= 2026 && (Q.inflation >= 8 || Q.unemployed >= 20) && Q.pro_republic <= 45 && Q.spd_in_government) {
         if (Q.workers_spd_normalized > 40) {
             Q.workers_spd -= 6/12;
         }
