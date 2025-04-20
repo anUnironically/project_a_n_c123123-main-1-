@@ -581,7 +581,6 @@ Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
 
-
 set-bg: img/map_2.jpg
 new-page: true
 
