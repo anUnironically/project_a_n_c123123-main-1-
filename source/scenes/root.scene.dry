@@ -19,9 +19,6 @@ go-to: start_menu_2
 @start
 on-arrival: 
 
-set-bg: img/map_2.jpg
-new-page: true
-
 {!
 Q.started = 1;
 // time elapsed (in months)
