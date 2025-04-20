@@ -538,7 +538,6 @@ Q.macalintal_advisor = 1; //MACALINTALLL
 // NPP - C
 Q.wels_advisor = 1; // Remmacaronie
 
-
 // all the initial advisors are centrists. - OLD ADVISORS BELOW
 Q.muller_advisor = 0; // Hermann Müller
 Q.muller_dead = 0;
