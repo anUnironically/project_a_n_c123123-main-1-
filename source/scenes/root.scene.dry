@@ -538,9 +538,9 @@ Q.macalintal_advisor = 1; //MACALINTALLL
 // NPP - C
 Q.wels_advisor = 1; // Otto Wels
 
-/////////////////////
-/// OLD ADVISORS
-/////////////////////
+#/////////////////////
+#/// OLD ADVISORS
+#/////////////////////
 
 // all the initial advisors are centrists.
 Q.muller_advisor = 0; // Hermann Müller
@@ -584,9 +584,10 @@ Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
 
-/////////////////////
-/// OLD ADVISORS - END
-/////////////////////
+#/////////////////////
+#/// OLD ADVISORS - END
+#/////////////////////
+
 set-bg: img/map_2.jpg
 new-page: true
 
