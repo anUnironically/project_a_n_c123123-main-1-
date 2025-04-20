@@ -32,7 +32,7 @@ We have improved our relations with the Z, [+ ddp_name +], and DVP, and reduced 
 
 @left_organization
 title: Grassroot Organizations
-subtitle: Increases support within Proletarians. While this angers the NPP-C and NPP-U factions, Macalintal will work with the NPP-R and the NPP-A to expand more "radical" organizing.
+subtitle: Increases support within Proletarians. While this angers the NPP-C and NPP-U factions, Macalintal will work with the NPP-R and the NPP-A to expand more "radical" grassroot organizing.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
