@@ -538,9 +538,9 @@ Q.macalintal_advisor = 1; //MACALINTALLL
 // NPP - C
 Q.wels_advisor = 1; // Otto Wels
 
-#/////////////////////
-#/// OLD ADVISORS
-#/////////////////////
+/////////////////////
+/// OLD ADVISORS
+/////////////////////
 
 // all the initial advisors are centrists.
 Q.muller_advisor = 0; // Hermann Müller
