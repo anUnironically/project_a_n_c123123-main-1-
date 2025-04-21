@@ -265,6 +265,10 @@ if (window && d3) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstag").datum(data).call(parliament);
 }
+
+for (var party of Q.parties) {
+    console.log(party + " votes: ", Q[party + '_votes']);
+}
 !}
 go-to: coalition_menu
 
@@ -295,9 +299,6 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#535e00'> </div> !} PDP-LABAN: {!</td><td>!} [+ pdp_r +]% {!</td><td>!} [+ str_change_pdp +] {!</td></tr>!}
 {!</table>!}
 
-for (var party of Q.parties) {
-    console.log(party + " votes: ", Q[party + '_votes']);
-}
 
 **Potential coalitions:**
 

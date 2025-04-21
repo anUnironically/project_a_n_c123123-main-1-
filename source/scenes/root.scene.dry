@@ -295,6 +295,14 @@ Q.lppa_r = 10;
 Q.ppm_r = 20;
 Q.pdp_r = 3;
 
+Q.npp_votes = 26;
+Q.tkdp_votes = 9;
+Q.d_votes = 17;
+Q.wxs_votes = 6;
+Q.lppa_votes = 10;
+Q.ppm_votes = 20;
+Q.pdp_votes = 3;
+
 // Current Reichstag composition
 // % of Reichstag in Jan 1928
 // source: wikipedia
