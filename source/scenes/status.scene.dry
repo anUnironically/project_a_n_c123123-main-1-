@@ -166,13 +166,13 @@ AMDG: [+ d_votes +]%
 
 TKDP: [+ tkdp_votes +]%
 
-WXS: [+ ddp_votes +]%
+WXS: [+ wxs_votes +]%
 
-LPPA: [+ dvp_votes +]%
+LPPA: [+ lppa_votes +]%
 
-PPM: [+ dnvp_votes +]%
+PPM: [+ ppm_votes +]%
 
-PDP-LABAN: [+ nsdap_votes +]%
+PDP-LABAN: [+ pdp_votes +]%
 
 Others: [+ other_votes +]%
 
