@@ -185,10 +185,10 @@ on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
 data = [
     {
-        "id": "tkpd",
-        "legend": "TKPD",
-        "name": "TKPD",
-        "seats": Math.round(Q.tkpd_r*5),
+        "id": "tkdp",
+        "legend": "tkdp",
+        "name": "tkdp",
+        "seats": Math.round(Q.tkdp_r*5),
     }
 ];
 if (Q.sapd_formed && Q.sapd_r) {
@@ -275,25 +275,25 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#491d7a; outline: 2px; outline-style: solid;'> </div> !} **NPP:** {!</td><td>!} **[+ npp_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#491d7a; outline: 2px; outline-style: solid;'> </div> !} **NPP:** {!</td><td>!} **[+ npp_r +]%** {!</td><td>!} **[+ str_change_npp +]** {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}Anarchists: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#24009c'> </div> !}TKDP: {!</td><td>!} [+ tkpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#24009c'> </div> !}TKDP: {!</td><td>!} [+ tkdp_r +]% {!</td><td>!} [+ str_change_tkdp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#cac0eb'> </div> !} WXS: {!</td><td>!} [+ wxs_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#cac0eb'> </div> !} WXS: {!</td><td>!} [+ wxs_r +]% {!</td><td>!} [+ str_change_wxs +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#bf00ff'> </div> !} Davao: {!</td><td>!} [+ d_minus_b_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#bf00ff'> </div> !} Davao: {!</td><td>!} [+ d_minus_b_r +]% {!</td><td>!} [+ str_change_d +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#d9776f'> </div> !} Bisaya National: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#de4335'> </div> !} LPPA: {!</td><td>!} [+ lppa_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#de4335'> </div> !} LPPA: {!</td><td>!} [+ lppa_r +]% {!</td><td>!} [+ str_change_lppa +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#05ad3a'> </div> !} PPM: {!</td><td>!} [+ opm_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#05ad3a'> </div> !} PPM: {!</td><td>!} [+ ppm_r +]% {!</td><td>!} [+ str_change_ppm +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#535e00'> </div> !} PDP-LABAN: {!</td><td>!} [+ pdp_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#535e00'> </div> !} PDP-LABAN: {!</td><td>!} [+ pdp_r +]% {!</td><td>!} [+ str_change_pdp +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**

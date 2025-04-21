@@ -225,7 +225,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['npp', 'tkpd', 'd', 'wxs', 'lppa', 'ppm', 'pdp', 'other'];
+Q.parties = ['npp', 'tkdp', 'd', 'wxs', 'lppa', 'ppm', 'pdp', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
@@ -286,6 +286,14 @@ Q.catholics_dnvp = 5;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 12;
 
+//new name testing
+Q.npp_r = 26;
+Q.tkdp_r = 9;
+Q.d_r = 17;
+Q.wxs_r = 6;
+Q.lppa_r = 10;
+Q.ppm_r = 20;
+Q.pdp_r = 3;
 
 // Current Reichstag composition
 // % of Reichstag in Jan 1928
