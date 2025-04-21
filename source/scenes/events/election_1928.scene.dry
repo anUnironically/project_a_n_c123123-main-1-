@@ -185,7 +185,7 @@ on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
 data = [
     {
-        "id": "kpd",
+        "id": "tkpd",
         "legend": "TKPD",
         "name": "TKPD",
         "seats": Math.round(Q.kpd_r*5),
@@ -201,31 +201,31 @@ if (Q.sapd_formed && Q.sapd_r) {
 }
 data = data.concat([
     {
-        "id": "spd",
+        "id": "npp",
         "legend": "NPP",
         "name": "NPP",
         "seats": Math.round(Q.spd_r*5),
     },
     {
-        "id": "ddp",
+        "id": "wxs",
         "legend": WXS,
         "name": WXS,
         "seats": Math.round(Q.ddp_r*5),
     },
     {
-        "id": "z",
+        "id": "d",
         "legend": "Davao",
         "name": "Davao",
         "seats": Math.round((Q.z_r - 3)*5),
     },
     {
-        "id": "bvp",
+        "id": "b",
         "legend": "Bisaya National",
         "name": "Bisaya National",
         "seats": Math.round(3*5),
     },
     {
-        "id": "dvp",
+        "id": "lppa",
         "legend": "LPPA",
         "name": "LPPA",
         "seats": Math.round(Q.dvp_r*5),
@@ -237,13 +237,13 @@ data = data.concat([
         "seats": Math.round(Q.other_r*5),
     },
     {
-        "id": "dnvp",
+        "id": "ppm",
         "legend": "PPM",
         "name": "PPM",
         "seats": Math.round(Q.dnvp_r*5),
     },
     {
-        "id": "nsdap",
+        "id": "pdp",
         "legend": "PDP-LABAN",
         "name": "PDP-LABAN",
         "seats": Math.round(Q.nsdap_r*5),
