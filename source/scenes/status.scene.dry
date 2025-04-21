@@ -45,11 +45,11 @@ Reichstag composition:
 # 1928: 10, 1930: 13
 {!<span class="tooltip-text" title="Tsukumizu Democratic Party">TKDP</span>!}: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="Ateneo Independent Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
+{!<span class="tooltip-text" title="Wonderlands x Showtime">WXS</span>!}: [+ ddp_r +]%
 # 1928: 9, 1930: 5
 {!<span class="tooltip-text" title="L'Party Populare Ateneo">LPPA</span>!}: [+ dvp_r +]%
 # 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="Conservative Davao Party of Ateneo">CDPA</span>!}: [+ dnvp_r +]%
+{!<span class="tooltip-text" title="Pambansang Partido Maharlika">PPM</span>!}: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
 {!<span class="tooltip-text" title="Partido ng Demokratiko Pilipino - Lakas ng Bayan (Nazis)">PDP-LABAN</span>!}: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
@@ -76,19 +76,19 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Ateneo Davao Party">ADP</span>!}: [+ z_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="Wonderlands x Showtime">WXS</span>!}: [+ ddp_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
+{!<span class="tooltip-text" title="L'Party Populare Ateneo">LPPA</span>!}: [+ dvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
+{!<span class="tooltip-text" title="Tsukumizu Democratic Party">TKPD</span>!}: [+ kpd_relation : relationships +]
 
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
+{!<span class="tooltip-text" title="Pambansang Partido Maharlika">PPM</span>!}: [+ dnvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+{!<span class="tooltip-text" title="Partido ng Demokratiko Pilipino - Lakas ng Bayan (Nazis)">PDP-LABAN</span>!}: [+ nsdap_relation : relationships +]
 
-= Internal Factions of the SPD
+= Internal Factions of the NPP
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 

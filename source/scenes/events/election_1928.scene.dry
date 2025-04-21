@@ -208,8 +208,8 @@ data = data.concat([
     },
     {
         "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
+        "legend": WXS,
+        "name": WXS,
         "seats": Math.round(Q.ddp_r*5),
     },
     {
@@ -220,8 +220,8 @@ data = data.concat([
     },
     {
         "id": "bvp",
-        "legend": "WXS",
-        "name": "WXS",
+        "legend": "Bisaya National",
+        "name": "Bisaya National",
         "seats": Math.round(3*5),
     },
     {
@@ -238,8 +238,8 @@ data = data.concat([
     },
     {
         "id": "dnvp",
-        "legend": "ADCP",
-        "name": "ADCP",
+        "legend": "PPM",
+        "name": "PPM",
         "seats": Math.round(Q.dnvp_r*5),
     },
     {
@@ -281,7 +281,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#24009c'> </div> !}TKDP: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#cac0eb'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#cac0eb'> </div> !} WXS: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#bf00ff'> </div> !} Davao: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
 
@@ -291,7 +291,7 @@ go-to: coalition_menu
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#05ad3a'> </div> !} ADCP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#05ad3a'> </div> !} PPM: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#535e00'> </div> !} PDP-LABAN: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
