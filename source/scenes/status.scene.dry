@@ -41,7 +41,7 @@ Reichstag composition:
 {!<span class="tooltip-text" title="New Progressive Party">NPP</span>!}: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: Anarchists: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Ateneo Davao Party (Davao + Bisaya National)">ADP</span>!}: [+ z_r +]%
+{!<span class="tooltip-text" title="Ad Majorem Dei Gloriam - Davao + Bisaya">AMDG</span>!}: [+ z_r +]%
 # 1928: 10, 1930: 13
 {!<span class="tooltip-text" title="Tsukumizu Democratic Party">TKDP</span>!}: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
