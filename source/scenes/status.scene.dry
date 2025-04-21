@@ -14,7 +14,7 @@ if (Q.economic_growth) {
 }
 !}
 
-= Status
+= <p style="color: #2a3e96;">Status</p>
 
 [+ month : month +] [+ year +]
 
@@ -29,7 +29,7 @@ NPP position: [? if spd_toleration : toleration ?][? if spd_in_government : in g
 
 Internal dissent: [+ dissent_percent : dissent +]
 
-= Government
+= <p style="color: #2a3e96;">Government</p>
 
 President: [+ president +]
 
@@ -59,7 +59,7 @@ Others: [+ other_r +]%
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
-= Economics
+= <p style="color: #2a3e96;">Economics</p>
 
 Inflation: [+ inflation_2 +]%
 
@@ -76,7 +76,7 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Ateneo Davao Party">ADP</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Ad Majorem Dei Gloriam - Davao + Bisaya">AMDG</span>!}: [+ z_relation : relationships +]
 
 {!<span class="tooltip-text" title="Wonderlands x Showtime">WXS</span>!}: [+ ddp_relation : relationships +]
 
