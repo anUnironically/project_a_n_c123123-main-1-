@@ -188,7 +188,7 @@ data = [
         "id": "tkpd",
         "legend": "TKPD",
         "name": "TKPD",
-        "seats": Math.round(Q.kpd_r*5),
+        "seats": Math.round(Q.tkpd_r*5),
     }
 ];
 if (Q.sapd_formed && Q.sapd_r) {
@@ -204,19 +204,19 @@ data = data.concat([
         "id": "npp",
         "legend": "NPP",
         "name": "NPP",
-        "seats": Math.round(Q.spd_r*5),
+        "seats": Math.round(Q.npp_r*5),
     },
     {
         "id": "wxs",
         "legend": WXS,
         "name": WXS,
-        "seats": Math.round(Q.ddp_r*5),
+        "seats": Math.round(Q.wxs_r*5),
     },
     {
         "id": "d",
         "legend": "Davao",
         "name": "Davao",
-        "seats": Math.round((Q.z_r - 3)*5),
+        "seats": Math.round((Q.d_r - 3)*5),
     },
     {
         "id": "b",
@@ -228,7 +228,7 @@ data = data.concat([
         "id": "lppa",
         "legend": "LPPA",
         "name": "LPPA",
-        "seats": Math.round(Q.dvp_r*5),
+        "seats": Math.round(Q.lppa_r*5),
     },
     {
         "id": "other",
@@ -240,13 +240,13 @@ data = data.concat([
         "id": "ppm",
         "legend": "PPM",
         "name": "PPM",
-        "seats": Math.round(Q.dnvp_r*5),
+        "seats": Math.round(Q.ppm_r*5),
     },
     {
         "id": "pdp",
         "legend": "PDP-LABAN",
         "name": "PDP-LABAN",
-        "seats": Math.round(Q.nsdap_r*5),
+        "seats": Math.round(Q.pdp_r*5),
     },
 ]);
 
