@@ -207,8 +207,8 @@ data = data.concat([
     },
     {
         "id": "wxs",
-        "legend": WXS,
-        "name": WXS,
+        "legend": "WXS",
+        "name": "WXS",
         "seats": Math.round(Q.wxs_r*5),
     },
     {
