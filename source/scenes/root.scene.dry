@@ -224,7 +224,7 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'davao'];
 Q.parties = ['npp', 'tkdp', 'd', 'wxs', 'lppa', 'ppm', 'pdp', 'other'];
 
 // TODO: add 'sapd' later on
@@ -361,14 +361,14 @@ Q.unemployed_pdp = 15;
 Q.unemployed_other = 9;
 
 // Catholics
-Q.catholics_npp = 15;
-Q.catholics_tkdp = 2;
-Q.catholics_wxs = 50;
-Q.catholics_lppa = 0;
-Q.catholics_ppm = 5;
-Q.catholics_d = 5;
-Q.catholics_pdp = 0;
-Q.catholics_other = 12;
+Q.davao_npp = 15;
+Q.davao_tkdp = 2;
+Q.davao_wxs = 50;
+Q.davao_lppa = 0;
+Q.davao_ppm = 5;
+Q.davao_d = 5;
+Q.davao_pdp = 0;
+Q.davao_other = 12;
 
 // Current Reichstag composition
 // % of Reichstag in Jan 1928

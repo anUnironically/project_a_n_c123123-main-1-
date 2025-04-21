@@ -158,36 +158,36 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-SPD: [+ spd_votes +]%
+NPP: [+ npp_votes +]%
 
 [? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
-Z + BVP: [+ z_votes +]%
+AMDG: [+ d_votes +]%
 
-KPD: [+ kpd_votes +]%
+TKDP: [+ TKDP_votes +]%
 
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
+WXS: [+ ddp_votes +]%
 
-DVP: [+ dvp_votes +]%
+LPPA: [+ dvp_votes +]%
 
-DNVP: [+ dnvp_votes +]%
+PPM: [+ dnvp_votes +]%
 
-NSDAP: [+ nsdap_votes +]%
+PDP-LABAN: [+ nsdap_votes +]%
 
 Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: NPP: [+ workers_npp_display +]%, AMDG: [+ workers_d_display +]%, TKDP: [+ workers_tkdp_display +]%, WXS: [+ workers_wxs_display +]%, LPPA: [+ workers_lppa_display +]%; PPM: [+ workers_ppm_display +]%, PDP-LABAN: [+ workers_pdp_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: NPP: [+ new_middle_npp_display +]%, AMDG: [+ new_middle_d_display +]%, TKDP: [+ new_middle_kpd_display +]%, WXS: [+ new_middle_wxs_display +]%, DVP: [+ new_middle_lppa_display +]%; DNVP: [+ new_middle_ppm_display +]%, NSDAP: [+ new_middle_pdp_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: NPP: [+ old_middle_npp_display +]%, AMDG: [+ old_middle_d_display +]%, TKDP: [+ old_middle_kpd_display +]%, WXS: [+ old_middle_wxs_display +]%, DVP: [+ old_middle_lppa_display +]%; DNVP: [+ old_middle_ppm_display +]%, NSDAP: [+ old_middle_pdp_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: NPP: [+ rural_npp_display +]%, AMDG: [+ rural_d_display +]%, TKDP: [+ rural_tkdp_display +]%, WXS: [+ rural_wxs_display +]%, DVP: [+ rural_lppa_display +]%; DNVP: [+ rural_ppm_display +]%, NSDAP: [+ rural_pdp_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: NPP: [+ unemployed_npp_display +]%, AMDG: [+ unemployed_d_display +]%, TKDP: [+ unemployed_tkdp_display +]%, WXS: [+ unemployed_wxs_display +]%, DVP: [+ unemployed_lppa_display +]%; DNVP: [+ unemployed_ppm_display +]%, NSDAP: [+ unemployed_pdp_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Davaoenos: NPP: [+ davao_npp_display +]%, AMDG: [+ davao_d_display +]%, TKDP: [+ davao_tkdp_display +]%, WXS: [+ davao_wxs_display +]%, DVP: [+ davao_lppa_display +]%; DNVP: [+ davao_ppm_display +]%, NSDAP: [+ davao_pdp_display +]%, Others: [+ davao_other_display +]% [? if sapd_formed: SAPD: [+ davao_sapd_display +]% ?]
 
-Support for the Republic: [+ pro_republic_disp +]%
+Support for Server Democracy: [+ pro_republic_disp +]%
