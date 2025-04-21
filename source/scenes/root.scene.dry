@@ -17,10 +17,7 @@ go-to: start_menu_2
 
 
 @start
-on-arrival: 
-
-{!
-Q.started = 1;
+on-arrival: {! Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
 Q.year = 2020;
@@ -228,7 +225,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['npp', 'tkdp', 'd', 'wxs', 'lppa', 'ppm', 'pdp', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
@@ -289,6 +286,89 @@ Q.catholics_dnvp = 5;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 12;
 
+//new name testing
+Q.npp_r = 26;
+Q.tkdp_r = 9;
+Q.d_r = 17;
+Q.wxs_r = 6;
+Q.lppa_r = 10;
+Q.ppm_r = 20;
+Q.pdp_r = 3;
+
+Q.npp_votes = 26;
+console.log("After setting: npp votes =", Q.npp_votes);
+Q.tkdp_votes = 9;
+console.log("After setting: npp votes =", Q.tkdp_votes);
+Q.d_votes = 17;
+console.log("After setting: npp votes =", Q.d_votes);
+Q.wxs_votes = 6;
+console.log("After setting: npp votes =", Q.wxs_votes);
+Q.lppa_votes = 10;
+console.log("After setting: npp votes =", Q.lppa_votes);
+Q.ppm_votes = 20;
+console.log("After setting: npp votes =", Q.ppm_votes);
+Q.pdp_votes = 3;
+console.log("After setting: npp votes =", Q.pdp_votes);
+
+// Workers
+Q.workers_npp = 60;           // formerly spd
+Q.workers_tkdp = 20;          // formerly kpd
+Q.workers_wxs = 5;            // formerly z
+Q.workers_lppa = 0;           // formerly ddp
+Q.workers_ppm = 0;            // formerly dvp
+Q.workers_d = 5;              // formerly dnvp
+Q.workers_pdp = 0;            // formerly nsdap
+Q.workers_other = 10;
+
+// Old Middle Class
+Q.old_middle_npp = 5;
+Q.old_middle_tkdp = 0;
+Q.old_middle_wxs = 5;
+Q.old_middle_lppa = 10;
+Q.old_middle_ppm = 25;
+Q.old_middle_d = 25;
+Q.old_middle_pdp = 10;
+Q.old_middle_other = 10;
+
+// New Middle Class
+Q.new_middle_npp = 5;
+Q.new_middle_tkdp = 1;
+Q.new_middle_wxs = 10;
+Q.new_middle_lppa = 25;
+Q.new_middle_ppm = 25;
+Q.new_middle_d = 10;
+Q.new_middle_pdp = 5;
+Q.new_middle_other = 15;
+
+// Rural
+Q.rural_npp = 10;
+Q.rural_tkdp = 0;
+Q.rural_wxs = 5;
+Q.rural_lppa = 5;
+Q.rural_ppm = 15;
+Q.rural_d = 45;
+Q.rural_pdp = 5;
+Q.rural_other = 10;
+
+// Unemployed
+Q.unemployed_npp = 25;
+Q.unemployed_tkdp = 55;
+Q.unemployed_wxs = 1;
+Q.unemployed_lppa = 0;
+Q.unemployed_ppm = 0;
+Q.unemployed_d = 5;
+Q.unemployed_pdp = 15;
+Q.unemployed_other = 9;
+
+// Catholics
+Q.catholics_npp = 15;
+Q.catholics_tkdp = 2;
+Q.catholics_wxs = 50;
+Q.catholics_lppa = 0;
+Q.catholics_ppm = 5;
+Q.catholics_d = 5;
+Q.catholics_pdp = 0;
+Q.catholics_other = 12;
 
 // Current Reichstag composition
 // % of Reichstag in Jan 1928
@@ -540,7 +620,6 @@ Q.macalintal_advisor = 1; //MACALINTALLL
 // NPP - C
 Q.wels_advisor = 1; // Remmacaronie
 
-
 // all the initial advisors are centrists. - OLD ADVISORS BELOW
 Q.muller_advisor = 0; // Hermann Müller
 Q.muller_dead = 0;
@@ -582,6 +661,9 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
+set-bg: img/map_2.jpg
+new-page: true
+
 
 
 > *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
@@ -630,10 +712,10 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 2020
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+It is a bright time for Ateneocord. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. Yuuto's impeachment is paving the way for radical politics to be completely put out of the system entirely. All that is left is his trial. 
 
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
+Now, the task of Server Democracy is to prepare for the next election. The TKDP and PDP coalition after Yuuto's loss has collapsed, and we stand to gain. Perhaps the next government will have a socialist majority.
 
 
