@@ -413,6 +413,8 @@ Q.economic_records = [];
 // State of the government
 Q.president = "EarthworMGD";
 // starting chancellor: Naomi Nakayama
+Q.speaker = "Naomi Nakayama";
+Q.speaker_party = 'TKDP';
 Q.chancellor = "Naomi Nakayama";
 Q.chancellor_party = 'TKDP';
 Q.spd_in_government = 0;
