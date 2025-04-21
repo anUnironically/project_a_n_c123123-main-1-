@@ -87,7 +87,6 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 // get change arrows and signs
 
-
 // The largest party can only be the NSDAP or the SPD.
 Q.largest_party = 'SPD';
 if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
@@ -295,6 +294,10 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#535e00'> </div> !} PDP-LABAN: {!</td><td>!} [+ pdp_r +]% {!</td><td>!} [+ str_change_pdp +] {!</td></tr>!}
 {!</table>!}
+
+for (var party of Q.parties) {
+    console.log(party + " votes: ", Q[party + '_votes']);
+}
 
 **Potential coalitions:**
 
