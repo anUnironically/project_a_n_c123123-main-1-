@@ -164,7 +164,7 @@ NPP: [+ npp_votes +]%
 
 AMDG: [+ d_votes +]%
 
-TKDP: [+ TKDP_votes +]%
+TKDP: [+ tkdp_votes +]%
 
 WXS: [+ ddp_votes +]%
 
