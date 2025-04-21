@@ -168,7 +168,7 @@ Q.reichswehr_goal_completed = 0;
 
 Q.strike_term_seen = 0;
 
-Q.z_minus_bvp_r = Q.z_r - 3;
+Q.d_minus_b_r = Q.d_r - 3;
 
 // understanding the enemy
 if (Q.nsdap_r >= 15) {
@@ -275,25 +275,25 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#491d7a; outline: 2px; outline-style: solid;'> </div> !} **NPP:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#491d7a; outline: 2px; outline-style: solid;'> </div> !} **NPP:** {!</td><td>!} **[+ npp_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}Anarchists: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#24009c'> </div> !}TKDP: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#24009c'> </div> !}TKDP: {!</td><td>!} [+ tkpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#cac0eb'> </div> !} WXS: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#cac0eb'> </div> !} WXS: {!</td><td>!} [+ wxs_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#bf00ff'> </div> !} Davao: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#bf00ff'> </div> !} Davao: {!</td><td>!} [+ d_minus_b_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#d9776f'> </div> !} Bisaya National: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#de4335'> </div> !} LPPA: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#de4335'> </div> !} LPPA: {!</td><td>!} [+ lppa_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#05ad3a'> </div> !} PPM: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#05ad3a'> </div> !} PPM: {!</td><td>!} [+ opm_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#535e00'> </div> !} PDP-LABAN: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#535e00'> </div> !} PDP-LABAN: {!</td><td>!} [+ pdp_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
