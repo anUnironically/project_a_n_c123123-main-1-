@@ -524,7 +524,7 @@ table {
 }
 .seat.npp {
     fill: #491d7a;
-    stroke: #FFD700;
+    stroke: #000;
     stroke-width: 1.5px;
 }
 .seat.wxs {
