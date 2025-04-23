@@ -45,7 +45,7 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-# Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist']; //OLD
+// Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist']; //OLD
 
 Q.factions = ['youth', 'center', 'revanchists', 'solidarist', 'neorevisionist'];
 // should this be normalized to 100%?
