@@ -1,4 +1,4 @@
-title: 2023
+title: 2024
 subtitle: A new year 
 on-arrival: {!
 // increase NSDAP vote share 
@@ -17,7 +17,7 @@ if (!Q.works_program) {
 // moved demographic changes to post_event
 !}
 tags: event
-view-if: year = 2023 and month = 1 
+view-if: year = 2024 and month = 1 
 priority: 2
 max-visits: 1
 
