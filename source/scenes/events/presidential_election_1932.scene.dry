@@ -427,7 +427,7 @@ on-arrival: president = "Thälmann"; kpd_relation = 80;
 
 Ernst Thälmann of the KPD has won the presidency. Immediately, the far-right launches a coup attempt against the government. We have no choice but to unite with the KPD against the fascists...
 
-- @civil_war: This is civil war.
+- @game_over: This is civil war.
 
 @hitler_wins
 on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party = "NSDAP"
@@ -435,7 +435,7 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party
 [? if nsdap_candidate == "Hitler" : Adolf Hitler of the NSDAP has won the presidency. He wastes no time in consolidating power. ?]
 [? if nsdap_candidate != "Hitler" : The NSDAP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
 
-- @hitler_takes_power: What do we do now?
+- @game_over: What do we do now?
 
 
 @braun_wins
