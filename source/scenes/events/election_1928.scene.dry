@@ -433,7 +433,7 @@ on-arrival: chancellor = nsdap_leader; chancellor_party = "NSDAP"
 
 [? if president == "Hindenburg" : President Hindenburg's camarilla ?][? if president == "Braun" : President Braun somehow ?] has decided that [+ nsdap_leader +] must be chancellor [? if president == "Hindenburg": , and the aging president accepts their recommendations. ?][? if president == "Braun" : because it is what the constitution would stipulate. ?]
 
-- What do we do now?
+- @game_over: What do we do now?
 
 
 @far_right_fail
