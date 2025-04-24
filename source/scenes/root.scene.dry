@@ -44,10 +44,14 @@ Q.dues = 2;
 Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
+//PARTY CHAIRPERSON 
+Q.npp_party_chair = "Barnabus W. McGucket";
+Q.npp_party_chair_faction = "NPP-R";
+
 // factions
 // Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist']; //OLD
 
-Q.factions = ['youth', 'center', 'revanchists', 'solidarist', 'neorevisionist'];
+Q.factions = ['youth', 'center', 'radical', 'solidarist', 'neorevisionist'];
 // should this be normalized to 100%?
 Q.left_strength = 15;
 Q.left_dissent = 20;
@@ -64,8 +68,8 @@ Q.youth_strength = 15;
 Q.youth_dissent = 20;
 Q.center_strength = 30;
 Q.center_dissent = 0;
-Q.revanchists_strength = 25;
-Q.revanchists_dissent = 5;
+Q.radical_strength = 25;
+Q.radical_dissent = 5;
 Q.solidarist_strength = 25;
 Q.solidarist_dissent = 5;
 
@@ -118,6 +122,15 @@ Q.dvp_relation = 35;
 // DNVP and NSDAP are invariably hostile
 Q.DNVP_relation = 10;
 Q.NSDAP_relation = 0;
+
+// NEW
+Q.d_relation = 50;
+Q.tkdp_relation = 25;
+Q.wxs_relation = 60;
+Q.lppa_relation = 35;
+// PPM and PDP are invariably hostile
+Q.ppm_relation = 10;
+Q.pdp_relation = 0;
 
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader

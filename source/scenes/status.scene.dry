@@ -41,7 +41,7 @@ Reichstag composition:
 {!<span class="tooltip-text" title="New Progressive Party">NPP</span>!}: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: Anarchists: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Ad Majorem Dei Gloriam - Davao + Bisaya">AMDG</span>!}: [+ z_r +]%
+{!<span class="tooltip-text" title="Ad Majorem Dei Gloriam - HDGP + ACP">AMDG</span>!}: [+ z_r +]%
 # 1928: 10, 1930: 13
 {!<span class="tooltip-text" title="Tsukumizu Democratic Party">TKDP</span>!}: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
@@ -75,30 +75,29 @@ Economic growth: [+ economic_growth_2 +]%
 
 = <p style="color: #2a3e96;">Inter-Party Relations</p>
 
+{!<span class="tooltip-text" title="Ad Majorem Dei Gloriam - HDGP + ACP">AMDG</span>!}: [+ d_relation : relationships +]
 
-{!<span class="tooltip-text" title="Ad Majorem Dei Gloriam - Davao + Bisaya">AMDG</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Wonderlands x Showtime">WXS</span>!}: [+ wxs_relation : relationships +]
 
-{!<span class="tooltip-text" title="Wonderlands x Showtime">WXS</span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="L'Party Populare Ateneo">LPPA</span>!}: [+ lppa_relation : relationships +]
 
-{!<span class="tooltip-text" title="L'Party Populare Ateneo">LPPA</span>!}: [+ dvp_relation : relationships +]
+{!<span class="tooltip-text" title="Tsukumizu Democratic Party">TKPD</span>!}: [+ tkdp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Tsukumizu Democratic Party">TKPD</span>!}: [+ kpd_relation : relationships +]
+{!<span class="tooltip-text" title="Pambansang Partido Maharlika">PPM</span>!}: [+ ppm_relation : relationships +]
 
-{!<span class="tooltip-text" title="Pambansang Partido Maharlika">PPM</span>!}: [+ dnvp_relation : relationships +]
-
-{!<span class="tooltip-text" title="Partido ng Demokratiko Pilipino - Lakas ng Bayan (Nazis)">PDP-LABAN</span>!}: [+ nsdap_relation : relationships +]
+{!<span class="tooltip-text" title="Partido ng Demokratiko Pilipino - Lakas ng Bayan (Nazis)">PDP-LABAN</span>!}: [+ pdp_relation : relationships +]
 
 = Internal Factions of the NPP
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+Party Chairperson: [ + npp_party_chair +] ([ + npp_party_chair_faction +])
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Radikals are staunch opponents of the PDP and its allies. They favor a Socialist majority and cooperation with traditionally anti-Yuuto factions.">Radikals</span>!} strength: [+ radical_dissent : strength +], dissent: [+ radical_strength : dissent +]
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+{!<span class="tooltip-text" title="The Center is a faction of Democratic Socialists between reform and revolution. They favor building wide spanning coalitions to keep out reactionaries.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Youth is a new and more energetic faction focusing on the grassroot organizations the NPP currently hosts. They favor government devolutio and syndicalistic control of the economy.">Youth</span>!} strength: [+ youth_strength : strength +], dissent: [+ youth_dissent : dissent +]
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+{!<span class="tooltip-text" title="The Solidarists expouse a vague ideology of "Total control of the revolutionary mind". They are nicknamed Totalists and are feverishly anti-bourgeois who believe authoritarianism is necessary to crush right wing extravagance">Solidarists</span>!} strength: [+ solidarist_strength : strength +], dissent: [+ solidarist_dissent : dissent +]
 
 
 @paramilitaries
