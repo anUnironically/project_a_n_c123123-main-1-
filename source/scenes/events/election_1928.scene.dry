@@ -431,7 +431,7 @@ This coalition arrangement is tolerable to all.
 @drop_labor
 title: Drop the Labor Ministry.
 view-if: labor_minister_party = "NPP"
-on-arrival: labor_minister_party = "AMDG" if in_full_npp_coalition = 0; labor_minister = "Blooky" if in_full_npp_coalition = 0; "WXS" if in_full_npp_coalition; labor_minister = "Moist" if in_full_npp_coalition = 0; leverage += 5;
+on-arrival: labor_minister_party = "AMDG" if in_full_npp_coalition = 0; labor_minister = "Blooky" if in_full_npp_coalition = 0; labor_minister_party = "WXS" if in_full_npp_coalition; labor_minister = "Moist" if in_full_npp_coalition = 0; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
