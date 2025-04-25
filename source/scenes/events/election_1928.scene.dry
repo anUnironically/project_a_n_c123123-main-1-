@@ -326,12 +326,12 @@ Our representatives walk around the floor looking for potential power arrangemen
 
 
 @coalition_fail_negotiate
-view if: fallout_coalition <=50 and full_house_coalition <= 50 and democratic_coalition <=50 and (lppa_relation <= 50 and tkdp_relation <= 28 and d_relation <= 28 and star_npp_coalition <= 50)
+view if: fallout_coalition <=50 and full_house_coalition <= 50 and democratic_coalition <= 50 and (lppa_relation <= 50 and tkdp_relation <= 28 and d_relation <= 28 and star_npp_coalition <= 50) and nazi_coalition < 50
 
 It's over.
 
 @coalition_negotiations
-view-if: fallout_coalition >=50 or full_house_coalition >= 50 or democratic_coalition >=50 or (lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50)
+view-if: fallout_coalition >=50 or full_house_coalition >= 50 or democratic_coalition >=50 or (lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50) and nazi_coalition < 50
 
 [? if lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50 : Star Fox has signalled his willingness to form a dominating government with us, leaving out WXS and bringing together the other conservatives on board. Even if the others disagree, Star Fox can make adjustments where we become a stable ruling arm. If we join his coalition, we will have a [+ star_npp_coalition +]% majority. ?]
 
