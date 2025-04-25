@@ -265,7 +265,7 @@ for (var party of Q.parties) {
     console.log(party + " votes: ", Q[party + '_votes']);
 }
 !}
-go-to: coalition_menu
+go-to: coalition_begin
 
 = Election results
 
@@ -297,27 +297,50 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
+Fallout Coalition (NPP + WXS + AMDG): [+ fallout_coalition +]%
 
-Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
+Full House Coalition (NPP + WXS + AMDG + LPPA): [+ full_house_coalition +]%
 
-Bourgeois Coalition (Z + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
+Democratic Coalition (NPP + WXS + AMDG + TKDP): [+ democratic_coalition +]%
 
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
+Star Coalition (LPPA + TKDP + AMDG): [+ star_coalition +]% 
+
+Conservative Coalition (AMDG + TKDP + LPPA): [+ conservative_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 : Together, the anti-democratic PDP, PPM, and LPPA have a majority in the Congress. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 
-@coalition_menu
+@coalition_begin
 
 Our representatives walk around the floor looking for potential power arrangements.
 
+- @coalition_negotiations: What are our options?
+
+@coalition_negotiations
+
+[? if lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50 : Star Fox has signalled his willingness to form a dominating government with us, leaving out WXS and bringing together the other conservatives on board. Even if the others disagree, Star Fox can make adjustments where we become a stable ruling arm. If we join his coalition, we will have a [+ star_npp_coalition +]% majority. ?]
+
+- @c_lppa_approach
+
+@c_lppa_approach
+title: Lets give Star Fox's offer a chance.
+subtitle: NPP + LPPA + TKDP + AMDG ([+ star_npp_coalition +]%)
+unavailable-subtitle: The other wings of the party unite as they heavily oppose Star Fox and his oppurtunist colors. Only the Solidarists approve of this, we need the NPP-C/R/Y in less of a powerful position to even accept.
+view-if: lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50
+choose-if: radical_strength <= 59 and center_strength <=59 and youth_strength <=59 and solidarist_strength >=60
+go-to: ministries
+
+Our factions are in revolt as they view Star Fox as a schemer. All major non-solidarists have resigned from our oversight board.
+
+
+
+
 @ministries
 
-We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
+We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area.
 
 - #mins_1928
 - #drop_mins_1928
