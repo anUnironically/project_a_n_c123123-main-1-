@@ -336,14 +336,9 @@ view-if: npp_r >= 50
 on-arrival: chancellor = "Empty"; chancellor_party = "NPP"; npp_in_government = 1; in_npp_majority = 1; pro_republic += 5; foreign_minister_party = "NPP"; foreign_minister = "Danni"; interior_minister_party = "NPP"; interior_minister = "Macalintal"; justice_minister_party = "NPP"; justice_minister = "Remma"; labor_minister_party = "NPP"; labor_minister = "Filipino"; reichswehr_minister_party = "NPP"; reichswehr_minister = "Robbie"; economic_minister_party = "NPP"; economic_minister = "Clueless"; finance_minister_party = "NPP"; finance_minister = "Icota"; agriculture_minister_party = "NPP"; agriculture_minister = "San"; reichswehr_loyalty -= 0.05; 
 achievement: majority_party
 
-Finally, the SPD can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
+Finally, the NPP can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
 Who should be chancellor?
-
-- @braun_majority_chancellor: Otto Braun for Chancellor.
-- @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
-- @muller_majority_chancellor: Hermann Müller for Chancellor.
-- @wels_majority_chancellor: Otto Wels for Chancellor.
 
 
 @c_lppa_approach
