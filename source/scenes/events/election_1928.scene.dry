@@ -128,20 +128,20 @@ Q.progressive_coalition = Q.npp_r + Q.wxs_r;
 
 Q.leverage = Q.npp_r;
 
-Q.grand_coalition_failed = 0;
+// NEW FLAGS IGNORE OLD
+
+
+Q.democratic_coalition_failed = 0;
+Q.full_house_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.coalition_dissent = 0;
-Q.kpd_coalition_dissent = 0;
-Q.spd_in_government = 0;
-Q.in_weimar_coalition = 0;
-Q.in_grand_coalition = 0;
-Q.in_left_front = 0;
-Q.in_popular_front = 0;
+Q.npp_in_government = 0;
+
 Q.in_emergency_government = 0;
 Q.in_minority_government = 0;
 Q.in_unity_government = 0;
-Q.spd_toleration = 0;
-Q.spd_caretaker = 0;
+Q.npp_toleration = 0;
+Q.npp_caretaker = 0;
 Q.foreign_minister_party = 'DVP';
 Q.interior_minister_party = 'Z';
 Q.justice_minister_party = 'I';
@@ -150,27 +150,6 @@ Q.reichswehr_minister_party = 'I';
 Q.economic_minister_party = Q.ddp_name;
 Q.finance_minister_party = 'DVP';
 Q.agriculture_minister_party = 'Z';
-
-// reset KPD goals
-Q.kpd_goals_seen = 0;
-Q.kpd_ultimatum_seen = 0;
-Q.welfare_goal = 0;
-Q.agriculture_goal = 0;
-Q.economy_goal = 0;
-Q.finance_goal = 0;
-Q.labor_goal = 0;
-Q.foreign_goal = 0;
-Q.interior_goal = 0;
-Q.reichswehr_goal = 0;
-
-Q.welfare_goal_completed = 0;
-Q.agriculture_goal_completed = 0;
-Q.economy_goal_completed = 0;
-Q.finance_goal_completed = 0;
-Q.labor_goal_completed = 0;
-Q.foreign_goal_completed = 0;
-Q.interior_goal_completed = 0;
-Q.reichswehr_goal_completed = 0;
 
 Q.strike_term_seen = 0;
 
