@@ -45,7 +45,7 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 //PARTY CHAIRPERSON 
-Q.npp_party_chair = "Barnabus W. McGucket";
+Q.npp_party_chair = "Robbie Rotten";
 Q.npp_party_chair_faction = "NPP-R";
 
 // factions
