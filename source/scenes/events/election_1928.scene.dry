@@ -324,7 +324,7 @@ Our representatives walk around the floor looking for potential power arrangemen
 
 
 @coalition_fail_negotiate
-view if: fallout_coalition <=50 and full_house_coalition <= 50 and democratic_coalition <=50 and (lppa_relation <= 50 and tkdp_relation <= 28 and d_relation >< 28 and star_npp_coalition <= 50)
+view if: fallout_coalition <=50 and full_house_coalition <= 50 and democratic_coalition <=50 and (lppa_relation <= 50 and tkdp_relation <= 28 and d_relation <= 28 and star_npp_coalition <= 50)
 
 It's over.
 
