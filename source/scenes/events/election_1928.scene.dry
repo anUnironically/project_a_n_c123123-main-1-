@@ -108,7 +108,7 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 Q.fallout_coalition = Q.npp_r + Q.wxs_r + Q.d_r;
 Q.full_house_coalition = Q.npp_r + Q.wxs_r + Q.d_r + Q.lppa_r;
 Q.democratic_coalition = Q.npp_r + Q.wxs_r + Q.d_r + Q.tkdp;
-Q.conservative_coalition = Q.d_r + Q.tkdp_r + Q.lppa_r;
+Q.conservative_coalition = Q.d_r + Q.tkdp_r + Q.lppa_r + Q.ppm_r;
 
 Q.the_npp_coalition = Q.npp_r + Q.wxs_r + Q.tkdp;
 
@@ -305,7 +305,9 @@ Democratic Coalition (NPP + WXS + AMDG + TKDP): [+ democratic_coalition +]%
 
 Star Coalition (LPPA + TKDP + AMDG): [+ star_coalition +]% 
 
-Conservative Coalition (AMDG + TKDP + LPPA): [+ conservative_coalition +]%
+Conservative Coalition (AMDG + TKDP + LPPA + PPM): [+ conservative_coalition +]%
+
+Nazi Coalition (PDP + PPM): [+ nazi_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
@@ -320,15 +322,34 @@ Our representatives walk around the floor looking for potential power arrangemen
 - @coalition_negotiations: What are our options?
 
 @coalition_negotiations
+view-if: fallout_coalition >=50 or full_house_coalition >= 50 or democratic_coalition >=50 or (lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50)
 
 [? if lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50 : Star Fox has signalled his willingness to form a dominating government with us, leaving out WXS and bringing together the other conservatives on board. Even if the others disagree, Star Fox can make adjustments where we become a stable ruling arm. If we join his coalition, we will have a [+ star_npp_coalition +]% majority. ?]
 
+- @npp_majority
 - @c_lppa_approach
+
+@npp_majority
+title: NPP Majority Alone
+subtitle: NPP: [+ npp_r +]%
+view-if: npp_r >= 50
+on-arrival: chancellor = "Empty"; chancellor_party = "NPP"; npp_in_government = 1; in_npp_majority = 1; pro_republic += 5; foreign_minister_party = "NPP"; foreign_minister = "Danni"; interior_minister_party = "NPP"; interior_minister = "Macalintal"; justice_minister_party = "NPP"; justice_minister = "Remma"; labor_minister_party = "NPP"; labor_minister = "Filipino"; reichswehr_minister_party = "NPP"; reichswehr_minister = "Robbie"; economic_minister_party = "NPP"; economic_minister = "Clueless"; finance_minister_party = "NPP"; finance_minister = "Icota"; agriculture_minister_party = "NPP"; agriculture_minister = "San"; reichswehr_loyalty -= 0.05; 
+achievement: majority_party
+
+Finally, the SPD can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
+
+Who should be chancellor?
+
+- @braun_majority_chancellor: Otto Braun for Chancellor.
+- @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
+- @muller_majority_chancellor: Hermann Müller for Chancellor.
+- @wels_majority_chancellor: Otto Wels for Chancellor.
+
 
 @c_lppa_approach
 title: Lets give Star Fox's offer a chance.
 subtitle: NPP + LPPA + TKDP + AMDG ([+ star_npp_coalition +]%)
-unavailable-subtitle: The other wings of the party unite as they heavily oppose Star Fox and his oppurtunist colors. Only the Solidarists approve of this, we need the NPP-C/R/Y in less of a powerful position to even accept.
+unavailable-subtitle: NPP + LPPA + TKDP + AMDG ([+ star_npp_coalition +]%). The other wings of the party unite as they heavily oppose Star Fox and his oppurtunist colors. Only the Solidarists approve of this, we need the NPP-C/R/Y in less of a powerful position to even accept.
 view-if: lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50
 choose-if: radical_strength <= 59 and center_strength <=59 and youth_strength <=59 and solidarist_strength >=60
 go-to: ministries
@@ -355,7 +376,7 @@ view-if: labor_minister_party != "NPP"
 on-arrival: leverage -= 5; labor_minister_party = "NPP"; labor_minister = "Filipino"
 go-to: ministries
 
-Ka Filipino of the NPP has been appointed labor minister.
+Ka Filipino of the NPP-Y has been appointed labor minister.
 
 @interior
 title: Interior Ministry
@@ -367,7 +388,7 @@ view-if: interior_minister_party != "NPP"
 on-arrival: leverage -= 5; interior_minister_party = "NPP"; interior_minister = "Macalintal"
 go-to: ministries
 
-Leon Macalintal of the NPP has been appointed Interior Minister.
+Leon Macalintal of the NPP-R has been appointed Interior Minister.
 
 @finance
 title: Finance Ministry
@@ -379,7 +400,7 @@ view-if: finance_minister_party != "NPP"
 on-arrival: leverage -= 10; finance_minister_party = "NPP"; finance_minister = "Icota"
 go-to: ministries
 
-Icota of the NPP has been appointed Finance Minister.
+Icota of the NPP-S has been appointed Finance Minister.
 
 @economic
 title: Economic Ministry
@@ -388,10 +409,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: economic_minister_party != "NPP"
-on-arrival: leverage -= 10; economic_minister_party = "NPP"; economic_minister = "Bon"
+on-arrival: leverage -= 10; economic_minister_party = "NPP"; economic_minister = "Clueless"
 go-to: ministries
 
-Mei of the NPP has been appointed Economic Minister.
+Clueless Partisan of the NPP-Y has been appointed Economic Minister.
 
 @justice
 title: Justice Ministry
@@ -403,7 +424,7 @@ view-if: justice_minister_party != "NPP"
 on-arrival: leverage -= 10; justice_minister_party = "NPP"; justice_minister = "Remma"
 go-to: ministries
 
-Remma of the NPP has been appointed Justice Minister.
+Remma of the NPP-C has been appointed Justice Minister.
 
 @foreign
 title: Foreign Ministry
@@ -415,7 +436,7 @@ view-if: foreign_minister_party != "NPP"
 on-arrival: leverage -= 10; foreign_minister_party = "NPP"; foreign_minister = "Danni"
 go-to: ministries
 
-Danni of the NPP has been appointed Foreign Minister.
+Danni of the NPP-C has been appointed Foreign Minister.
 
 
 @agriculture
@@ -424,11 +445,11 @@ subtitle: This is not our usual domain.
 unavailable-subtitle: We do not have enough leverage.
 choose-if: leverage >= 10 
 view-if: agriculture_minister_party != "NPP"
-on-arrival: leverage -= 10; agriculture_minister_party = "NPP"; agriculture_minister = "Serb"
+on-arrival: leverage -= 10; agriculture_minister_party = "NPP"; agriculture_minister = "San"
 go-to: ministries
 tags: mins_1928
 
-Serb W. Criminaal of the NPP has been appointed Agriculture Minister.
+Ka San of the NPP-Y has been appointed Agriculture Minister.
 
 @reichswehr
 title: Ministry of Defense
@@ -440,7 +461,7 @@ view-if: reichswehr_minister_party != "NPP"
 on-arrival: leverage -= 15; reichswehr_minister_party = "NPP"; reichswehr_minister = "Rotten"
 go-to: ministries
 
-Robbie Rotten of the NPP has been appointed Defense Minister.
+Robbie Rotten of the NPP-R has been appointed Defense Minister.
 
 
 
