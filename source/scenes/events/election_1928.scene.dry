@@ -320,6 +320,13 @@ There are some potential coalition arrangements.
 Our representatives walk around the floor looking for potential power arrangements.
 
 - @coalition_negotiations: What are our options?
+- @coalition_fail_negotiate: We are outmatched.
+
+
+@coalition_fail_negotiate
+view if: fallout_coalition <=50 and full_house_coalition <= 50 and democratic_coalition <=50 and (lppa_relation <= 50 and tkdp_relation <= 28 and d_relation >< 28 and star_npp_coalition <= 50)
+
+It's over.
 
 @coalition_negotiations
 view-if: fallout_coalition >=50 or full_house_coalition >= 50 or democratic_coalition >=50 or (lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50)
