@@ -590,6 +590,13 @@ table {
   font-family: "Aldrich";
 }
 
+.tooltip-new .tooltiptext img {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
 .tooltip-new:hover .tooltiptext {
   visibility: visible;
   position: absolute;
