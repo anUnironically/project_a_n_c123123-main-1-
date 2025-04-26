@@ -649,7 +649,7 @@ Q.macalintal_description = "Our Schemer";
 
 // NPP - C
 Q.remma_advisor = 1; // Remmacaronie
-Q.remma_description = "Gucklandia's Peacemaker";
+Q.remma_description = "Remma: Gucklandia's Peacemaker";
 
 
 // all the initial advisors are centrists. - OLD ADVISORS BELOW
