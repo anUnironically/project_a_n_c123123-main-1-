@@ -2,7 +2,7 @@ title: Remmacaronie
 is-pinned-card: true
 tags: advisor, NPP-C
 card-image: img/portraits/WelsOtto.jpg
-view-if: wels_advisor = 1
+view-if: remma_advisor = 1
 new-page: true
 
 = Remmacaronie
