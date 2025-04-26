@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<script>
-    document.querySelector('.tooltip-new').addEventListener('mousemove', function(e) {
-      const tooltip = this.querySelector('.tooltiptext');
-      tooltip.style.left = (e.offsetX + 10) + 'px'; // 10px to the right
-      tooltip.style.top = (e.offsetY + 30) + 'px';  // 30px below
-    });
-    </script>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -324,5 +317,14 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.tooltip-new').addEventListener('mousemove', function(e) {
+          const tooltip = this.querySelector('.tooltiptext');
+          tooltip.style.left = (e.offsetX + 10) + 'px'; // 10px to the right
+          tooltip.style.top = (e.offsetY + 30) + 'px';  // 30px below
+        });
+    </script>
+
   </body>
 </html>
