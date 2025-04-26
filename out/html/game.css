@@ -567,7 +567,8 @@ table {
 }
 
 .tooltip-new .tooltiptext {
-  
+
+  margin-left: -4px;
   visibility: hidden;
   width: 120px;
   background-color: white;
