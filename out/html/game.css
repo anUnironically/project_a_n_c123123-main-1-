@@ -563,6 +563,7 @@ table {
   position: relative;
   display: inline-block;
   color: #2a3e96;
+  border-bottom: 1px dotted black;
 }
 
 .tooltip-new .tooltiptext {
