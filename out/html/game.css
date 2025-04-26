@@ -564,10 +564,12 @@ table {
   display: inline-block;
   color: #2a3e96;
   border-bottom: 1px dotted black;
+  font-size: 0;
 }
 
 .tooltip-new .tooltiptext {
 
+  font-size: 12px;
   visibility: hidden;
   width: 120px;
   background-color: white;
