@@ -562,7 +562,6 @@ table {
 .tooltip-new {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
   color: #2a3e96;
 }
 
