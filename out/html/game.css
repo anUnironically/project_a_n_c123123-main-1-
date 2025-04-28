@@ -592,7 +592,7 @@ transition: opacity 0.4sease-out, transform 0.4scubic-bezier(0.3, 1.2, 0.2, 1);
 
 position: absolute;
 z-index: 1;
-bottom: -1140%;
+bottom: -890%;
 right: 100%;
 margin-right: -170px;
 

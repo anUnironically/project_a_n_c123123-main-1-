@@ -92,14 +92,18 @@ for (var party of Q.parties) {
 
 // get change arrows and signs
 
-// The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
+// The largest party can only be PDP, NPP, AMDG, or TKDP
+Q.largest_party = 'NPP';
+if (Q.pdp_r >= Q.npp_r && Q.pdp_r >= Q.npp_r) {
+    Q.largest_party = 'PDP';
 }
 
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
+if (Q.tkdp_r >= Q.npp_r && Q.tkdp_r >= Q.pdp_r) {
+    Q.largest_party = 'TKDP';
+}
+
+if (Q.z_r >= Q.npp_r && Q.z_r >= Q.pdp_r) {
+    Q.largest_party = 'AMDG';
 }
 
 // coalitions
@@ -323,6 +327,11 @@ Our representatives walk around the floor looking for potential power arrangemen
 
 - @coalition_negotiations: What are our options?
 - @coalition_fail_negotiate: We are outmatched.
+- @fallout_coalition
+- @npp_majority
+- @full_house_coalition
+- @democratic_coalition
+- @rejection_npp
 
 
 @coalition_fail_negotiate
@@ -339,7 +348,7 @@ view-if: fallout_coalition >=50 or full_house_coalition >= 50 or democratic_coal
 - @c_lppa_approach
 
 @npp_majority
-title: NPP Majority Alone
+title: NPP's Majority Alone
 subtitle: NPP: [+ npp_r +]%
 view-if: npp_r >= 50
 on-arrival: chancellor = "Empty"; chancellor_party = "NPP"; npp_in_government = 1; in_npp_majority = 1; pro_republic += 5; foreign_minister_party = "NPP"; foreign_minister = "Danni"; interior_minister_party = "NPP"; interior_minister = "Macalintal"; justice_minister_party = "NPP"; justice_minister = "Remma"; labor_minister_party = "NPP"; labor_minister = "Filipino"; reichswehr_minister_party = "NPP"; reichswehr_minister = "Robbie"; economic_minister_party = "NPP"; economic_minister = "Clueless"; finance_minister_party = "NPP"; finance_minister = "Icota"; agriculture_minister_party = "NPP"; agriculture_minister = "San"; reichswehr_loyalty -= 0.05; 
@@ -359,6 +368,12 @@ choose-if: radical_strength <= 59 and center_strength <=59 and youth_strength <=
 go-to: ministries
 
 Our factions are in revolt as they view Star Fox as a schemer. All major non-solidarists have resigned from our oversight board.
+
+
+@fallout_coalition
+title: We can form the Fallout Coalition
+subtitle: NPP + WXS + AMDG ([+ % fallout_coalition % +])
+on-arrival: 
 
 
 
