@@ -642,10 +642,10 @@ Q.march_on_berlin_timer = 0;
 
 // NPP - R
 Q.barnabus_advisor = 1; //BARNABUSS
-Q.barnabus_description = "The Favorite Son";
+Q.barnabus_description = "Robbie Rotten: The Establishment's Favorite Son";
 
 Q.macalintal_advisor = 1; //MACALINTALLL 
-Q.macalintal_description = "Our Schemer";
+Q.macalintal_description = "Leon Macalintal: The Nation's Schemer and the Davaoeno's enemy";
 
 // NPP - C
 Q.remma_advisor = 1; // Remmacaronie
