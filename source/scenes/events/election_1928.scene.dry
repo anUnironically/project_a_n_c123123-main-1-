@@ -404,7 +404,7 @@ The speaker himself is okay with our plans for concessions. His agenda can now b
 @S_remma
 title: Remmacaronie for Speaker
 subtitle: The preferred candidate for Speakership of [? if in_democratic_coalition = 1 or in_fallout_coalition = 1: most of the coalition, his election will ease over negotiations over policy. ?][? if in_star_coalition = 1: the more liberal-inclined members of the coalition, his election will need the support of non-NPP members. This, of course, means concessions. ?]
-on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10 if in_democratic_coalition = 1 or in_fallout_coalition = 1; leverage -= 5 if in_star_coalition 1;
+on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10 if in_democratic_coalition = 1 or in_fallout_coalition = 1; leverage -= 5 if in_star_coalition = 1;
 go-to: ministries
 
 Remma's moderation and pragmatism pushes through, giving us more leverage in choosing ministries. His Speakership agenda will revolve around a public works program and focus on the idea of State Businesses. 
