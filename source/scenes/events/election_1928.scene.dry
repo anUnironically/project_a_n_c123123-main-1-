@@ -329,11 +329,6 @@ Our representatives walk around the floor looking for potential power arrangemen
 
 - @coalition_negotiations: What are our options?
 - @coalition_fail_negotiate: We are outmatched.
-- @fallout_coalition
-- @npp_majority
-- @full_house_coalition
-- @democratic_coalition
-- @rejection_npp
 
 
 @coalition_fail_negotiate
