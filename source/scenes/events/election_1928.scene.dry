@@ -445,7 +445,7 @@ Blooky's votes are too much for the NPP to overcome, and Robbie is easily defeat
 
 How could we have thrown out such a position like that?
 
-@S_robbie_backdoor
+@S_robbie_negotiate
 title: Perhaps a funding scheme would appease them?
 unavailable-subtitle: -2 resources. You have insufficient funds for this.
 choose-if: resources >= 2
