@@ -458,7 +458,7 @@ Some people call it corruption, others say strategy. Whatever they say, our fund
 @S_robbie_favor_called
 title: Remma can negotiate a truce between the AMDG and NPP. That's his use after all.
 unavailable-subtitle: [? if remma_advisor = 0 : "You expect me to kiss your feet after you've trashed me?" ?][? if macalintal_favors_remaining <= 0 and macalintal_advisor = 1 : "Even I have limits, I can't compromise for a cow in a slaughterhouse." ?] ;
-choose-if: remma_favors_remaining > 0 and remma_advisor = 1;
+choose-if: remma_favors_remaining > 0 and remma_advisor = 1
 subtitle: Remma, the peacemaker as always, will find a way.
 on-arrival: remma_favors_remaining -= 1;
 
@@ -471,7 +471,7 @@ The HQ telephone rings, it's him.
 @S_robbie_backdoor
 title: Pull some strings.
 unavailable-subtitle: [? if macalintal_advisor = 0 : "You've retired me. I would have been useful here, would have." ?][? if macalintal_favors_remaining <= 0 and macalintal_advisor = 1 : "You can't keep asking me, I'm not superman. Even I have limits." ?] ;
-choose-if: macalintal_favors_remaining > 0 and macalintal_advisor = 1;
+choose-if: macalintal_favors_remaining > 0 and macalintal_advisor = 1
 subtitle: Macalintal's worth shines bright.
 on-arrival: macalintal_favors_remaining -= 1;
 
