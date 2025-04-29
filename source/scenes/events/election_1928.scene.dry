@@ -411,11 +411,10 @@ Remma's moderation and pragmatism pushes through, giving us more leverage in cho
 
 His "New Deal" is seen with skepticism amongst sects of our coalition members. The Party is more than willing though to accept his proposal. Perhaps this can be the start of a socialist economy.
 
-
 @S_robbie
 title: Robbie Rotten for Speaker
 subtitle: Robbie's anti-Yuuto stance is popular amongst our base. His nomination will mark an internal victory for the NPP but might worsen our working relations with the AMDG [? if in_star_coalition : and LPPA ?] due to his criticism of Daveonos as a whole for enabling the PDP.
-go-to: S_robbie_success if (d_relation > 45 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or (((d_relation > 50 and tkdp_relation > 50) and ( in_star_coalition or in_democratic_coalition )) or (in_full_npp_coalition or in_npp_majority) ); S_robbie_deadlock if (d_relation < 45 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or ((d_relation < 50 and tkdp_relation < 50) and ( in_star_coalition or in_democratic_coalition ));
+go-to: S_robbie_success if (d_relation > 45 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or (((d_relation > 50 and tkdp_relation > 50) and ( in_star_coalition or in_democratic_coalition )) or (in_full_npp_coalition or in_npp_majority) ); S_robbie_deadlock if (d_relation < 45 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or ((d_relation < 50 and tkdp_relation < 50) and ( in_star_coalition or in_democratic_coalition ))
 
 @S_robbie_success
 on-arrival: npp_in_government = 1; speaker = "Robbie Rotten"; speaker_party = "NPP"; leverage -= 5; radical_dissent -= 20; center_dissent -= 10; solidarist_dissent -= 10; youth_dissent -= 10; workers_npp += 6; new_middle_npp += 3; old_middle_npp += 3; rural_npp += 3;
@@ -484,7 +483,7 @@ Blooky is unseated even before the voting period commences. Robbie has claimed v
 
 @S_robbie_challenge
 on-arrival: d_relation -= 10; tkdp_relation -= 5;
-go-to: S_robbie_defeat if npp_r <= d_r; S_robbie_success if npp_r > d_r;
+go-to: S_robbie_defeat if npp_r <= d_r; S_robbie_success if npp_r > d_r
 
 The vote commences and both sides fight fiercely.
 
@@ -526,7 +525,7 @@ go-to: no_govt_2
 
 @no_govt_2
 on-arrival: reformist_dissent += 25; center_dissent += 10; labor_dissent += 25; neorevisionist_dissent += 25; in_fallout_coalition = 0; in_democratic_coalition = 0; in_star_coalition = 0; in_full_house_coalition = 0; chancellor = "Blooky"; npp_in_government = 0; democratic_coalition_failed = 1
-go-to: conservative_coalition_win if conservative_coalition >= 50; new_elections_npp if (conservative_coalition < 50 or year >= 1929);
+go-to: conservative_coalition_win if conservative_coalition >= 50; new_elections_npp if (conservative_coalition < 50 or year >= 1929)
 
 @new_elections_npp
 on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; new_middle_npp -= 5; old_middle_npp -= 5; workers_npp -= 3; davao_npp -= 3; in_election = 1
