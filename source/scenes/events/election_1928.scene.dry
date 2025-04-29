@@ -386,6 +386,8 @@ Party leaders scheme and discuss. This coalition has been our prefered one since
 - @S_clueless
 - @S_blooky
 
+# SPEAKER CHOICES:
+
 @S_macalintal
 title: Leon Macalintal for Speaker
 subtitle: Macalintal's history of combativeness with Davaoenos has left them wanting move leverage in exchange for his tenure.
@@ -398,14 +400,19 @@ The speaker himself is okay with our plans for concessions. His agenda can now b
 
 @S_remma
 title: Remmacaronie for Speaker
-subtitle: The preferred candidate for Speakership by most of the coalition, his election will ease over negotiations over policy.
-on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10;
+subtitle: The preferred candidate for Speakership of [if in_democratic_coalition = 1 or in_fallout_coalition = 1: most of the coalition, his election will ease over negotiations over policy.][if in_star_coalition = 1: the more liberal-inclined members of the coalition, his election will need the support of non-NPP members. This, of course, means concessions.]
+on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10 if in_democratic_coalition = 1 or in_fallout_coalition = 1; leverage -= 5 if in_star_coalition 1;
 go-to: ministries
 
+Remma's moderation and pragmatism pushes through, giving us more leverage in choosing ministries. His Speakership agenda will revolve around a public works program and focus on the idea of State Businesses. 
+
+His "New Deal" is seen with skepticism amongst sects of our coalition members. The Party is more than willing though to accept his proposal. Perhaps this can be the start of a socialist economy.
+
+
 @S_robbie
-title: Remmacaronie for Speaker
-subtitle: The preferred candidate for Speakership by most of the coalition, his election will ease over negotiations over policy.
-on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10;
+title: Robbie Rotten for Speaker
+subtitle: Robbie's anti-Yuuto stance is popular amongst our base. His nomination will mark an internal victory for the NPP but might worsen our working relations with the AMDG.
+on-arrival: npp_in_government = 1; speaker = "Robbie"; speaker_party = "NPP";
 go-to: ministries
 
 @S_clueless
