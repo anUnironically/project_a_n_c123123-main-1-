@@ -372,15 +372,59 @@ Our factions are in revolt as they view Star Fox as a schemer. All major non-sol
 
 @fallout_coalition
 title: We can form the Fallout Coalition
-subtitle: NPP + WXS + AMDG ([+ % fallout_coalition % +])
-on-arrival: 
+subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]%
+view-if: fallout_coalition >= 50
+on-arrival: npp_in_government = 1; in_fallout_coalition = 1; leverage += 5; 
 
+The delegates we have amassed are enough to form the "Fallout" coalition comprised of the traditionally liberal-democratic parties. Predicted to be the expected heirs to the PDP's rule, this coalition will sift through the fallout of Yuuto's administration.
+
+Party leaders scheme and discuss. This coalition has been our prefered one since the PDP's demise and when the Blooky led AMDG launched their new program to align more to the left. Our strides in this election has allowed to us to make a critical decision — who should be speaker?
+
+- @S_macalintal
+- @S_remma
+- @S_robbie
+- @S_clueless
+- @S_blooky
+
+@S_macalintal
+title: Leon Macalintal for Speaker
+subtitle: Macalintal's history of combativeness with Davaoenos has left them wanting move leverage in exchange for his tenure.
+on-arrival: npp_in_government = 1; speaker = "Macalintal"; speaker_party = "NPP"; leverage -= 10;
+go-to: ministries
+
+Macalintal's past hostility to Davaoenos have left the AMDG in a tense state. If we are to continue with the "grand master plan" that the man has prepared, we have to make some concessions.
+
+The speaker himself is okay with our plans for concessions. His agenda can now be pushed on with full steam. May our trust in him be worth the investment.
+
+@S_remma
+title: Remmacaronie for Speaker
+subtitle: The preferred candidate for Speakership by most of the coalition, his election will ease over negotiations over policy.
+on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10;
+go-to: ministries
+
+@S_robbie
+title: Remmacaronie for Speaker
+subtitle: The preferred candidate for Speakership by most of the coalition, his election will ease over negotiations over policy.
+on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10;
+go-to: ministries
+
+@S_clueless
+title: Remmacaronie for Speaker
+subtitle: The preferred candidate for Speakership by most of the coalition, his election will ease over negotiations over policy.
+on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10;
+go-to: ministries
+
+@S_blooky
+title: Remmacaronie for Speaker
+subtitle: The preferred candidate for Speakership by most of the coalition, his election will ease over negotiations over policy.
+on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10;
+go-to: ministries
 
 
 
 @ministries
 
-We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area.
+Now, as the debate has settled, we can start picking our positions in government. Our party controlling a certain ministry will make us steer the course of that specific department. Likewise, leaving the rest to our coalition partners will allow them to hold final say in those fields. Pick wisely.
 
 - #mins_1928
 - #drop_mins_1928
@@ -407,7 +451,7 @@ view-if: interior_minister_party != "NPP"
 on-arrival: leverage -= 5; interior_minister_party = "NPP"; interior_minister = "Macalintal"
 go-to: ministries
 
-Leon Macalintal of the NPP-R has been appointed Interior Minister.
+[? if speaker != "Macalintal" : Leon Macalintal ?][? if speaker = "Macalintal" : WasteofSpace ?] of the NPP-R has been appointed Interior Minister.
 
 @finance
 title: Finance Ministry
