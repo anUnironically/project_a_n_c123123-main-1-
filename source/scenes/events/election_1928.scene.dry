@@ -13,7 +13,7 @@ set-jump: post_election_1928
 
 = Elections, [+ month : month +] [+ year +]
 
-The Reichstag elections are to be held now.
+Parliament elections are to be held now.
 
 - @election_algorithm: May we do our best...
 - @cancel_elections
@@ -323,8 +323,6 @@ There are some potential coalition arrangements.
 
 @coalition_begin
 
-=
-
 Our representatives walk around the floor looking for potential power arrangements.
 
 - @coalition_negotiations: What are our options?
@@ -409,7 +407,7 @@ His "New Deal" is seen with skepticism amongst sects of our coalition members. T
 @S_robbie
 title: Robbie Rotten for Speaker
 subtitle: Robbie's anti-Yuuto stance is popular amongst our base. His nomination will mark an internal victory for the NPP but might worsen our working relations with the AMDG [? if in_star_coalition : and LPPA ?] due to his criticism of Daveonos as a whole for enabling the PDP.
-go-to: S_robbie_success if (d_relation > 45 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or (((d_relation > 50 and tkdp_relation > 50) and ( in_star_coalition or in_democratic_coalition )) or (in_full_npp_coalition or in_npp_majority) ); S_robbie_deadlock if (d_relation < 45 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or ((d_relation < 50 and tkdp_relation < 50) and ( in_star_coalition or in_democratic_coalition ))
+go-to: S_robbie_success if (d_relation > 55 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or (((d_relation > 50 and tkdp_relation > 50) and ( in_star_coalition or in_democratic_coalition )) or (in_full_npp_coalition or in_npp_majority) ); S_robbie_deadlock if (d_relation < 55 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or ((d_relation < 50 and tkdp_relation < 50) and ( in_star_coalition or in_democratic_coalition ))
 
 @S_robbie_success
 on-arrival: npp_in_government = 1; speaker = "Robbie Rotten"; speaker_party = "NPP"; leverage -= 5; radical_dissent -= 20; center_dissent -= 10; solidarist_dissent -= 10; youth_dissent -= 10; workers_npp += 6; new_middle_npp += 3; old_middle_npp += 3; rural_npp += 3;
@@ -478,7 +476,7 @@ Blooky is unseated even before the voting period commences. Robbie has claimed v
 
 @S_robbie_challenge
 on-arrival: d_relation -= 10; tkdp_relation -= 5;
-go-to: S_robbie_defeat if npp_r <= d_r; S_robbie_success if npp_r > d_r
+go-to: S_robbie_defeat if npp_r <= ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) ); S_robbie_success if npp_r > ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) )
 
 The vote commences and both sides fight fiercely.
 
@@ -556,8 +554,11 @@ go-to: ministries
 
 
 @ministries
+go-to: ministries_proper
 
 Now, as the debate has settled, we can start picking our positions in government. Our party controlling a certain ministry will make us steer the course of that specific department. Likewise, leaving the rest to our coalition partners will allow them to hold final say in those fields. Pick wisely.
+
+@ministries_proper
 
 - #mins_1928
 - #drop_mins_1928
@@ -570,7 +571,7 @@ tags: mins_1928
 choose-if: leverage >= 5
 view-if: labor_minister_party != "NPP"
 on-arrival: leverage -= 5; labor_minister_party = "NPP"; labor_minister = "Filipino"
-go-to: ministries
+go-to: ministries_proper
 
 Ka Filipino of the NPP-Y has been appointed labor minister.
 
@@ -582,7 +583,7 @@ tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "NPP"
 on-arrival: leverage -= 5; interior_minister_party = "NPP"; interior_minister = "Macalintal"
-go-to: ministries
+go-to: ministries_proper
 
 [? if speaker != "Macalintal" : Leon Macalintal ?][? if speaker = "Macalintal" : WasteofSpace ?] of the NPP-R has been appointed Interior Minister.
 
@@ -594,7 +595,7 @@ tags: mins_1928
 choose-if: leverage >= 10 
 view-if: finance_minister_party != "NPP"
 on-arrival: leverage -= 10; finance_minister_party = "NPP"; finance_minister = "Icota"
-go-to: ministries
+go-to: ministries_proper
 
 Icota of the NPP-S has been appointed Finance Minister.
 
@@ -606,7 +607,7 @@ tags: mins_1928
 choose-if: leverage >= 10 
 view-if: economic_minister_party != "NPP"
 on-arrival: leverage -= 10; economic_minister_party = "NPP"; economic_minister = "Clueless"
-go-to: ministries
+go-to: ministries_proper
 
 Clueless Partisan of the NPP-Y has been appointed Economic Minister.
 
@@ -618,7 +619,7 @@ tags: mins_1928
 choose-if: leverage >= 10 
 view-if: justice_minister_party != "NPP"
 on-arrival: leverage -= 10; justice_minister_party = "NPP"; justice_minister = "Remma"
-go-to: ministries
+go-to: ministries_proper
 
 Remma of the NPP-C has been appointed Justice Minister.
 
@@ -630,7 +631,7 @@ tags: mins_1928
 choose-if: leverage >= 10 
 view-if: foreign_minister_party != "NPP"
 on-arrival: leverage -= 10; foreign_minister_party = "NPP"; foreign_minister = "Danni"
-go-to: ministries
+go-to: ministries_proper
 
 Danni of the NPP-C has been appointed Foreign Minister.
 
@@ -642,7 +643,7 @@ unavailable-subtitle: We do not have enough leverage.
 choose-if: leverage >= 10 
 view-if: agriculture_minister_party != "NPP"
 on-arrival: leverage -= 10; agriculture_minister_party = "NPP"; agriculture_minister = "San"
-go-to: ministries
+go-to: ministries_proper
 tags: mins_1928
 
 Ka San of the NPP-Y has been appointed Agriculture Minister.
@@ -655,7 +656,7 @@ tags: mins_1928
 choose-if: leverage >= 15 
 view-if: reichswehr_minister_party != "NPP"
 on-arrival: leverage -= 15; reichswehr_minister_party = "NPP"; reichswehr_minister = "Rotten"
-go-to: ministries
+go-to: ministries_proper
 
 Robbie Rotten of the NPP-R has been appointed Defense Minister.
 
@@ -673,53 +674,53 @@ title: Drop the Labor Ministry.
 view-if: labor_minister_party = "NPP"
 on-arrival: labor_minister_party = "AMDG" if in_full_npp_coalition = 0; labor_minister = "Blooky" if in_full_npp_coalition = 0; labor_minister_party = "WXS" if in_full_npp_coalition; labor_minister = "Moist" if in_full_npp_coalition = 0; leverage += 5;
 tags: drop_mins_1928
-go-to: ministries
+go-to: ministries_proper
 
 @drop_interior
 title: Drop the Interior Ministry.
 view-if: interior_minister_party = "NPP"
 on-arrival: interior_minister_party = "TKDP" if in_full_npp_coalition or in_star_coalition; interior_minister = "Nakayama" if in_full_npp_coalition or in_star_coalition; interior_minister_party = "WXS" if in_full_npp_coalition = 0 and in_star_coalition = 0; interior_minister = "Kel" if in_full_npp_coalition = 0 and in_star_coalition = 0; leverage += 5;
 tags: drop_mins_1928
-go-to: ministries
+go-to: ministries_proper
 
 @drop_finance
 title: Drop the Finance Ministry.
 view-if: finance_minister_party = "NPP"
 on-arrival: interior_minister_party = "TKDP" if in_full_npp_coalition or in_star_coalition; interior_minister = "Skycord" if in_full_npp_coalition or in_star_coalition; interior_minister_party = "WXS" if in_full_npp_coalition = 0 and in_star_coalition = 0; interior_minister = "Lara" if in_full_npp_coalition = 0 and in_star_coalition = 0; leverage += 10;
 tags: drop_mins_1928
-go-to: ministries
+go-to: ministries_proper
 
 @drop_economic
 title: Drop the Economic Ministry.
 view-if: economic_minister_party = "NPP"
 on-arrival: economic_minister_party = "I"; economic_minister = "Keyaru"; leverage += 10; 
 tags: drop_mins_1928
-go-to: ministries
+go-to: ministries_proper
 
 @drop_justice
 title: Drop the Justice Ministry.
 view-if: justice_minister_party = "NPP"
 on-arrival: justice_minister_party = "I"; justice_minister = "Amnesiac"; leverage += 10;
 tags: drop_mins_1928
-go-to: ministries
+go-to: ministries_proper
 
 @drop_foreign
 title: Drop the Foreign Ministry.
 view-if: foreign_minister_party = "NPP"
 on-arrival: foreign_minister_party = "LPPA" if in_star_coalition or in_full_house_coalition; foreign_minister = "Star Fox" if in_star_coalition or in_full_house_coalition; foreign_minister_party = "I" if in_star_coalition = 0 or in_full_house_coalition = 0; foreign_minister = "Bananaheim" if in_star_coalition = 0 or in_full_house_coalition = 0; leverage += 10;
 tags: drop_mins_1928
-go-to: ministries
+go-to: ministries_proper
 
 @drop_agriculture
 title: Drop the Agriculture Ministry.
 view-if: agriculture_minister_party = "NPP"
 on-arrival: agriculture_minister_party = "I"; agriculture_minister = "Nnitro"; leverage += 10;
 tags: drop_mins_1928
-go-to: ministries
+go-to: ministries_proper
 
 @drop_reichswehr
 title: Drop the Reichswehr Ministry.
 view-if: reichswehr_minister_party = "NPP"
 on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Eclipse"; leverage += 15;
 tags: drop_mins_1928
-go-to: ministries
+go-to: ministries_proper
