@@ -591,7 +591,7 @@ line-height: 1.1;
 transition: opacity 0.4sease-out, transform 0.4scubic-bezier(0.3, 1.2, 0.2, 1);
 
 position: absolute;
-z-index: 1;
+z-index: 4;
 bottom: -890%;
 right: 100%;
 margin-right: -170px;

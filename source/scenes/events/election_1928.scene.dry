@@ -148,6 +148,8 @@ Q.in_full_house_coalition = 0;
 Q.in_democratic_coalition = 0;
 Q.in_full_npp_coalition = 0;
 
+Q.power_conservative_coalition = 0;
+
 Q.in_emergency_government = 0;
 Q.in_minority_government = 0;
 Q.in_unity_government = 0;
@@ -346,6 +348,7 @@ view-if: fallout_coalition >=50 or full_house_coalition >= 50 or democratic_coal
 
 - @npp_majority
 - @c_lppa_approach
+- @fallout_coalition
 
 @npp_majority
 title: NPP's Majority Alone
@@ -400,7 +403,7 @@ The speaker himself is okay with our plans for concessions. His agenda can now b
 
 @S_remma
 title: Remmacaronie for Speaker
-subtitle: The preferred candidate for Speakership of [if in_democratic_coalition = 1 or in_fallout_coalition = 1: most of the coalition, his election will ease over negotiations over policy.][if in_star_coalition = 1: the more liberal-inclined members of the coalition, his election will need the support of non-NPP members. This, of course, means concessions.]
+subtitle: The preferred candidate for Speakership of [? if in_democratic_coalition = 1 or in_fallout_coalition = 1: most of the coalition, his election will ease over negotiations over policy. ?][? if in_star_coalition = 1: the more liberal-inclined members of the coalition, his election will need the support of non-NPP members. This, of course, means concessions. ?]
 on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10 if in_democratic_coalition = 1 or in_fallout_coalition = 1; leverage -= 5 if in_star_coalition 1;
 go-to: ministries
 
@@ -408,12 +411,140 @@ Remma's moderation and pragmatism pushes through, giving us more leverage in cho
 
 His "New Deal" is seen with skepticism amongst sects of our coalition members. The Party is more than willing though to accept his proposal. Perhaps this can be the start of a socialist economy.
 
-
 @S_robbie
 title: Robbie Rotten for Speaker
-subtitle: Robbie's anti-Yuuto stance is popular amongst our base. His nomination will mark an internal victory for the NPP but might worsen our working relations with the AMDG.
-on-arrival: npp_in_government = 1; speaker = "Robbie"; speaker_party = "NPP";
+subtitle: Robbie's anti-Yuuto stance is popular amongst our base. His nomination will mark an internal victory for the NPP but might worsen our working relations with the AMDG [? if in_star_coalition : and LPPA ?] due to his criticism of Daveonos as a whole for enabling the PDP.
+go-to: S_robbie_success if (d_relation > 45 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or (((d_relation > 50 and tkdp_relation > 50) and ( in_star_coalition or in_democratic_coalition )) or (in_full_npp_coalition or in_npp_majority) ); S_robbie_deadlock if (d_relation < 45 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or ((d_relation < 50 and tkdp_relation < 50) and ( in_star_coalition or in_democratic_coalition ));
+
+@S_robbie_success
+on-arrival: npp_in_government = 1; speaker = "Robbie Rotten"; speaker_party = "NPP"; leverage -= 5; radical_dissent -= 20; center_dissent -= 10; solidarist_dissent -= 10; youth_dissent -= 10; workers_npp += 6; new_middle_npp += 3; old_middle_npp += 3; rural_npp += 3;
+go-to: ministries 
+
+[? if in_full_npp_coalition = 0 : Despite the half-AMDG[? if in_star_coalition : /LPPA ?] walk out, our coalition stays intact. Our good relations with the AMDG and TKDP have paid off and a solution was finally put on paper for this candidacy to go through. ?] Robbie Rotten's victory supercharges our base and allows the government to focus on preventing a PDP return. 
+
+Robbie's platforms include heavily persecuting corrupt businesses, the administration, and the far-right especially. His edge on bringing the establishment to the negotiating table has alienated some TKDP voters.
+
+@S_robbie_deadlock
+on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5; youth_dissent += 5; workers_npp += 6; new_middle_npp -= 3; old_middle_npp -= 3; rural_npp -= 3;
+
+The coalition is on fire! Our partners worry about his populist anti-establishment stance and wish to extract more concessions for his speakership. Blooky has called him out and now has cast his vote instead for himself. 
+
+The AMDG rally has raised people to vote for their candidate, but the NPP-C and their connections can still be used to push the candidacy of Robbie through. Our next steps are crucial in keeping this coalition stable.
+
+- @S_robbie_superfail: It's Robbie or Bust! Another election we must!
+- @S_robbie_challenge: We will challenge Blooky! Enter into a coalition primary against him.
+- @S_robbie_backdoor
+- @S_robbie_favor_called
+- @S_robbie_negotiate
+
+@S_robbie_defeat
+on-arrival: radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5; youth_dissent += 5; speaker = "Blooky"; speaker_party = "AMDG";
 go-to: ministries
+
+Blooky's votes are too much for the NPP to overcome, and Robbie is easily defeated. All our factions are in disarray.
+
+How could we have thrown out such a position like that?
+
+@S_robbie_backdoor
+title: Perhaps a funding scheme would appease them?
+unavailable-subtitle: -2 resources. You have insufficient funds for this.
+choose-if: resources >= 2
+subtitle: -2 resources. Tell the secretary to send Blooky a message.
+on-arrival: resources -= 2; workers_d += 4; new_middle_npp -= 5; old_middle_npp -= 5;
+go-to: S_robbie_success
+
+Some people call it corruption, others say strategy. Whatever they say, our funding scheme maintains the coalition's cohesion, and Robbie is sworn in as Speaker. Members of the middle class decry this as 'vote buying', but can they really blame us if we're doing this for the greater good?
+
+@S_robbie_favor_called
+title: Remma can negotiate a truce between the AMDG and NPP. That's his use after all.
+unavailable-subtitle: [? if remma_advisor = 0 : "You expect me to kiss your feet after you've trashed me?" ?][? if macalintal_favors_remaining <= 0 and macalintal_advisor = 1 : "Even I have limits, I can't compromise for a cow in a slaughterhouse." ?] ;
+choose-if: remma_favors_remaining > 0 and remma_advisor = 1;
+subtitle: Remma, the peacemaker as always, will find a way.
+on-arrival: remma_favors_remaining -= 1;
+
+Days, hours, weeks pass by. Remma is trapped in a back and forth between the NPP and AMDG. Never sleeping, he fights for a way through.
+
+The HQ telephone rings, it's him.
+
+- @S_robbie_success: "We have a breakthrough."
+
+@S_robbie_backdoor
+title: Pull some strings.
+unavailable-subtitle: [? if macalintal_advisor = 0 : "You've retired me. I would have been useful here, would have." ?][? if macalintal_favors_remaining <= 0 and macalintal_advisor = 1 : "You can't keep asking me, I'm not superman. Even I have limits." ?] ;
+choose-if: macalintal_favors_remaining > 0 and macalintal_advisor = 1;
+subtitle: Macalintal's worth shines bright.
+on-arrival: macalintal_favors_remaining -= 1;
+
+The SDE takes to the streets at night. <span class="tooltip-new">Macalintal's<span class="tooltiptext"><img src="img/portraits/Macalintal.jpg" alt="Leon."><br>[+ macalintal_description +]</span></span> guards personally accompany them. Soon they arrive at houses. A few bumps and statements here and there, nothing special. The floor is packed the next day by AMDG deserters, seemingly supportive of the anti-Yuutoist stance. 
+
+Blooky is unseated even before the voting period commences. Robbie has claimed victory.
+
+- @S_robbie_success: All in favor of Robbie Rotten, raise your hand.
+
+@S_robbie_challenge
+on-arrival: d_relation -= 10; tkdp_relation -= 5;
+go-to: S_robbie_defeat if npp_r <= d_r; S_robbie_success if npp_r > d_r;
+
+The vote commences and both sides fight fiercely.
+
+@S_robbie_superfail
+subtitle: This will cause significant internal dissent amongst our party outside the NPP-R, and will lead to increased distrust from the bourgeois parties.
+on-arrival: radical_dissent += 5; center_dissent += 5; youth_dissent += 5; solidarist_dissent += 5;
+
+Are we sure about not participating in government? This will cause significant internal dissent, and will lead to increased distrust from the bourgeois parties. Even debating this option causes internal backlash. In addition, it is possible that the bourgeois and right-wing parties will also be unable to form a coalition government, leading to a regime appointed by President [+ president +].
+
+- @S_robbie_superfail_2: We are sure.
+- @S_robbie_challenge: We will challenge Blooky! Enter into a coalition primary against him.
+- @S_robbie_backdoor
+- @S_robbie_favor_called
+- @S_robbie_negotiate
+
+@S_robbie_superfail_2
+
+What are our goals here, exactly?
+
+- @majority: We hope to reach a socialist majority in the next election.
+- @trap: It is a trap to form a government now. We would be unable to accomplish our goals.
+- @socialism: Revolutionary socialism is our goal.
+
+@majority
+
+...
+
+- @no_govt_2: Let's hope that's true.
+
+@trap
+on-arrival: radicalization += 1
+go-to: no_govt_2
+
+@socialism
+
+...
+
+- @no_govt_2: Ok.
+
+@no_govt_2
+on-arrival: reformist_dissent += 25; center_dissent += 10; labor_dissent += 25; neorevisionist_dissent += 25; in_fallout_coalition = 0; in_democratic_coalition = 0; in_star_coalition = 0; in_full_house_coalition = 0; chancellor = "Blooky"; npp_in_government = 0; democratic_coalition_failed = 1
+go-to: conservative_coalition_win if conservative_coalition >= 50; new_elections_npp if (conservative_coalition < 50 or year >= 1929);
+
+@new_elections_npp
+on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; new_middle_npp -= 5; old_middle_npp -= 5; workers_npp -= 3; davao_npp -= 3; in_election = 1
+
+Since the remaining bourgeois and right-wing parties cannot form a tolerable governing agreement, new elections have been called for [+ next_election_month : month +] [+ next_election_year +]. The previous chancellor has resigned, and has been replaced by Blooky, also of AMDG, ruling as part of a presidential cabinet. 
+
+We are seen as responsible for the failure to form a government, and many of our middle-class and even some working-class supporters have deserted the party.
+
+- @root: Was it worth it?
+
+@conservative_coalition_win
+view-if: conservative_coalition >= 50
+on-arrival: npp_in_government = 0; npp_toleration = 0; chancellor = "Star Fox"; chancellor_party = "LPPA"; foreign_minister_party = "LPPA"; interior_minister_party = "LPPA"; justice_minister_party = "LPPA"; labor_minister_party = "LPPA"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "LPPA"; power_conservative_coalition = 1;
+
+Even though the LPPA is very reluctant to participate in such a coalition, they still accede to the right's wishes. Thus, a majority center-right coalition is formed, with Star Fox as speaker.
+
+- @root: What's your 'secret plan' now?
+
+
 
 @S_clueless
 title: Remmacaronie for Speaker
