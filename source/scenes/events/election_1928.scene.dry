@@ -479,7 +479,7 @@ go-to: S_robbie_defeat if npp_r <= ( d_r + (fallout_coalition + 5 - (d_r + npp_r
 
 The vote commences and both sides fight fiercely.
 
-[? if npp_r > ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) ) : Robbie comes out on top, and by defeating Blooky head on, has destroyed AMDG's political capital. We have more to gain in picking ministries ?]
+[? if npp_r > ( d_r + ( fallout_coalition + 5 - (d_r + npp_r) ) ) : Robbie comes out on top, and by defeating Blooky head on, has destroyed AMDG's political capital. We have more to gain in picking ministries ?]
 
 @S_robbie_superfail
 subtitle: This will cause significant internal dissent amongst our party outside the NPP-R, and will lead to increased distrust from the bourgeois parties.
@@ -505,7 +505,7 @@ What are our goals here, exactly?
 
 ...
 
-- @no_govt_2: Let's hope that's true.
+- @no_govt_2: I hope that's true.
 
 @trap
 on-arrival: radicalization += 1
@@ -543,8 +543,14 @@ Even though the LPPA is very reluctant to participate in such a coalition, they 
 @S_clueless
 title: Clueless for Speaker
 subtitle: The youthful and energetic candidate of the NPP-Y and SDE, this may raise problems about the ever-growing power of our paramilitary down the line.
-on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10;
+unavailable-subtitle: The youth section of our party isn't relevant enough for him to be a serious choice.
+choose-if: youth_strength >= 40
+on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 150; youth_dissent -= 20
 go-to: ministries
+
+
+
+
 
 @S_blooky
 title: Remmacaronie for Speaker
