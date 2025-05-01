@@ -455,11 +455,9 @@ choose-if: remma_favors_remaining > 0 and remma_advisor = 1
 subtitle: Remma, the peacemaker as always, will find a way.
 on-arrival: remma_favors_remaining -= 1;
 
-Days, hours, weeks pass by. Remma is trapped in a back and forth between the NPP and AMDG. Never sleeping, he fights for a way through.
+Days, hours, weeks pass by. Remma is trapped in a back and forth between the NPP and AMDG. Never sleeping, we send him to fight for a way through. Soon enough, the HQ phone rings, and he reports a breakthrough.
 
-The HQ telephone rings, it's him.
-
-- @S_robbie_success: "We have a breakthrough."
+- @S_robbie_success: A lull in the fighting.
 
 @S_robbie_backdoor
 title: Pull some strings.
