@@ -87,9 +87,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Partido ng Demokratiko Pilipino - Lakas ng Bayan (Nazis)">PDP-LABAN</span>!}: [+ pdp_relation : relationships +]
 
-= Internal Factions of the NPP
+= <p style="color: #2a3e96;">Internal Factions of the NPP</p>
 
-Party Chairperson: [ + npp_party_chair +] ([ + npp_party_chair_faction +])
+Party Chairperson: [+ npp_party_chair +] ([+ npp_party_chair_faction +])
 
 {!<span class="tooltip-text" title="The Radikals are staunch opponents of the PDP and its allies. They favor a Socialist majority and cooperation with traditionally anti-Yuuto factions.">Radikals</span>!} strength: [+ radical_dissent : strength +], dissent: [+ radical_strength : dissent +]
 
