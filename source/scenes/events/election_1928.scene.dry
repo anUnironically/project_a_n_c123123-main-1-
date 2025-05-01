@@ -406,7 +406,7 @@ His "New Deal" is seen with skepticism amongst sects of our coalition members. T
 
 @S_robbie
 title: Robbie Rotten for Speaker
-subtitle: Robbie's anti-Yuuto stance is popular amongst our base. His nomination will mark an internal victory for the NPP but might worsen our working relations with the AMDG [? if in_star_coalition : and LPPA ?] due to his criticism of Daveonos as a whole for enabling the PDP.
+subtitle: Robbie's anti-Yuuto stance is popular amongst our base. His nomination will mark an internal victory for the NPP but might worsen our working relations with the AMDG [? if in_star_coalition : and LPPA ?].
 go-to: S_robbie_success if (d_relation > 55 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or (((d_relation > 50 and tkdp_relation > 50) and ( in_star_coalition or in_democratic_coalition )) or (in_full_npp_coalition or in_npp_majority) ); S_robbie_deadlock if (d_relation < 55 and (in_democratic_coalition = 0 or in_star_coalition = 0)) or ((d_relation < 50 and tkdp_relation < 50) and ( in_star_coalition or in_democratic_coalition ))
 
 @S_robbie_success
@@ -420,7 +420,7 @@ Robbie's platforms include heavily persecuting corrupt businesses, the administr
 @S_robbie_deadlock
 on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5; youth_dissent += 5; workers_npp += 6; new_middle_npp -= 3; old_middle_npp -= 3; rural_npp -= 3;
 
-The coalition is on fire! Our partners worry about his populist anti-establishment stance and wish to extract more concessions for his speakership. Blooky has called him out and now has cast his vote instead for himself. 
+The coalition is on fire! Due to his anti-Davaoeno rhetoric calling them "enablers" of Yuuto, Davaoeno members of parliament block his candidacy from passing Parliament. Our partners worry about his populist anti-establishment stance and wish to extract more concessions for his speakership. Blooky has called him out and now has cast his vote instead for himself. 
 
 The AMDG rally has raised people to vote for their candidate, but the NPP-C and their connections can still be used to push the candidacy of Robbie through. Our next steps are crucial in keeping this coalition stable.
 
@@ -446,7 +446,7 @@ subtitle: -2 resources. Tell the secretary to send Blooky a message.
 on-arrival: resources -= 2; workers_d += 4; new_middle_npp -= 5; old_middle_npp -= 5;
 go-to: S_robbie_success
 
-Some people call it corruption, others say strategy. Whatever they say, our funding scheme maintains the coalition's cohesion, and Robbie is sworn in as Speaker. Members of the middle class decry this as 'vote buying', but can they really blame us if we're doing this for the greater good?
+Some people call it corruption, others say strategy. Whatever they say, our "transfer of resources" maintains the coalition's cohesion, and Robbie is sworn in as Speaker. Members of the middle class decry this as 'vote buying', but our party is satisfied with the news?
 
 @S_robbie_favor_called
 title: Remma can negotiate a truce between the AMDG and NPP. That's his use after all.
@@ -541,8 +541,8 @@ Even though the LPPA is very reluctant to participate in such a coalition, they 
 
 
 @S_clueless
-title: Remmacaronie for Speaker
-subtitle: The preferred candidate for Speakership by most of the coalition, his election will ease over negotiations over policy.
+title: Clueless for Speaker
+subtitle: The youthful and energetic candidate of the NPP-Y and SDE, this may raise problems about the ever-growing power of our paramilitary down the line.
 on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10;
 go-to: ministries
 
