@@ -475,7 +475,7 @@ Blooky is unseated even before the voting period commences. Robbie has claimed v
 @S_robbie_challenge
 on-arrival: d_relation -= 10; tkdp_relation -= 5;
 subtitle: Fighting Blooky head on will be risky. If we lose here, then no negotiations will take place. Some of our party members dissent as they feel that these "purity tests" are not worth it. It does not help that the more moderate wings of our coalition actively support Blooky's candidacy.
-go-to: S_robbie_defeat if npp_r <= ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) ); S_robbie_success if npp_r > ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) ); leverage += 8; if npp_r > ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) )
+go-to: S_robbie_defeat if npp_r <= ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) ); S_robbie_success if npp_r > ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) ); leverage += 8
 
 The vote commences and both sides fight fiercely.
 
