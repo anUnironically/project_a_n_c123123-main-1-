@@ -402,7 +402,9 @@ subtitle: The preferred candidate for Speakership of [? if in_democratic_coaliti
 on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10 if in_democratic_coalition = 1 or in_fallout_coalition = 1; leverage -= 5 if in_star_coalition = 1;
 go-to: ministries
 
-Remma's moderation and pragmatism pushes through, giving us more leverage in choosing ministries. His Speakership agenda will revolve around a public works program and focus on the idea of State Businesses. 
+<div class="container">
+<div class="image"><img src="img/event/convention_2.png"></div>
+<div class="text">Remma's moderation and pragmatism pushes through, giving us more leverage in choosing ministries. His Speakership agenda will revolve around a public works program and focus on the idea of State Businesses.</div></div>
 
 His "New Deal" is seen with skepticism amongst sects of our coalition members. The Party is more than willing though to accept his proposal. Perhaps this can be the start of a socialist economy.
 
@@ -424,7 +426,9 @@ on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidaris
 
 The coalition is on fire! Due to his anti-Davaoeno rhetoric calling them "enablers" of Yuuto, Davaoeno members of parliament block his candidacy from passing Parliament. Our partners worry about his populist anti-establishment stance and wish to extract more concessions for his speakership. Blooky has called him out and now has cast his vote instead for himself. 
 
-The AMDG rally has raised people to vote for their candidate, but the NPP-C and their connections can still be used to push the candidacy of Robbie through. Our next steps are crucial in keeping this coalition stable.
+<div class="container">
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">The AMDG rally has raised people to vote for their candidate, but the NPP-C and their connections can still be used to push the candidacy of Robbie through. Our next steps are crucial in keeping this coalition stable.</div></div>
 
 - @S_robbie_superfail: It's Robbie or Bust! Another election we must!
 - @S_robbie_challenge: We will challenge Blooky! Enter into a coalition primary against him.
@@ -536,11 +540,11 @@ We are seen as responsible for the failure to form a government, and many of our
 view-if: conservative_coalition >= 50
 on-arrival: npp_in_government = 0; npp_toleration = 0; chancellor = "Star Fox"; chancellor_party = "LPPA"; foreign_minister_party = "LPPA"; interior_minister_party = "LPPA"; justice_minister_party = "LPPA"; labor_minister_party = "LPPA"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "LPPA"; power_conservative_coalition = 1;
 
-Even though the PPM is very reluctant to participate in such a coalition, they still accede to the right's wishes. Thus, a majority center-right coalition is formed, with Star Fox as speaker.
+<div class="container">
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">Even though the PPM is very reluctant to participate in such a coalition, they still accede to the right's wishes. Thus, a majority center-right coalition is formed, with Star Fox as speaker.</div></div>
 
 - @root: What's your 'secret plan' now?
-
-
 
 @S_clueless
 title: Clueless for Speaker
@@ -550,8 +554,11 @@ choose-if: youth_strength >= 40
 on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 150; sh_strength -= 70; sa_strength -= 70; youth_strength += 10; youth_dissent -= 20; radicalization += 2; leverage -= 5
 go-to: ministries
 
-With the urgency of the PDP resurgence, Clueless' victory supercharges the SDE and inspires a surge in recruitment. Our radical rhetoric is put on full swing and the fight against authoritarianism begins. A new wind of change blows through the land, culminating in the arrest of Milkman, Yuuto's second in command, in a high profile arrest.
+With the urgency of the PDP resurgence, Clueless' victory supercharges the SDE and inspires a surge in recruitment. 
 
+<div class="container">
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">Our radical rhetoric is put on full swing and the fight against authoritarianism begins. A new wind of change blows through the land, culminating in the arrest of Milkman, Yuuto's second in command, in a high profile arrest.</div></div>
 
 
 @S_blooky
@@ -562,7 +569,9 @@ choose-if: center_strength < 35 and center_dissent < 30
 on-arrival: npp_in_government = 1; speaker = "Blooky"; speaker_party = "AMDG"; leverage += 5; 
 go-to: ministries
 
-Blooky's victoiry is unexpected, and launches the party into disarray. A walkout ensues, and members of our coalition take to the streets. On TV, one of our party cadres call Blooky "The PDP from 7-Eleven". Nevertheless, the decision gets pushed through.
+<div class="container">
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">Blooky's victory is unexpected, and launches the party into disarray. A walkout ensues, and members of our coalition take to the streets. On TV, one of our party cadres call Blooky "The PDP from 7-Eleven". Nevertheless, the decision gets pushed through.</div></div>
 
 @ministries
 go-to: ministries_proper
