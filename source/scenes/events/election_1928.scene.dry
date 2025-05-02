@@ -568,7 +568,7 @@ title: Blooky for Speaker
 subtitle: We will accept and support Blooky's candidacy for the speakership. Although there is opposition within our party, this will allow us more freedom in choosing ministries.
 unavailable-subtitle: The NPP-C is against this decision, we should be the leaders of this coalition, not them.
 choose-if: center_strength < 35 and center_dissent < 30
-on-arrival: npp_in_government = 1; speaker = "Blooky"; speaker_party = "AMDG"; leverage += 5; 
+on-arrival: npp_in_government = 1; speaker = "Blooky"; speaker_party = "AMDG"; leverage += 5; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15
 go-to: ministries
 
 <div class="container">
@@ -690,6 +690,8 @@ subtitle: [? if leverage >= 10 : We still have some more leverage to gain minist
 tags: mins_1928
 
 This coalition arrangement is tolerable to all.
+
+(The cards have been updated in Government Affairs, new options will show up depending on the ministries and Speaker we have chosen)
 
 @drop_labor
 title: Drop the Labor Ministry.
