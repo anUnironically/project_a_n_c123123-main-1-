@@ -552,7 +552,7 @@ on-arrival: npp_in_government = 0; npp_toleration = 0; chancellor = "Star Fox"; 
 title: Clueless for Speaker
 subtitle: The youthful and energetic candidate of the NPP-Y and SDE, this may raise problems about the ever-growing power of our paramilitary down the line.
 unavailable-subtitle: The youth section of our party isn't relevant enough for him to be a serious choice.
-choose-if: youth_strength >= 40
+choose-if: youth_strength >= 30
 on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 150; sh_strength -= 70; sa_strength -= 70; youth_strength += 10; youth_dissent -= 20; radicalization += 2; leverage -= 5
 go-to: ministries
 
