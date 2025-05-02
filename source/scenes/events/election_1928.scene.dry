@@ -418,7 +418,7 @@ go-to: ministries
 Robbie's platforms include heavily persecuting corrupt businesses, the administration, and the far-right especially. His edge on bringing the establishment to the negotiating table has alienated some TKDP voters.
 
 @S_robbie_deadlock
-on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5; youth_dissent += 5; workers_npp += 6; new_middle_npp -= 3; old_middle_npp -= 3; rural_npp -= 3;
+on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5; youth_dissent += 5; workers_npp += 6; new_middle_npp -= 3; old_middle_npp -= 3; rural_npp -= 3; leverage -= 5;
 
 The coalition is on fire! Due to his anti-Davaoeno rhetoric calling them "enablers" of Yuuto, Davaoeno members of parliament block his candidacy from passing Parliament. Our partners worry about his populist anti-establishment stance and wish to extract more concessions for his speakership. Blooky has called him out and now has cast his vote instead for himself. 
 
@@ -534,7 +534,7 @@ We are seen as responsible for the failure to form a government, and many of our
 view-if: conservative_coalition >= 50
 on-arrival: npp_in_government = 0; npp_toleration = 0; chancellor = "Star Fox"; chancellor_party = "LPPA"; foreign_minister_party = "LPPA"; interior_minister_party = "LPPA"; justice_minister_party = "LPPA"; labor_minister_party = "LPPA"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "LPPA"; power_conservative_coalition = 1;
 
-Even though the LPPA is very reluctant to participate in such a coalition, they still accede to the right's wishes. Thus, a majority center-right coalition is formed, with Star Fox as speaker.
+Even though the PPM is very reluctant to participate in such a coalition, they still accede to the right's wishes. Thus, a majority center-right coalition is formed, with Star Fox as speaker.
 
 - @root: What's your 'secret plan' now?
 
@@ -545,20 +545,22 @@ title: Clueless for Speaker
 subtitle: The youthful and energetic candidate of the NPP-Y and SDE, this may raise problems about the ever-growing power of our paramilitary down the line.
 unavailable-subtitle: The youth section of our party isn't relevant enough for him to be a serious choice.
 choose-if: youth_strength >= 40
-on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 150; youth_dissent -= 20
+on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 150; sh_strength -= 70; sa_strength -= 70; youth_strength += 10; youth_dissent -= 20; radicalization += 2; leverage -= 5
 go-to: ministries
 
-
+With the urgency of the PDP resurgence, Clueless' victory supercharges the SDE and inspires a surge in recruitment. Our radical rhetoric is put on full swing and the fight against authoritarianism begins. A new wind of change blows through the land, culminating in the arrest of Milkman, Yuuto's second in command, in a high profile arrest.
 
 
 
 @S_blooky
-title: Remmacaronie for Speaker
-subtitle: The preferred candidate for Speakership by most of the coalition, his election will ease over negotiations over policy.
-on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10;
+title: Blooky for Speaker
+subtitle: We will accept and support Blooky's candidacy for the speakership. Although there is opposition within our party, this will allow us more freedom in choosing ministries.
+unavailable-subtitle: The NPP-C is against this decision, we should be the leaders of this coalition, not them.
+choose-if: center_strength < 35 and center_dissent < 30
+on-arrival: npp_in_government = 1; speaker = "Blooky"; speaker_party = "AMDG"; leverage += 5; 
 go-to: ministries
 
-
+Blooky's victoiry is unexpected, and launches the party into disarray. A walkout ensues, and members of our coalition take to the streets. On TV, one of our party cadres call Blooky "The PDP from 7-Eleven". Nevertheless, the decision gets pushed through.
 
 @ministries
 go-to: ministries_proper
