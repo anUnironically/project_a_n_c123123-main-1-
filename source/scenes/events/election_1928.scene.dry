@@ -419,7 +419,9 @@ go-to: ministries
 
 [? if in_full_npp_coalition = 0 : Despite the half-AMDG[? if in_star_coalition : /LPPA ?] walk out, our coalition stays intact. Our good relations with the AMDG and TKDP have paid off and a solution was finally put on paper for this candidacy to go through. ?] Robbie Rotten's victory supercharges our base and allows the government to focus on preventing a PDP return. 
 
-Robbie's platforms include heavily persecuting corrupt businesses, the administration, and the far-right especially. His edge on bringing the establishment to the negotiating table has alienated some TKDP voters.
+<div class="container">
+<div class="image"><img src="img/event/convention_2.png"></div>
+<div class="text">Robbie's platforms include heavily persecuting corrupt businesses, the administration, and the far-right especially. His edge on bringing the establishment to the negotiating table has alienated some TKDP voters.</div></div>
 
 @S_robbie_deadlock
 on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5; youth_dissent += 5; workers_npp += 6; new_middle_npp -= 3; old_middle_npp -= 3; rural_npp -= 3; leverage -= 5;
@@ -427,7 +429,7 @@ on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidaris
 The coalition is on fire! Due to his anti-Davaoeno rhetoric calling them "enablers" of Yuuto, Davaoeno members of parliament block his candidacy from passing Parliament. Our partners worry about his populist anti-establishment stance and wish to extract more concessions for his speakership. Blooky has called him out and now has cast his vote instead for himself. 
 
 <div class="container">
-<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="image"><img src="img/event/blooky.png"></div>
 <div class="text">The AMDG rally has raised people to vote for their candidate, but the NPP-C and their connections can still be used to push the candidacy of Robbie through. Our next steps are crucial in keeping this coalition stable.</div></div>
 
 - @S_robbie_superfail: It's Robbie or Bust! Another election we must!
@@ -557,7 +559,7 @@ go-to: ministries
 With the urgency of the PDP resurgence, Clueless' victory supercharges the SDE and inspires a surge in recruitment. 
 
 <div class="container">
-<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="image"><img src="img/event/clueless_poster.png"></div>
 <div class="text">Our radical rhetoric is put on full swing and the fight against authoritarianism begins. A new wind of change blows through the land, culminating in the arrest of Milkman, Yuuto's second in command, in a high profile arrest.</div></div>
 
 
@@ -650,10 +652,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: foreign_minister_party != "NPP"
-on-arrival: leverage -= 10; foreign_minister_party = "NPP"; foreign_minister = "Danni"
+on-arrival: leverage -= 10; foreign_minister_party = "NPP"; foreign_minister = "Paisco"
 go-to: ministries_proper
 
-Danni of the NPP-C has been appointed Foreign Minister.
+Paisco of the NPP-C has been appointed Foreign Minister.
 
 
 @agriculture
