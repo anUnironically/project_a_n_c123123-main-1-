@@ -311,7 +311,7 @@ Democratic Coalition (NPP + WXS + AMDG + TKDP): [+ democratic_coalition +]%
 
 Star Coalition (LPPA + TKDP + AMDG): [+ star_coalition +]% 
 
-Conservative Coalition (AMDG + TKDP + LPPA + PPM): [+ conservative_coalition +]%
+Cons. Coalition (AMDG + TKDP + LPPA + PPM): [+ conservative_coalition +]%
 
 Nazi Coalition (PDP + PPM): [+ nazi_coalition +]%
 
@@ -391,12 +391,10 @@ on-arrival: npp_in_government = 1; speaker = "Macalintal"; speaker_party = "NPP"
 go-to: ministries
 
 <div class="container">
-<div class="image"><img src="img/event/convention_1"></div>
-<div class="text">Macalintal's past hostility to Davaoenos have left the AMDG in a tense state. If we are to continue with the "grand master plan" that the man has prepared, we have to make some concessions.
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">Macalintal's past hostility to Davaoenos has left the AMDG in a tense state. If we are to continue with the "grand master plan" that the man has prepared, we have to make some concessions.</div></div>
 
 The speaker himself is okay with our plans for concessions. His agenda can now be pushed on with full steam. May our trust in him be worth the investment.
-</div>
-</div>
 
 @S_remma
 title: Remmacaronie for Speaker
@@ -404,7 +402,9 @@ subtitle: The preferred candidate for Speakership of [? if in_democratic_coaliti
 on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; leverage += 10 if in_democratic_coalition = 1 or in_fallout_coalition = 1; leverage -= 5 if in_star_coalition = 1;
 go-to: ministries
 
-Remma's moderation and pragmatism pushes through, giving us more leverage in choosing ministries. His Speakership agenda will revolve around a public works program and focus on the idea of State Businesses. 
+<div class="container">
+<div class="image"><img src="img/event/convention_2.png"></div>
+<div class="text">Remma's moderation and pragmatism pushes through, giving us more leverage in choosing ministries. His Speakership agenda will revolve around a public works program and focus on the idea of State Businesses.</div></div>
 
 His "New Deal" is seen with skepticism amongst sects of our coalition members. The Party is more than willing though to accept his proposal. Perhaps this can be the start of a socialist economy.
 
@@ -419,14 +419,18 @@ go-to: ministries
 
 [? if in_full_npp_coalition = 0 : Despite the half-AMDG[? if in_star_coalition : /LPPA ?] walk out, our coalition stays intact. Our good relations with the AMDG and TKDP have paid off and a solution was finally put on paper for this candidacy to go through. ?] Robbie Rotten's victory supercharges our base and allows the government to focus on preventing a PDP return. 
 
-Robbie's platforms include heavily persecuting corrupt businesses, the administration, and the far-right especially. His edge on bringing the establishment to the negotiating table has alienated some TKDP voters.
+<div class="container">
+<div class="image"><img src="img/event/convention_2.png"></div>
+<div class="text">Robbie's platforms include heavily persecuting corrupt businesses, the administration, and the far-right especially. His edge on bringing the establishment to the negotiating table has alienated some TKDP voters.</div></div>
 
 @S_robbie_deadlock
 on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5; youth_dissent += 5; workers_npp += 6; new_middle_npp -= 3; old_middle_npp -= 3; rural_npp -= 3; leverage -= 5;
 
 The coalition is on fire! Due to his anti-Davaoeno rhetoric calling them "enablers" of Yuuto, Davaoeno members of parliament block his candidacy from passing Parliament. Our partners worry about his populist anti-establishment stance and wish to extract more concessions for his speakership. Blooky has called him out and now has cast his vote instead for himself. 
 
-The AMDG rally has raised people to vote for their candidate, but the NPP-C and their connections can still be used to push the candidacy of Robbie through. Our next steps are crucial in keeping this coalition stable.
+<div class="container">
+<div class="image"><img src="img/event/blooky.png"></div>
+<div class="text">The AMDG rally has raised people to vote for their candidate, but the NPP-C and their connections can still be used to push the candidacy of Robbie through. Our next steps are crucial in keeping this coalition stable.</div></div>
 
 - @S_robbie_superfail: It's Robbie or Bust! Another election we must!
 - @S_robbie_challenge: We will challenge Blooky! Enter into a coalition primary against him.
@@ -538,11 +542,11 @@ We are seen as responsible for the failure to form a government, and many of our
 view-if: conservative_coalition >= 50
 on-arrival: npp_in_government = 0; npp_toleration = 0; chancellor = "Star Fox"; chancellor_party = "LPPA"; foreign_minister_party = "LPPA"; interior_minister_party = "LPPA"; justice_minister_party = "LPPA"; labor_minister_party = "LPPA"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "LPPA"; power_conservative_coalition = 1;
 
-Even though the PPM is very reluctant to participate in such a coalition, they still accede to the right's wishes. Thus, a majority center-right coalition is formed, with Star Fox as speaker.
+<div class="container">
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">Even though the PPM is very reluctant to participate in such a coalition, they still accede to the right's wishes. Thus, a majority center-right coalition is formed, with Star Fox as speaker.</div></div>
 
 - @root: What's your 'secret plan' now?
-
-
 
 @S_clueless
 title: Clueless for Speaker
@@ -552,8 +556,11 @@ choose-if: youth_strength >= 40
 on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 150; sh_strength -= 70; sa_strength -= 70; youth_strength += 10; youth_dissent -= 20; radicalization += 2; leverage -= 5
 go-to: ministries
 
-With the urgency of the PDP resurgence, Clueless' victory supercharges the SDE and inspires a surge in recruitment. Our radical rhetoric is put on full swing and the fight against authoritarianism begins. A new wind of change blows through the land, culminating in the arrest of Milkman, Yuuto's second in command, in a high profile arrest.
+With the urgency of the PDP resurgence, Clueless' victory supercharges the SDE and inspires a surge in recruitment. 
 
+<div class="container">
+<div class="image"><img src="img/event/clueless_poster.png"></div>
+<div class="text">Our radical rhetoric is put on full swing and the fight against authoritarianism begins. A new wind of change blows through the land, culminating in the arrest of Milkman, Yuuto's second in command, in a high profile arrest.</div></div>
 
 
 @S_blooky
@@ -564,7 +571,9 @@ choose-if: center_strength < 35 and center_dissent < 30
 on-arrival: npp_in_government = 1; speaker = "Blooky"; speaker_party = "AMDG"; leverage += 5; 
 go-to: ministries
 
-Blooky's victoiry is unexpected, and launches the party into disarray. A walkout ensues, and members of our coalition take to the streets. On TV, one of our party cadres call Blooky "The PDP from 7-Eleven". Nevertheless, the decision gets pushed through.
+<div class="container">
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">Blooky's victory is unexpected, and launches the party into disarray. A walkout ensues, and members of our coalition take to the streets. On TV, one of our party cadres call Blooky "The PDP from 7-Eleven". Nevertheless, the decision gets pushed through.</div></div>
 
 @ministries
 go-to: ministries_proper
@@ -643,10 +652,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: foreign_minister_party != "NPP"
-on-arrival: leverage -= 10; foreign_minister_party = "NPP"; foreign_minister = "Danni"
+on-arrival: leverage -= 10; foreign_minister_party = "NPP"; foreign_minister = "Paisco"
 go-to: ministries_proper
 
-Danni of the NPP-C has been appointed Foreign Minister.
+Paisco of the NPP-C has been appointed Foreign Minister.
 
 
 @agriculture
