@@ -390,9 +390,13 @@ subtitle: Macalintal's history of combativeness with Davaoenos has left them wan
 on-arrival: npp_in_government = 1; speaker = "Macalintal"; speaker_party = "NPP"; leverage -= 10;
 go-to: ministries
 
-Macalintal's past hostility to Davaoenos have left the AMDG in a tense state. If we are to continue with the "grand master plan" that the man has prepared, we have to make some concessions.
+<div class="container">
+<div class="image"><img src="img/event/convention_1"></div>
+<div class="text">Macalintal's past hostility to Davaoenos have left the AMDG in a tense state. If we are to continue with the "grand master plan" that the man has prepared, we have to make some concessions.
 
 The speaker himself is okay with our plans for concessions. His agenda can now be pushed on with full steam. May our trust in him be worth the investment.
+</div>
+</div>
 
 @S_remma
 title: Remmacaronie for Speaker
