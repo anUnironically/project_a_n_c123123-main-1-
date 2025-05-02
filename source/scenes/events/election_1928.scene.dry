@@ -342,6 +342,8 @@ view-if: fallout_coalition >=50 or full_house_coalition >= 50 or democratic_coal
 - @npp_majority
 - @c_lppa_approach
 - @fallout_coalition
+- @full_house_coalition
+- @democratic_coalition
 
 @npp_majority
 title: NPP's Majority Alone
@@ -355,6 +357,37 @@ Finally, the NPP can govern alone! Our long campaign of electioneering has paid 
 Who should be chancellor?
 
 
+@full_house_coalition
+title: We can form the Full House Coalition
+subtitle: NPP + WXS + AMDG + LPPA: [+ full_house_coalition +]% There is not enough support.
+view-if: fallout_coalition >= 50
+on-arrival: npp_in_government = 1; in_fallout_coalition = 1; leverage += 5; 
+
+
+- @S_macalintal
+- @S_remma
+- @S_robbie
+- @S_clueless
+- @S_blooky
+
+@democratic_coalition
+title: We can form the Democratic Coalition
+subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]%
+unavailable-subtitle: NPP + WXS + AMDG + TKDP: [+ democratic_coalition +]% [? if democratic_coalition < 50 : There is not enough support. ?] [? if tkdp_relation < 50 : TKDP does not trust us just yet ?]
+choose-if: fallout_coalition >= 50 and tkdp_relation >= 50
+on-arrival: npp_in_government = 1; in_democratic_coalition = 1; leverage -= 6; 
+
+The delegates we have amassed are enough to form the "Democratic" coalition comprised of the republican parties. This coalition is intended to be more pragmatic, removing ideology and accepting centrism instead as a guiding ideology.
+
+Party leaders scheme and discuss. This coalition is not as popular amongst us compared to the "Fallout" coalition. Nevertheless, we can still make a critical decision due to our election turnout — who should be speaker?
+
+- @S_macalintal
+- @S_remma
+- @S_robbie
+- @S_clueless
+- @S_blooky
+- @S_nao
+
 @c_lppa_approach
 title: Lets give Star Fox's offer a chance.
 subtitle: NPP + LPPA + TKDP + AMDG ([+ star_npp_coalition +]%)
@@ -363,13 +396,18 @@ view-if: lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and st
 choose-if: radical_strength <= 59 and center_strength <=59 and youth_strength <=59 and solidarist_strength >=60
 go-to: ministries
 
-Our factions are in revolt as they view Star Fox as a schemer. All major non-solidarists have resigned from our oversight board.
+<div class="container">
+<div class="image"><img src="img/event/convention_3.png"></div>
+<div class="text">Our factions are in revolt as they view Star Fox as a schemer. All major non-solidarists have resigned from our oversight board. Our base worries that we have forgotten about the rights of workers.</div></div>
+
+Star Fox will be speaker, we cannot force the right to support our schemes. However, they allow us more leeway in ministry picking than the "Democratic" coalition ever could.
 
 
 @fallout_coalition
 title: We can form the Fallout Coalition
 subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]%
-view-if: fallout_coalition >= 50
+unavailable-subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]% [? if fallout_coalition < 50 : There is not enough support. ?] [? if d_relation < 50 : AMDG would rather govern with more people than just us. ?]
+choose-if: fallout_coalition >= 50 and d_relation >= 50
 on-arrival: npp_in_government = 1; in_fallout_coalition = 1; leverage += 5; 
 
 The delegates we have amassed are enough to form the "Fallout" coalition comprised of the traditionally liberal-democratic parties. Predicted to be the expected heirs to the PDP's rule, this coalition will sift through the fallout of Yuuto's administration.
