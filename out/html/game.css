@@ -618,7 +618,7 @@ position: absolute;
 
 .container {
  display: grid;
- align-items: center; 
+ align-items: start; 
  grid-template-columns: 1fr 2fr 1fr;
  column-gap: 1px;
   width: 134%; /* Make sure it stretches */
