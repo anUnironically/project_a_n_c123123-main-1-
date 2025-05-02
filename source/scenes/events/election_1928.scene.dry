@@ -604,7 +604,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "NPP"
-on-arrival: leverage -= 5; interior_minister_party = "NPP"; interior_minister = "Macalintal"
+on-arrival: leverage -= 5; interior_minister_party = "NPP"; interior_minister = "Macalintal" if speaker != "Macalintal"; interior_minister = "WasteofSpace" if speaker = "Macalintal"
 go-to: ministries_proper
 
 [? if speaker != "Macalintal" : Leon Macalintal ?][? if speaker = "Macalintal" : WasteofSpace ?] of the NPP-R has been appointed Interior Minister.
