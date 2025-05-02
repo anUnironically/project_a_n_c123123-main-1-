@@ -613,3 +613,25 @@ margin: 0 auto -10px auto;
 visibility: visible;
 position: absolute;
 }
+
+/* Side by Side Images */ 
+
+.container {
+ display: grid;
+ align-items: center; 
+ grid-template-columns: 1fr 2fr 1fr;
+ column-gap: 1px;
+  width: 134%; /* Make sure it stretches */
+  max-width: 500%; /* Prevent overflow constraints */
+ margin-bottom: -20px;
+}
+
+.container img {
+  max-width: 65%;
+  max-height: 100%;
+  padding-bottom: 30px;
+}
+
+.image {
+ margin-right: -45px;
+}

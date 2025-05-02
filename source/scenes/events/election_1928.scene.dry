@@ -311,7 +311,7 @@ Democratic Coalition (NPP + WXS + AMDG + TKDP): [+ democratic_coalition +]%
 
 Star Coalition (LPPA + TKDP + AMDG): [+ star_coalition +]% 
 
-Conservative Coalition (AMDG + TKDP + LPPA + PPM): [+ conservative_coalition +]%
+Cons. Coalition (AMDG + TKDP + LPPA + PPM): [+ conservative_coalition +]%
 
 Nazi Coalition (PDP + PPM): [+ nazi_coalition +]%
 
@@ -391,12 +391,10 @@ on-arrival: npp_in_government = 1; speaker = "Macalintal"; speaker_party = "NPP"
 go-to: ministries
 
 <div class="container">
-<div class="image"><img src="img/event/convention_1"></div>
-<div class="text">Macalintal's past hostility to Davaoenos have left the AMDG in a tense state. If we are to continue with the "grand master plan" that the man has prepared, we have to make some concessions.
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">Macalintal's past hostility to Davaoenos has left the AMDG in a tense state. If we are to continue with the "grand master plan" that the man has prepared, we have to make some concessions.</div></div>
 
 The speaker himself is okay with our plans for concessions. His agenda can now be pushed on with full steam. May our trust in him be worth the investment.
-</div>
-</div>
 
 @S_remma
 title: Remmacaronie for Speaker
