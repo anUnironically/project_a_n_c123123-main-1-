@@ -359,7 +359,8 @@ Who should be chancellor?
 
 @full_house_coalition
 title: We can form the Full House Coalition
-subtitle: NPP + WXS + AMDG + LPPA: [+ full_house_coalition +]% There is not enough support.
+subtitle: NPP + WXS + AMDG + LPPA: [+ full_house_coalition +]% 
+unavailable-subtitle: NPP + WXS + AMDG + LPPA: [+ full_house_coalition +]% There is not enough support.
 choose-if: full_house_coalition >= 50
 on-arrival: npp_in_government = 1; in_full_house_coalition = 1;
 
