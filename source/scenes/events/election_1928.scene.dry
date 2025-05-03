@@ -330,7 +330,8 @@ Our representatives walk around the floor looking for potential power arrangemen
 
 
 @coalition_fail_negotiate
-view if: fallout_coalition <=50 and full_house_coalition <= 50 and democratic_coalition <= 50 and (lppa_relation <= 50 and tkdp_relation <= 28 and d_relation <= 28 and star_npp_coalition <= 50) and nazi_coalition < 50
+view if: (npp_r < 50 or (( tkdp_r + npp_r < 50 ) and npp_formation_real = 1) ) and fallout_coalition <=50 and full_house_coalition <= 50 and democratic_coalition <= 50 and (lppa_relation <= 50 and tkdp_relation <= 28 and d_relation <= 28 and star_npp_coalition <= 50) and (nazi_coalition >= 50 or star_coalition >= 50 or conservative_coalition >= 50)
+go-to: game_over if nazi_coalition >= 50; star_coalition_win if star_coalition >= 50; conservative_coalition_win if conservative_coalition >= 50
 
 It's over.
 
@@ -674,6 +675,16 @@ Since the remaining bourgeois and right-wing parties cannot form a tolerable gov
 We are seen as responsible for the failure to form a government, and many of our middle-class and even some working-class supporters have deserted the party.
 
 - @root: Was it worth it?
+
+@star_coalition_win
+view-if: conservative_coalition >= 50
+on-arrival: npp_in_government = 0; npp_toleration = 0; chancellor = "Star Fox"; chancellor_party = "LPPA"; foreign_minister_party = "LPPA"; interior_minister_party = "LPPA"; justice_minister_party = "LPPA"; labor_minister_party = "LPPA"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "LPPA"; power_conservative_coalition = 1;
+
+<div class="container">
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">The traditional parties have betrayed us and now the AMDG and TKDP have allied with the LPPA to keep socialism out of government. This government will be headed by Star Fox and will run on austerity and cuts to welfare.</div></div>
+
+- @root: Is it over?
 
 @conservative_coalition_win
 view-if: conservative_coalition >= 50
