@@ -438,7 +438,7 @@ Party leaders scheme and discuss. This coalition has been our prefered one since
 @S_robbie_majority
 title: Robbie for Speaker
 subtitle: The NPP-R's champion can rule in peace, no deadlocks, and no Yuuto.
-on-arrival: npp_in_government = 1; speaker = "Robbie Rotten"; speaker_party = "NPP"; workers_npp += 5
+on-arrival: npp_in_government = 1; speaker = "Robbie Rotten"; speaker_party = "NPP"; workers_npp += 6
 go-to: ministries 
 
 The majority victory sparks hope in many for the first time in years. Robbie's triumph allows for our agenda to be unstoppable in parliament.
