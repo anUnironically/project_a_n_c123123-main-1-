@@ -426,7 +426,7 @@ Party leaders scheme and discuss. This coalition has been our prefered one since
 
 # SPEAKER CHOICES:
 
-@S_nao
+@S_fh_star
 title: Star Fox for Speaker
 subtitle: We all know Star Fox only cares about power.
 on-arrival: npp_in_government = 1; speaker = "Star Fox"; speaker_party = "LPPA"; leverage += 10; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15; d_relation += 10; lppa_relation += 15; macalintal_favors_remaining += 1
