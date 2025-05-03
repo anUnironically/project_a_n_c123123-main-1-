@@ -111,7 +111,7 @@ if (Q.z_r >= Q.npp_r && Q.z_r >= Q.pdp_r) {
 //democratic coalitions
 Q.fallout_coalition = Q.npp_r + Q.wxs_r + Q.d_r;
 Q.full_house_coalition = Q.npp_r + Q.wxs_r + Q.d_r + Q.lppa_r;
-Q.democratic_coalition = Q.npp_r + Q.wxs_r + Q.d_r + Q.tkdp;
+Q.democratic_coalition = Q.npp_r + Q.wxs_r + Q.d_r + Q.tkdp_r;
 Q.conservative_coalition = Q.d_r + Q.tkdp_r + Q.lppa_r + Q.ppm_r;
 
 Q.the_npp_coalition = Q.npp_r + Q.wxs_r + Q.tkdp;
