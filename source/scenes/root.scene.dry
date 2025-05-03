@@ -132,18 +132,6 @@ Q.lppa_relation = 35;
 Q.ppm_relation = 10;
 Q.pdp_relation = 0;
 
-Q.kpd_leader = "Thälmann";
-// alternative is the Conciliators as party leader
-Q.kpd_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
-
-// hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
-
-
 // Does the SPD lead in Prussia?
 Q.spd_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
@@ -152,7 +140,7 @@ Q.prussian_government = "SPD";
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
+Q.rb_strength = 1800;
 Q.rb_militancy = 0.01;
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
@@ -192,6 +180,10 @@ Q.nationalism = 60;
 Q.socialism = 40;
 // pro-republic vs anti-republic
 Q.pro_republic = 59;
+
+// has the NPP proper formed?
+Q.npp_formation_real = 0;
+
 
 Q.emergency_rule = 0;
 
