@@ -360,21 +360,25 @@ Who should be chancellor?
 @full_house_coalition
 title: We can form the Full House Coalition
 subtitle: NPP + WXS + AMDG + LPPA: [+ full_house_coalition +]% There is not enough support.
-view-if: fallout_coalition >= 50
-on-arrival: npp_in_government = 1; in_fallout_coalition = 1; leverage += 5; 
+choose-if: full_house_coalition >= 50
+on-arrival: npp_in_government = 1; in_full_house_coalition = 1;
 
+The delegates we have amassed are enough to form the "Full House" coalition comprised of the traditionally powerful parties. This coalition is intended to be an alliance of compromise, as these parties only form to prevent a government shutdown.
+
+Party leaders scheme and discuss. This coalition is unpopular within our party. Nevertheless, we can still make a critical decision due to our election turnout — who should be speaker?
 
 - @S_macalintal
 - @S_remma
 - @S_robbie
 - @S_clueless
 - @S_blooky
+- @S_fh_star
 
 @democratic_coalition
 title: We can form the Democratic Coalition
 subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]%
 unavailable-subtitle: NPP + WXS + AMDG + TKDP: [+ democratic_coalition +]% [? if democratic_coalition < 50 : There is not enough support. ?] [? if tkdp_relation < 50 : TKDP does not trust us just yet ?]
-choose-if: fallout_coalition >= 50 and tkdp_relation >= 50
+choose-if: democratic_coalition >= 50 and tkdp_relation >= 50
 on-arrival: npp_in_government = 1; in_democratic_coalition = 1; leverage -= 6; 
 
 The delegates we have amassed are enough to form the "Democratic" coalition comprised of the republican parties. This coalition is intended to be more pragmatic, removing ideology and accepting centrism instead as a guiding ideology.
@@ -407,12 +411,12 @@ Star Fox will be speaker, we cannot force the right to support our schemes. Howe
 title: We can form the Fallout Coalition
 subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]%
 unavailable-subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]% [? if fallout_coalition < 50 : There is not enough support. ?] [? if d_relation < 50 : AMDG would rather govern with more people than just us. ?]
-choose-if: fallout_coalition >= 50 and d_relation >= 50
+choose-if: fallout_coalition >= 50 and d_relation >= 45
 on-arrival: npp_in_government = 1; in_fallout_coalition = 1; leverage += 5; 
 
 The delegates we have amassed are enough to form the "Fallout" coalition comprised of the traditionally liberal-democratic parties. Predicted to be the expected heirs to the PDP's rule, this coalition will sift through the fallout of Yuuto's administration.
 
-Party leaders scheme and discuss. This coalition has been our prefered one since the PDP's demise and when the Blooky led AMDG launched their new program to align more to the left. Our strides in this election has allowed to us to make a critical decision — who should be speaker?
+Party leaders scheme and discuss. This coalition has been our prefered one since the PDP's demise and when the Blooky led AMDG launched their new program to align more to the left. Despite that, we'll be competing for ministries. Our strides in this election has allowed to us to make a critical decision — who should be speaker?
 
 - @S_macalintal
 - @S_remma
@@ -421,6 +425,31 @@ Party leaders scheme and discuss. This coalition has been our prefered one since
 - @S_blooky
 
 # SPEAKER CHOICES:
+
+@S_nao
+title: Star Fox for Speaker
+subtitle: We all know Star Fox only cares about power.
+on-arrival: npp_in_government = 1; speaker = "Star Fox"; speaker_party = "LPPA"; leverage += 10; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15; d_relation += 10; lppa_relation += 15; macalintal_favors_remaining += 1
+go-to: ministries
+
+<div class="container">
+<div class="image"><img src="img/event/pro_republic_1.png"></div>
+<div class="text">Our support allows the conservative Star Fox to enter the speakership. His uphill election is helped by our "special favors", and the LPPA owes us one.</div></div>
+
+AMDG would have never allowed us this leeway in ministries anyway. Our main gripe with Star Fox is policy. The workers expect us to stop his bourgeois and anti-authoritarian tendencies.
+
+@S_nao
+title: Naomi for Speaker
+subtitle: Naomi and Blooky are butting heads on who gets to be speaker. Nao offers us support in exchange for an anti-blooky front.
+on-arrival: npp_in_government = 1; speaker = "Nakayama"; speaker_party = "TKDP"; leverage += 10; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15; d_relation += 10; tkdp_relation += 15; remma_favors_remaining += 1; workers_npp -= 7;
+go-to: ministries
+
+<div class="container">
+<div class="image"><img src="img/event/convention_2.png"></div>
+<div class="text">Our support allows Nao to triumph during speaker elections. Blooky is outmaneuvered and Nao rewards us with some promised concessions and a stronger position for ministries. Our party members, however, view this as a wasted chance to capture the speakership.</div></div>
+
+AMDG would have never allowed us this leeway in ministries anyway. Our main gripe with Nao is policy. The workers expect us to stop her worst excesses. Nao owes us one for maintaining her power.
+
 
 @S_macalintal
 title: Leon Macalintal for Speaker
