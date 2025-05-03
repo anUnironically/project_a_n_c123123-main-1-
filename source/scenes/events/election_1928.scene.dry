@@ -436,6 +436,7 @@ Party leaders scheme and discuss. This coalition has been our prefered one since
 # SPEAKER CHOICES:
 
 @S_robbie_majority
+title: Robbie for Speaker
 subtitle: The NPP-R's champion can rule in peace, no deadlocks, and no Yuuto.
 on-arrival: npp_in_government = 1; speaker = "Robbie Rotten"; speaker_party = "NPP"; workers_npp += 5
 go-to: ministries 
