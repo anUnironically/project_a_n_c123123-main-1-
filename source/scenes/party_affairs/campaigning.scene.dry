@@ -24,7 +24,7 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_npp += 6*(1-dissent); workers_npp -= 2 if unemployed >= 15; workers_npp -= 2 if unemployed >= 25;  resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
+on-arrival: workers_npp += 6*(1-dissent); workers_npp -= 2 if unemployed >= 15; workers_npp -= 2 if unemployed >= 25;  resources -= 1; workers_npp += 3*(1-dissent) if nationalization_progress >= 1;
 
 <div class="container">
 <div class="image"><img src="img/event/labor_2.png"></div>
@@ -54,7 +54,7 @@ on-arrival: old_middle_npp += 5*(1-dissent); resources -= 1; old_middle_npp -= 3
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_npp += 5*(1-dissent); resources -= 1; rural_spd += 3*(1-dissent) if rural_policy >= 2
+on-arrival: rural_npp += 5*(1-dissent); resources -= 1; rural_npp += 3*(1-dissent) if rural_policy >= 2
 
 <div class="container">
 <div class="image"><img src="img/event/farmer_1.png"></div>
@@ -64,7 +64,7 @@ on-arrival: rural_npp += 5*(1-dissent); resources -= 1; rural_spd += 3*(1-dissen
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
+on-arrival: unemployed_npp += 6*(1-dissent); resources -= 1; unemployed_npp -= 3 if welfare < 0; unemployed_npp += 6*(1-dissent) if wtb_adopted = 1; unemployed_npp += 3*(1-dissent) if welfare >= 2;
 
 <div class="container">
 <div class="image"><img src="img/event/sad_citizen_1.png"></div>
@@ -75,7 +75,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 view-if: peoples_party == 1
-on-arrival: catholics_spd += 6*(1-dissent); resources -= 1
+on-arrival: catholics_npp += 6*(1-dissent); resources -= 1
 
 <div class="container">
 <div class="image"><img src="img/event/blooky.png"></div>

@@ -111,7 +111,7 @@ if (Q.z_r >= Q.npp_r && Q.z_r >= Q.pdp_r) {
 //democratic coalitions
 Q.fallout_coalition = Q.npp_r + Q.wxs_r + Q.d_r;
 Q.full_house_coalition = Q.npp_r + Q.wxs_r + Q.d_r + Q.lppa_r;
-Q.democratic_coalition = Q.npp_r + Q.wxs_r + Q.d_r + Q.tkdp;
+Q.democratic_coalition = Q.npp_r + Q.wxs_r + Q.d_r + Q.tkdp_r;
 Q.conservative_coalition = Q.d_r + Q.tkdp_r + Q.lppa_r + Q.ppm_r;
 
 Q.the_npp_coalition = Q.npp_r + Q.wxs_r + Q.tkdp;
@@ -293,7 +293,7 @@ go-to: coalition_begin
 
 {!<tr><td><div class="box" style='background-color:#de4335'> </div> !} LPPA: {!</td><td>!} [+ lppa_r +]% {!</td><td>!} [+ str_change_lppa +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#05ad3a'> </div> !} PPM: {!</td><td>!} [+ ppm_r +]% {!</td><td>!} [+ str_change_ppm +] {!</td></tr>!}
 
@@ -330,23 +330,27 @@ Our representatives walk around the floor looking for potential power arrangemen
 
 
 @coalition_fail_negotiate
-view if: fallout_coalition <=50 and full_house_coalition <= 50 and democratic_coalition <= 50 and (lppa_relation <= 50 and tkdp_relation <= 28 and d_relation <= 28 and star_npp_coalition <= 50) and nazi_coalition < 50
+view if: (npp_r < 50 or (( tkdp_r + npp_r < 50 ) and npp_formation_real = 1) ) and fallout_coalition <=50 and full_house_coalition <= 50 and democratic_coalition <= 50 and (lppa_relation <= 50 and tkdp_relation <= 28 and d_relation <= 28 and star_npp_coalition <= 50) and (nazi_coalition >= 50 or star_coalition >= 50 or conservative_coalition >= 50)
+go-to: game_over if nazi_coalition >= 50; star_coalition_win if star_coalition >= 50; conservative_coalition_win if conservative_coalition >= 50
 
 It's over.
 
 @coalition_negotiations
-view-if: fallout_coalition >=50 or full_house_coalition >= 50 or democratic_coalition >=50 or (lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50) and nazi_coalition < 50
+view-if: (npp_r >= 50 or (( tkdp_r + npp_r >= 50 ) and npp_formation_real = 1) ) or fallout_coalition >=50 or full_house_coalition >= 50 or democratic_coalition >=50 or (lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50) and nazi_coalition < 50
 
 [? if lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and star_npp_coalition >= 50 : Star Fox has signalled his willingness to form a dominating government with us, leaving out WXS and bringing together the other conservatives on board. Even if the others disagree, Star Fox can make adjustments where we become a stable ruling arm. If we join his coalition, we will have a [+ star_npp_coalition +]% majority. ?]
 
 - @npp_majority
 - @c_lppa_approach
 - @fallout_coalition
+- @full_house_coalition
+- @democratic_coalition
 
 @npp_majority
 title: NPP's Majority Alone
-subtitle: NPP: [+ npp_r +]%
-view-if: npp_r >= 50
+subtitle: NPP: [? if npp_formation_real = 0: [+ npp_r +]% ?][? if npp_formation_real = 1: [+ npp_r + tkdp_r +]% Our new allies with the TKDP have made this possible ?]
+unavailable-subtitle: NPP: [+ npp_r +]% There is not enough support. Maybe in the future there will
+choose-if: npp_r >= 50 or ( (npp_r + tkdp_r >= 50) and npp_formation_real = 1 )
 on-arrival: chancellor = "Empty"; chancellor_party = "NPP"; npp_in_government = 1; in_npp_majority = 1; pro_republic += 5; foreign_minister_party = "NPP"; foreign_minister = "Danni"; interior_minister_party = "NPP"; interior_minister = "Macalintal"; justice_minister_party = "NPP"; justice_minister = "Remma"; labor_minister_party = "NPP"; labor_minister = "Filipino"; reichswehr_minister_party = "NPP"; reichswehr_minister = "Robbie"; economic_minister_party = "NPP"; economic_minister = "Clueless"; finance_minister_party = "NPP"; finance_minister = "Icota"; agriculture_minister_party = "NPP"; agriculture_minister = "San"; reichswehr_loyalty -= 0.05; 
 achievement: majority_party
 
@@ -354,6 +358,48 @@ Finally, the NPP can govern alone! Our long campaign of electioneering has paid 
 
 Who should be chancellor?
 
+- @S_macalintal_majority
+- @S_remma_majority
+- @S_robbie_majority
+- @S_clueless_majority
+- @S_nao_npp
+
+@full_house_coalition
+title: We can form the Full House Coalition
+subtitle: NPP + WXS + AMDG + LPPA: [+ full_house_coalition +]% 
+unavailable-subtitle: NPP + WXS + AMDG + LPPA: [+ full_house_coalition +]% There is not enough support.
+choose-if: full_house_coalition >= 50
+on-arrival: npp_in_government = 1; in_full_house_coalition = 1; radical_dissent += 5; center_dissent += 5; youth_dissent += 5; solidarist_dissent += 5
+
+The delegates we have amassed are enough to form the "Full House" coalition comprised of the traditionally powerful parties. This coalition is intended to be an alliance of compromise, as these parties only form to prevent a government shutdown.
+
+Party leaders scheme and discuss. This coalition is unpopular within our party. Nevertheless, we can still make a critical decision due to our election turnout — who should be speaker?
+
+- @S_macalintal
+- @S_remma
+- @S_robbie
+- @S_clueless
+- @S_blooky
+- @S_fh_star
+
+@democratic_coalition
+title: We can form the Democratic Coalition
+subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]%
+unavailable-subtitle: NPP + WXS + AMDG + TKDP: [+ democratic_coalition +]% [? if democratic_coalition < 50 : There is not enough support. ?] [? if tkdp_relation < 50 : TKDP does not trust us just yet ?]
+choose-if: democratic_coalition >= 50 and tkdp_relation >= 50
+on-arrival: npp_in_government = 1; in_democratic_coalition = 1; leverage -= 6; 
+
+The delegates we have amassed are enough to form the "Democratic" coalition comprised of the republican parties. This coalition is intended to be more pragmatic, removing ideology and accepting centrism instead as a guiding ideology.
+
+Party leaders scheme and discuss. This coalition is not as popular amongst us compared to the "Fallout" coalition. Nevertheless, we can still make a critical decision due to our election turnout — who should be speaker?
+
+- @S_macalintal
+- @S_remma
+- @S_robbie
+- @S_clueless
+- @S_blooky
+- @S_nao
+- @S_nao_npp
 
 @c_lppa_approach
 title: Lets give Star Fox's offer a chance.
@@ -363,18 +409,23 @@ view-if: lppa_relation >= 50 and tkdp_relation >= 28 and d_relation >= 28 and st
 choose-if: radical_strength <= 59 and center_strength <=59 and youth_strength <=59 and solidarist_strength >=60
 go-to: ministries
 
-Our factions are in revolt as they view Star Fox as a schemer. All major non-solidarists have resigned from our oversight board.
+<div class="container">
+<div class="image"><img src="img/event/convention_3.png"></div>
+<div class="text">Our factions are in revolt as they view Star Fox as a schemer. All major non-solidarists have resigned from our oversight board. Our base worries that we have forgotten about the rights of workers.</div></div>
+
+Star Fox will be speaker, we cannot force the right to support our schemes. However, they allow us more leeway in ministry picking than the "Democratic" coalition ever could.
 
 
 @fallout_coalition
 title: We can form the Fallout Coalition
 subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]%
-view-if: fallout_coalition >= 50
+unavailable-subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]% [? if fallout_coalition < 50 : There is not enough support. ?] [? if d_relation < 50 : AMDG would rather govern with more people than just us. ?]
+choose-if: fallout_coalition >= 50 and d_relation >= 45
 on-arrival: npp_in_government = 1; in_fallout_coalition = 1; leverage += 5; 
 
 The delegates we have amassed are enough to form the "Fallout" coalition comprised of the traditionally liberal-democratic parties. Predicted to be the expected heirs to the PDP's rule, this coalition will sift through the fallout of Yuuto's administration.
 
-Party leaders scheme and discuss. This coalition has been our prefered one since the PDP's demise and when the Blooky led AMDG launched their new program to align more to the left. Our strides in this election has allowed to us to make a critical decision — who should be speaker?
+Party leaders scheme and discuss. This coalition has been our prefered one since the PDP's demise and when the Blooky led AMDG launched their new program to align more to the left. Despite that, we'll be competing for ministries. Our strides in this election has allowed to us to make a critical decision — who should be speaker?
 
 - @S_macalintal
 - @S_remma
@@ -383,6 +434,94 @@ Party leaders scheme and discuss. This coalition has been our prefered one since
 - @S_blooky
 
 # SPEAKER CHOICES:
+
+@S_robbie_majority
+title: Robbie for Speaker
+subtitle: The NPP-R's champion can rule in peace, no deadlocks, and no Yuuto.
+on-arrival: npp_in_government = 1; speaker = "Robbie Rotten"; speaker_party = "NPP"; workers_npp += 6
+go-to: ministries 
+
+The majority victory sparks hope in many for the first time in years. Robbie's triumph allows for our agenda to be unstoppable in parliament.
+
+<div class="container">
+<div class="image"><img src="img/event/convention_2.png"></div>
+<div class="text">Robbie's platforms include heavily persecuting corrupt businesses, the administration, and the far-right especially. With the NPP majority, there will be no one left to stop him.</div></div>
+
+@S_clueless_majority
+title: Clueless for Speaker
+subtitle: The first step to revolutionary socialism.
+on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 100;
+go-to: ministries
+
+With the mandate of a full majority, Clueless' victory supercharges the SDE and inspires a surge in recruitment. 
+
+<div class="container">
+<div class="image"><img src="img/event/clueless_poster.png"></div>
+<div class="text">Our radical rhetoric is put on full swing and the fight against authoritarianism begins. A new wind of change blows through the land, culminating in the arrest of Milkman, Yuuto's second in command, in a high profile arrest.</div></div>
+
+@S_remma_majority
+title: Remmacaronie for Speaker
+subtitle: The NPP-C's man, this time with nothing holding him back.
+on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; workers_pdp -= 5; workers_ppm -= 5;
+go-to: ministries
+
+It's chilling. The moment our coalition steps into power, our opposition fumbles. No more confidence during "redemption day", no more gains by the radical right. The best feeling of all, we're no longer tied at the hip to the bourgeois. We're free.
+
+<div class="container">
+<div class="image"><img src="img/event/convention_2.png"></div>
+<div class="text">Remma's moderation and pragmatism pushes through, but this time with no hindrances whatsoever. The idea of fully stocked shelves entices many within the nation. This newfound optimism breaks down the PDP and other opposition parties, finally allowing the NPP to rule alone. </div></div>
+
+@S_macalintal_majority
+title: Leon Macalintal for Speaker
+subtitle: All of the plans, the barely legal moves we pulled, it was all worth it.
+on-arrival: npp_in_government = 1; speaker = "Macalintal"; speaker_party = "NPP"; resources += 2
+go-to: ministries
+
+<div class="container">
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">Macalintal's victory inspires </div></div>
+
+The speaker himself is okay with our plans for giving in some ground. His agenda can now be pushed on with full steam. May our trust in him be worth the investment.
+
+
+@S_fh_star
+title: Star Fox for Speaker
+subtitle: We all know Star Fox only cares about power. Supporting the LPPA will satisfy his desires and give us some leverage.
+on-arrival: npp_in_government = 1; speaker = "Star Fox"; speaker_party = "LPPA"; leverage += 10; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15; d_relation += 10; lppa_relation += 15; macalintal_favors_remaining += 1
+go-to: ministries
+
+<div class="container">
+<div class="image"><img src="img/event/pro_republic_1.png"></div>
+<div class="text">Our support allows the conservative Star Fox to enter the speakership. His uphill election is helped by our "special favors", and the LPPA owes us one.</div></div>
+
+AMDG would have never allowed us this leeway in ministries anyway. Our main gripe with Star Fox is policy. The workers expect us to stop his bourgeois and anti-authoritarian tendencies.
+
+@S_nao_npp
+title: Naomi for Speaker
+subtitle: As our relations with the TKDP have been repaired, our full New Progressive Party can nominate her without any complaint.
+view-if: npp_formation_real = 1
+on-arrival: npp_in_government = 1; speaker = "Nakayama"; speaker_party = "NPP-TKDP"; leverage += 5; workers_npp -= 4;
+go-to: ministries
+
+<div class="container">
+<div class="image"><img src="img/event/convention_2.png"></div>
+<div class="text">With the TKDP being a fully fledged member of the NPP, there is no more complaints about Nao being speaker. We still may have to watch her corporatist excesses though, something our base hopes that we remember.</div></div>
+
+With this new coalition, we can finally begin the process of reconstructing Ateneocord.
+
+@S_nao
+title: Naomi for Speaker
+subtitle: Naomi and Blooky are butting heads on who gets to be speaker. Nao offers us support in exchange for an anti-blooky front.
+view-if: npp_formation_real = 0
+on-arrival: npp_in_government = 1; speaker = "Nakayama"; speaker_party = "TKDP"; leverage += 10; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15; d_relation += 10; tkdp_relation += 15; remma_favors_remaining += 1; workers_npp -= 7;
+go-to: ministries
+
+<div class="container">
+<div class="image"><img src="img/event/convention_2.png"></div>
+<div class="text">Our support allows Nao to triumph during speaker elections. Blooky is outmaneuvered and Nao rewards us with some promised concessions and a stronger position for ministries. Our party members, however, view this as a wasted chance to capture the speakership.</div></div>
+
+AMDG would have never allowed us this leeway in ministries anyway. Our main gripe with Nao is policy. The workers expect us to stop her worst excesses. Nao owes us one for maintaining her power.
+
 
 @S_macalintal
 title: Leon Macalintal for Speaker
@@ -538,6 +677,16 @@ We are seen as responsible for the failure to form a government, and many of our
 
 - @root: Was it worth it?
 
+@star_coalition_win
+view-if: conservative_coalition >= 50
+on-arrival: npp_in_government = 0; npp_toleration = 0; chancellor = "Star Fox"; chancellor_party = "LPPA"; foreign_minister_party = "LPPA"; interior_minister_party = "LPPA"; justice_minister_party = "LPPA"; labor_minister_party = "LPPA"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "LPPA"; power_conservative_coalition = 1;
+
+<div class="container">
+<div class="image"><img src="img/event/convention_1.png"></div>
+<div class="text">The traditional parties have betrayed us and now the AMDG and TKDP have allied with the LPPA to keep socialism out of government. This government will be headed by Star Fox and will run on austerity and cuts to welfare.</div></div>
+
+- @root: Is it over?
+
 @conservative_coalition_win
 view-if: conservative_coalition >= 50
 on-arrival: npp_in_government = 0; npp_toleration = 0; chancellor = "Star Fox"; chancellor_party = "LPPA"; foreign_minister_party = "LPPA"; interior_minister_party = "LPPA"; justice_minister_party = "LPPA"; labor_minister_party = "LPPA"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "LPPA"; power_conservative_coalition = 1;
@@ -552,7 +701,7 @@ on-arrival: npp_in_government = 0; npp_toleration = 0; chancellor = "Star Fox"; 
 title: Clueless for Speaker
 subtitle: The youthful and energetic candidate of the NPP-Y and SDE, this may raise problems about the ever-growing power of our paramilitary down the line.
 unavailable-subtitle: The youth section of our party isn't relevant enough for him to be a serious choice.
-choose-if: youth_strength >= 40
+choose-if: youth_strength >= 30
 on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 150; sh_strength -= 70; sa_strength -= 70; youth_strength += 10; youth_dissent -= 20; radicalization += 2; leverage -= 5
 go-to: ministries
 
@@ -568,7 +717,7 @@ title: Blooky for Speaker
 subtitle: We will accept and support Blooky's candidacy for the speakership. Although there is opposition within our party, this will allow us more freedom in choosing ministries.
 unavailable-subtitle: The NPP-C is against this decision, we should be the leaders of this coalition, not them.
 choose-if: center_strength < 35 and center_dissent < 30
-on-arrival: npp_in_government = 1; speaker = "Blooky"; speaker_party = "AMDG"; leverage += 5; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15
+on-arrival: npp_in_government = 1; speaker = "Blooky"; speaker_party = "AMDG"; leverage += 5; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15; d_relation += 10
 go-to: ministries
 
 <div class="container">
@@ -604,7 +753,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "NPP"
-on-arrival: leverage -= 5; interior_minister_party = "NPP"; interior_minister = "Macalintal"
+on-arrival: leverage -= 5; interior_minister_party = "NPP"; interior_minister = "Macalintal" if speaker != "Macalintal"; interior_minister = "WasteofSpace" if speaker = "Macalintal"
 go-to: ministries_proper
 
 [? if speaker != "Macalintal" : Leon Macalintal ?][? if speaker = "Macalintal" : WasteofSpace ?] of the NPP-R has been appointed Interior Minister.

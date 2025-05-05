@@ -53,16 +53,6 @@ Q.npp_party_chair_faction = "NPP-R";
 
 Q.factions = ['youth', 'center', 'radical', 'solidarist', 'neorevisionist'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
 
 Q.youth_strength = 15;
 Q.youth_dissent = 20;
@@ -78,6 +68,8 @@ Q.unions_independent = 0;
 Q.centrists_resign = 0;
 Q.left_split = 0;
 Q.reformists_resigned = 0;
+
+Q.yuuto_deported = 0;
 
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
@@ -114,15 +106,6 @@ Q.moderate_plan_adopted = 0;
 
 // organizations
 
-// inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
-
 // NEW
 Q.d_relation = 50;
 Q.tkdp_relation = 25;
@@ -132,18 +115,6 @@ Q.lppa_relation = 35;
 Q.ppm_relation = 10;
 Q.pdp_relation = 0;
 
-Q.kpd_leader = "Thälmann";
-// alternative is the Conciliators as party leader
-Q.kpd_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
-
-// hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
-
-
 // Does the SPD lead in Prussia?
 Q.spd_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
@@ -152,7 +123,7 @@ Q.prussian_government = "SPD";
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
+Q.rb_strength = 1800;
 Q.rb_militancy = 0.01;
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
@@ -192,6 +163,10 @@ Q.nationalism = 60;
 Q.socialism = 40;
 // pro-republic vs anti-republic
 Q.pro_republic = 59;
+
+// has the NPP proper formed?
+Q.npp_formation_real = 0;
+
 
 Q.emergency_rule = 0;
 
@@ -257,59 +232,6 @@ Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
-
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
-
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
-
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
-Q.rural_other = 10;
-
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
-
-Q.catholics_spd = 15;
-Q.catholics_kpd = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 12;
 
 //new name testing
 Q.npp_r = 26;
@@ -319,6 +241,7 @@ Q.wxs_r = 6;
 Q.lppa_r = 10;
 Q.ppm_r = 20;
 Q.pdp_r = 3;
+Q.others_r = 11;
 
 Q.npp_votes = 26;
 console.log("After setting: npp votes =", Q.npp_votes);
@@ -334,6 +257,8 @@ Q.ppm_votes = 20;
 console.log("After setting: npp votes =", Q.ppm_votes);
 Q.pdp_votes = 3;
 console.log("After setting: npp votes =", Q.pdp_votes);
+Q.others_votes = 11;
+console.log("After setting: npp votes =", Q.others_votes);
 
 // Workers
 Q.workers_npp = 60;           // formerly spd
@@ -397,35 +322,21 @@ Q.davao_other = 12;
 
 // Current Reichstag composition
 // % of Reichstag in Jan 1928
-// source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
-Q.nsdap_r = 3;
-Q.other_r = 9;
 
 // diff from prev
-Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
+Q.old_npp_r = 26;
+Q.old_tkdd_r = 9;
+Q.old_d_r = 17;
+Q.old_wxs_r = 6;
+Q.old_lppa_r = 10;
+Q.old_ppm_r = 20;
+Q.old_pdp_r = 3;
 Q.old_other_r = 9;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
 
-// for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -450,31 +361,19 @@ Q.dnvp_in_government = 1;
 Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
 
-Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
-Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
-Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
-Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
-Q.in_left_front = 0;
-// emergency government containing the SPD: only president Braun can do this.
-Q.in_emergency_government = 0;
-Q.in_spd_majority = 0;
-Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a minority government
-Q.in_minority_government = 0;
-// national unity governmet
+//governments
+Q.npp_in_government = 0;
+Q.in_fallout_coalition = 0;
+Q.in_democratic_coalition = 0;
+Q.in_star_coalition = 0;
+Q.in_full_house_coalition = 0;
+Q.in_npp_majority = 0;
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
-// dissent from the KPD, in a popular front or left front government
-Q.kpd_coalition_dissent = 0;
 
-// does the SPD tolerate the government even if it is not a participant?
-Q.spd_toleration = 0;
+// does the NPP tolerate the government even if it is not a participant?
+Q.npp_toleration = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
@@ -482,22 +381,22 @@ Q.minority_government = 0;
 // ministries - which parties control the ministries?
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
-Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
+Q.foreign_minister = 'test';
+Q.foreign_minister_party = 'I';
+Q.interior_minister = 'test';
+Q.interior_minister_party = 'I';
+Q.justice_minister = 'test';
+Q.justice_minister_party = 'I';
+Q.labor_minister = 'test';
 Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
+Q.reichswehr_minister = 'test';
 Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+Q.economic_minister = 'test';
+Q.economic_minister_party = 'I';
+Q.finance_minister = 'test';
+Q.finance_minister_party = 'I';
+Q.agriculture_minister = 'test';
+Q.agriculture_minister_party = 'I';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
@@ -557,9 +456,9 @@ Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SPD vote against the previous government in a vote of no confidence?
-Q.spd_no_confidence = 0;
+Q.npp_no_confidence = 0;
 // was the last SPD government taken down in a vote of no confidence by right-wing coalition partners?
-Q.no_confidence_against_spd = 0;
+Q.no_confidence_against_npp = 0;
 
 // Advisors/Leaders
 Q.n_advisors = 3;
@@ -649,53 +548,42 @@ Q.barnabus_advisor = 1; //BARNABUSS
 Q.barnabus_description = "Robbie Rotten: The Establishment's Favorite Son";
 
 Q.macalintal_advisor = 1; //MACALINTALLL 
-Q.macalintal_description = "Leon Macalintal: The Nation's Schemer and the Davaoeno's enemy";
+Q.macalintal_description = "Leon Macalintal: The Nations Schemer and the Davaoeno's enemy";
+
+Q.wasteofspace_advisor = 0; //WASTEOFSPACE 
+Q.wasteofspace_description = "WasteofSpace: The Grassroot Organizer. Popular amongst our base";
 
 // NPP - C
 Q.remma_advisor = 1; // Remmacaronie
 Q.remma_description = "Remma: Gucklandia's Peacemaker";
 
+Q.naomi_advisor = 0; // NAO
+Q.naomi_description = "Naomi: The Chrysanthemum Empress. Enemy of the workers, but can compromise.";
 
-// all the initial advisors are centrists. - OLD ADVISORS BELOW
-Q.muller_advisor = 0; // Hermann Müller
-Q.muller_dead = 0;
-// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
-Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 0; // Rudolf Hilferding
+Q.paisco_advisor = 0; // PAISCO
+Q.paisco_description = "Paisco: Our kindhearted light, and symbol of NPP liberalism.";
 
-// left advisors
-Q.sender_advisor = 0; // Toni Sender
-Q.levi_advisor = 0; // Paul Levi
-Q.levi_dead = 0;
-Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
-Q.seydewitz_advisor = 0; // Max Seydewitz
+// NPP - Y
+Q.clueless_advisor = 0; //CLUELESS
+Q.clueless_description = "Clueless Partisan: The SDE's Commander-in-Chief and a democratic fighter.";
 
-// centrist alternate advisors
-Q.pfulf_advisor = 0; // Antonie Pfülf
-Q.breitscheid_advisor = 0; // Rudolf Breitscheid
+Q.kafil_advisor = 0; //KA FIL
+Q.kafil_description = "Ka Filipino: A red wild card.";
 
-// Reformist advisors
-Q.severing_advisor = 0; // Carl Severing
-Q.braun_advisor = 0; // Otto Braun
-Q.juchacz_advisor = 0; // Marie Juchacz
-Q.baade_advisor = 0; // Fritz Baade
+Q.kasan_advisor = 0; //SANTI
+Q.kasan_description = "Ka San: NPP's Whiz Kid. Has this magical appeal to the youth around her.";
 
-// Labor advisors
-Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
-Q.wissell_advisor = 0; // Rudolf Wissell
+// NPP - S
+Q.shooter_advisor = 0; //SHOOTER
+Q.shooter_description = "Shooter: Totalitarian in Chief. A Nationalist and Progressive.";
 
-// Revisionist advisors
-Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
+Q.icota_advisor = 0; //ICOTA
+Q.icota_description = "Icota: Anti-Yuuto organizer, will kill Davaoenos for fun.";
 
-Q.leber_advisor = 0; // Julius Leber (post-1930)
-Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
+Q.datuput_advisor = 0; //DATUPUT
+Q.datuput_description = "Datuput: The Social and National Tyrant. His ideas will make your head implode.";
 
-// Nonfactional advisors
-Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
-Q.radbruch_advisor = 0; // Gustav Radbruch
-Q.stampfer_advisor = 0; // Friedrich Stampfer
+
 !}
 set-bg: img/map_2.jpg
 new-page: true
