@@ -293,7 +293,7 @@ go-to: coalition_begin
 
 {!<tr><td><div class="box" style='background-color:#de4335'> </div> !} LPPA: {!</td><td>!} [+ lppa_r +]% {!</td><td>!} [+ str_change_lppa +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#05ad3a'> </div> !} PPM: {!</td><td>!} [+ ppm_r +]% {!</td><td>!} [+ str_change_ppm +] {!</td></tr>!}
 
