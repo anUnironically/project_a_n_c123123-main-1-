@@ -241,7 +241,7 @@ Q.wxs_r = 6;
 Q.lppa_r = 10;
 Q.ppm_r = 20;
 Q.pdp_r = 3;
-Q.others_r = 11;
+Q.other_r = 11;
 
 Q.npp_votes = 26;
 console.log("After setting: npp votes =", Q.npp_votes);
@@ -257,7 +257,7 @@ Q.ppm_votes = 20;
 console.log("After setting: npp votes =", Q.ppm_votes);
 Q.pdp_votes = 3;
 console.log("After setting: npp votes =", Q.pdp_votes);
-Q.others_votes = 11;
+Q.other_votes = 11;
 console.log("After setting: npp votes =", Q.others_votes);
 
 // Workers
