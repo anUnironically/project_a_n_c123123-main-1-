@@ -419,8 +419,8 @@ Star Fox will be speaker, we cannot force the right to support our schemes. Howe
 @fallout_coalition
 title: We can form the Fallout Coalition
 subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]%
-unavailable-subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]% [? if fallout_coalition < 50 : There is not enough support. ?] [? if d_relation < 50 : AMDG would rather govern with more people than just us. ?]
-choose-if: fallout_coalition >= 50 and d_relation >= 45
+unavailable-subtitle: NPP + WXS + AMDG: [+ fallout_coalition +]% [? if fallout_coalition < 50 : There is not enough support. ?]
+choose-if: fallout_coalition >= 50
 on-arrival: npp_in_government = 1; in_fallout_coalition = 1; leverage += 5; 
 
 The delegates we have amassed are enough to form the "Fallout" coalition comprised of the traditionally liberal-democratic parties. Predicted to be the expected heirs to the PDP's rule, this coalition will sift through the fallout of Yuuto's administration.
