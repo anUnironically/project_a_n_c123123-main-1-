@@ -635,3 +635,10 @@ position: absolute;
 .image {
  margin-right: -45px;
 }
+
+.titleimage {
+  display: block;
+  margin: auto;
+  width: 50%;
+  border: 2px solid #B8FDFD;
+}
