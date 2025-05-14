@@ -8,6 +8,8 @@ go-to: start_menu_2
 
 = Server Democracy: An Alternate History
 
+<div class="titleimage"><img src="img/big/intro.png"></div>
+
 @start_menu_2
 
 - @start: Start game
@@ -583,6 +585,8 @@ Q.icota_description = "Icota: Anti-Yuuto organizer, will kill Davaoenos for fun.
 Q.datuput_advisor = 0; //DATUPUT
 Q.datuput_description = "Datuput: The Social and National Tyrant. His ideas will make your head implode.";
 
+//special descriptions
+Q.yuuto_description = "The Devil Himself.";
 
 !}
 set-bg: img/map_2.jpg
@@ -638,7 +642,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 2020
 
-It is a bright time for Ateneocord. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. Yuuto's impeachment is paving the way for radical politics to be completely put out of the system entirely. All that is left is his trial. 
+It is a bright time for Ateneocord. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. <span class="tooltip-new">Yuuto's<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Yuuto"><br>[+ yuuto_description +]</span></span> impeachment is paving the way for radical politics to be completely put out of the system entirely. All that is left is his trial. 
 
 Now, the task of Server Democracy is to prepare for the next election. The TKDP and PDP coalition after Yuuto's loss has collapsed, and we stand to gain. Perhaps the next government will have a socialist majority.
 
