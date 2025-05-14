@@ -263,60 +263,60 @@ console.log("After setting: npp votes =", Q.others_votes);
 // Workers
 Q.workers_npp = 60;           // formerly spd
 Q.workers_tkdp = 20;          // formerly kpd
-Q.workers_wxs = 5;            // formerly z
-Q.workers_lppa = 0;           // formerly ddp
-Q.workers_ppm = 0;            // formerly dvp
-Q.workers_d = 5;              // formerly dnvp
+Q.workers_d = 5;            // formerly z
+Q.workers_wxs = 0;           // formerly ddp
+Q.workers_lppa = 0;            // formerly dvp
+Q.workers_ppm = 5;              // formerly dnvp
 Q.workers_pdp = 0;            // formerly nsdap
 Q.workers_other = 10;
 
 // Old Middle Class
 Q.old_middle_npp = 5;
 Q.old_middle_tkdp = 0;
-Q.old_middle_wxs = 5;
-Q.old_middle_lppa = 10;
+Q.old_middle_d = 5;
+Q.old_middle_wxs = 10;
+Q.old_middle_lppa = 25;
 Q.old_middle_ppm = 25;
-Q.old_middle_d = 25;
 Q.old_middle_pdp = 10;
 Q.old_middle_other = 10;
 
 // New Middle Class
 Q.new_middle_npp = 5;
 Q.new_middle_tkdp = 1;
-Q.new_middle_wxs = 10;
-Q.new_middle_lppa = 25;
-Q.new_middle_ppm = 25;
 Q.new_middle_d = 10;
+Q.new_middle_wxs = 25;
+Q.new_middle_lppa = 25;
+Q.new_middle_ppm = 10;
 Q.new_middle_pdp = 5;
 Q.new_middle_other = 15;
 
 // Rural
 Q.rural_npp = 10;
 Q.rural_tkdp = 0;
+Q.rural_d = 5;
 Q.rural_wxs = 5;
-Q.rural_lppa = 5;
-Q.rural_ppm = 15;
-Q.rural_d = 45;
+Q.rural_lppa = 15;
+Q.rural_ppm = 45;
 Q.rural_pdp = 5;
 Q.rural_other = 10;
 
 // Unemployed
 Q.unemployed_npp = 25;
 Q.unemployed_tkdp = 55;
-Q.unemployed_wxs = 1;
+Q.unemployed_d = 1;
+Q.unemployed_wxs = 0;
 Q.unemployed_lppa = 0;
-Q.unemployed_ppm = 0;
-Q.unemployed_d = 5;
+Q.unemployed_ppm = 5;
 Q.unemployed_pdp = 15;
 Q.unemployed_other = 9;
 
 // Catholics
 Q.davao_npp = 15;
 Q.davao_tkdp = 2;
-Q.davao_wxs = 50;
-Q.davao_lppa = 0;
+Q.davao_d = 50;
+Q.davao_wxs = 0;
+Q.davao_lppa = 5;
 Q.davao_ppm = 5;
-Q.davao_d = 5;
 Q.davao_pdp = 0;
 Q.davao_other = 12;
 
