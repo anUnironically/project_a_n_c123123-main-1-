@@ -637,7 +637,7 @@ go-to: 1928_main
 
 @1928_main
 subtitle: This is the only tested difficulty for this game
-audio: shuffle music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 music/2021-2023/bananaboat.mp3 music/2021-2023/summertime.mp3 music/2021-2023/coffecold.mp3 music/2021-2023/unknownsoldier.mp3 music/2021-2023/whilemyguitargentlyweeps.mp3 music/2024-2026/backintheussr.mp3 music/2024-2026/californiadreaming.mp3 music/2024-2026/siklabsideb.mp3 
+audio: shuffle music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
