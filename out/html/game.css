@@ -646,5 +646,10 @@ position: absolute;
 
 .scrollbartext {
   overflow-y:scroll;
-  max-height: 160px;
+  max-height: 250px;
+  font-size: 80%;
+}
+
+.rightalign {
+  margin-right: 5px;
 }

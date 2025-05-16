@@ -598,6 +598,8 @@ audio: shuffle music/2020precrash/company.mp3 music/2020precrash/mtamt_maintheme
 
 <div class="titleimage"><img src="img/big/ttnw.png"></div>
 
+<div class="scrollbartext">
+<div class="rightalign">
 Ateneocord in 2020 is at the center of change, the right-populism that once ruled the political structure has been pushed out. Reactionaries hold on to dear life for a comeback. The air is silent, for the first time in history, there is no one firmly at the helm. The throne in heaven, empty. The NPPs new beginning starts now, their lead can only slip away as time progresses. Can *we* harness that change?
 
 The atmosphere is damp. Somewhere in the city, in a tall building, a man sits in a dark room. Faint light spills over the window curtains to his table, illuminating a red phone. He’s here, hiding, not wanting to let anyone else know. A noise shoots out. It’s the phone.
@@ -613,6 +615,9 @@ This is a story about redemption, about love, and about hate. Most importantly, 
 Of course, this is all fictional. The times and events were adjusted for this game to work, but allow me to lead you to believe in things that never were.
 
 But if you don’t know the NPP, and you decide to laugh and point, just know this love letter wasn't intended for you.
+
+</div>
+</div>
 
 - @begin_info: Answer The Phone.
 
@@ -637,15 +642,20 @@ new-page: true
 
 <div class="titleimage"><img src="img/big/npp_intro.png"></div>
 
-<div class="scrollbartext">Radical. Visionary. Firebrand. These are some words that pop up in peoples heads whenever they hear about the New Progressive Party. The left-wing monolith, despite the odds against it, walks through the mud as the only left-populist party in Ateneocord. Communists, Socialists, Social Democrats, the party welcomes all brands of the left. The united front it wields, the largest and broadest in Atenean history. From their humble beginnings, the NPP now seems to be the kingmaker of the future after Yuuto’s fall.
+<div class="scrollbartext">
+<div class="rightalign">
+Radical. Visionary. Firebrand. These are some words that pop up in peoples heads whenever they hear about the New Progressive Party. The left-wing monolith, despite the odds against it, walks through the mud as the only left-populist party in Ateneocord. Communists, Socialists, Social Democrats, the party welcomes all brands of the left. The united front it wields, the largest and broadest in Atenean history. From their humble beginnings, the NPP now seems to be the kingmaker of the future after Yuuto’s fall.
 
 But are they up to the task?
 
-Beneath the facades of unity, at the time Ateneocord needs them the most, lies a party on its knees. Paralyzed from indecision, its factions threaten to break apart its foundations unless fed like babies. The NPP demands a leader who leads them into the future, a leader with iron in them. They require only the strongest, the most ideologically pure. Their members have their own differing visions, their own beliefs, but they’ve only completed the first step. A step of unity.
+Beneath the facades of unity, at the time Ateneocord needs them the most, lies a party on its knees. Paralyzed from indecision, its factions threaten to break apart its foundations unless fed like babies. The NPP demands a leader who leads them into the future, a leader with iron in their blood. They require only the strongest, the most ideologically pure. Their members have their own differing visions, their own beliefs, but they’ve only completed the first step. A step of unity.
 
 They keep to each other because they aren’t like *them*. Their reactionary enemies are down, but not out. In between rounds, the party tears itself apart while their enemies rest. The party, the nation, needs action. They need a radical who will push towards the second step. They need a visionary to ensure the party’s future. They need a firebrand, someone that they can unite under. They’ll need *you*. 
 
-Will you be the proper leadership they require? Or will you throw them into the dustbin of history?</div>
+Will you be the proper leadership they require? Or will you throw them into the dustbin of history?
+
+</div>
+</div>
 
 
 - @npp_intro_2: "Yes, yes. You've reached the office of the NPP..."
