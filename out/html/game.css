@@ -643,3 +643,8 @@ position: absolute;
   border: 2px solid #6FBCB5;
   line-height: 0;
 }
+
+.scrollbartext {
+  overflow-y:scroll;
+  max-height: 160px;
+}
