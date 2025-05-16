@@ -588,6 +588,9 @@ Q.datuput_description = "Datuput: The Social and National Tyrant. His ideas will
 //special descriptions
 Q.yuuto_description = "The Devil Himself.";
 
+//not possible
+Q.impossible = 0;
+
 !}
 set-bg: img/map_2.jpg
 new-page: true
@@ -595,7 +598,7 @@ audio: shuffle music/2020precrash/company.mp3 music/2020precrash/mtamt_maintheme
 
 <div class="titleimage"><img src="img/big/ttnw.png"></div>
 
-Ateneocord in 2020 is at the center of change, the right-populism that once ruled the political structure has been pushed out. Reactionaries hold on to dear life for a comeback. The air is silent, for the first time in history, there is no one firmly at the helm. The throne in heaven, empty. The NPPs new beginning starts now, their power only slipping away as time progresses. Can *we* harness that change?
+Ateneocord in 2020 is at the center of change, the right-populism that once ruled the political structure has been pushed out. Reactionaries hold on to dear life for a comeback. The air is silent, for the first time in history, there is no one firmly at the helm. The throne in heaven, empty. The NPPs new beginning starts now, their lead can only slip away as time progresses. Can *we* harness that change?
 
 The atmosphere is damp. Somewhere in the city, in a tall building, a man sits in a dark room. Faint light spills over the window curtains to his table, illuminating a red phone. He’s here, hiding, not wanting to let anyone else know. A noise shoots out. It’s the phone.
 
@@ -617,6 +620,100 @@ But if you don’t know the NPP, and you decide to laugh and point, just know th
 
 <div class="titleimage"><img src="img/big/ttnw.png"></div>
 
+= Pick A Party
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_1
+- @ateneocord_intro_1
+
+@npp_intro_1
+title: The NPP
+new-page: true
+<div class="titleimage"><img src="img/big/npp_intro.png"></div>
+
+Radical. Visionary. Firebrand. These are some words that pop up in peoples heads whenever they hear about the NPP. The Party, despite the odds against it, walks through the mud as the only left-populist party in Ateneocord. Communists, Socialists, Social Democrats, the party welcomes all brands of the left. The united front it wields, the largest and broadest in Atenean history. From their humble beginnings, the NPP now seems to be the kingmaker of the future after Yuuto’s fall.
+
+But are they up to the task?
+
+Beneath the facades of unity, at the time Ateneocord needs them the most, lies a party on its knees. Paralyzed from indecision, its factions threaten to break apart its foundations unless fed like babies. The NPP demands a leader who leads them into the future, a leader with iron in them. They require only the strongest, the most ideologically pure. Their members have their own differing visions, their own beliefs, but they’ve only completed the first step. A step of unity.
+
+They keep to each other because they aren’t like *them*. Their reactionary enemies are down, but not out. In between rounds, the party tears itself apart while their enemies rest. The party, the nation, needs action. They need the second step. Will you be the proper leadership they require? Or will they be thrown into the dustbin of history?
+
+- @npp_intro_2
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_1
+- @ateneocord_intro_1
+
+@npp_intro_2
+subtitle: Destiny calls
+go-to: difficulty_choose
+
+@blooky_intro_1
+title: Blooky's AMDG
+new-page: true
+<div class="titleimage"><img src="img/big/amdg_intro.png"></div>
+
+- @npp_intro_1
+- @blooky_intro_2: Blooky's AMDG
+- @nao_intro_1
+- @star_fox_intro_1
+- @ateneocord_intro_1
+
+@blooky_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: Destiny calls
+go-to: difficulty_choose
+
+@nao_intro_1
+title: Nao's TKDP
+new-page: true
+<div class="titleimage"><img src="img/big/tkdp_intro.png"></div>
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_2: Nao's TKDP
+- @star_fox_intro_1
+- @ateneocord_intro_1
+
+@nao_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: Destiny calls
+go-to: difficulty_choose
+
+@star_fox_intro_1
+title: Star Fox's LPPA
+new-page: true
+<div class="titleimage"><img src="img/big/lppa_intro.png"></div>
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_2: Star Fox's LPPA
+- @ateneocord_intro_1
+
+@star_fox_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: Destiny calls
+go-to: difficulty_choose
+
+@ateneocord_intro_1
+title: Ateneocord.
+new-page: true
+<div class="titleimage"><img src="img/big/lppa_intro.png"></div>
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_1
+- @ateneocord_intro_2: Ateneocord.
+
+@ateneocord_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: Destiny calls
+go-to: difficulty_choose
 
 @difficulty_choose
 
