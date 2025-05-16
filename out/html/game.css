@@ -598,7 +598,9 @@ right: 170%;
 margin-right: -170px;
 
 opacity: 0;
-transition: opacity 1.5s;
+  transition: all 1000ms;
+  transition-delay: 0.1s;
+  visibility: hidden;
 
 font-family: "Aldrich";
 }
@@ -658,7 +660,7 @@ position: absolute;
 .scrollbartext {
   overflow-y:scroll;
   max-height: 250px;
-  font-size: 80%;
+  font-size: 100%;
 }
 
 .rightalign {
