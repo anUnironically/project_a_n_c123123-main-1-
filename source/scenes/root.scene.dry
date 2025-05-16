@@ -631,6 +631,7 @@ But if you don’t know the NPP, and you decide to laugh and point, just know th
 @npp_intro_1
 title: The NPP
 new-page: true
+
 <div class="titleimage"><img src="img/big/npp_intro.png"></div>
 
 Radical. Visionary. Firebrand. These are some words that pop up in peoples heads whenever they hear about the NPP. The Party, despite the odds against it, walks through the mud as the only left-populist party in Ateneocord. Communists, Socialists, Social Democrats, the party welcomes all brands of the left. The united front it wields, the largest and broadest in Atenean history. From their humble beginnings, the NPP now seems to be the kingmaker of the future after Yuuto’s fall.
@@ -654,6 +655,7 @@ go-to: difficulty_choose
 @blooky_intro_1
 title: Blooky's AMDG
 new-page: true
+
 <div class="titleimage"><img src="img/big/amdg_intro.png"></div>
 
 - @npp_intro_1
@@ -670,6 +672,7 @@ go-to: difficulty_choose
 @nao_intro_1
 title: Nao's TKDP
 new-page: true
+
 <div class="titleimage"><img src="img/big/tkdp_intro.png"></div>
 
 - @npp_intro_1
@@ -686,6 +689,7 @@ go-to: difficulty_choose
 @star_fox_intro_1
 title: Star Fox's LPPA
 new-page: true
+
 <div class="titleimage"><img src="img/big/lppa_intro.png"></div>
 
 - @npp_intro_1
@@ -702,7 +706,8 @@ go-to: difficulty_choose
 @ateneocord_intro_1
 title: Ateneocord.
 new-page: true
-<div class="titleimage"><img src="img/big/lppa_intro.png"></div>
+
+<div class="titleimage"><img src="img/big/ateneocord_intro.png"></div>
 
 - @npp_intro_1
 - @blooky_intro_1
