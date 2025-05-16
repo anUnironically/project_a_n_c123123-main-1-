@@ -597,9 +597,20 @@ bottom: 100%;
 right: 170%;
 margin-right: -170px;
 
-pointer-events: none;
+opacity: 0;
+transition: opacity 1.5s;
 
 font-family: "Aldrich";
+}
+
+
+.tooltip-new:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-new:hover:after .tooltiptext {
+  opacity: 0;
 }
 
 .tooltip-new .tooltiptext img {
