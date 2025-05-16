@@ -652,4 +652,5 @@ position: absolute;
 
 .rightalign {
   margin-right: 5px;
+  text-align: justify;
 }
