@@ -660,14 +660,14 @@ Will you be the proper leadership they require? Or will you throw them into the 
 </div>
 
 
-- @npp_intro_2: "Yes, yes. You've reached the office of the NPP..."
+- @npp_intro_2: The NPP
 - @blooky_intro_1
 - @nao_intro_1
 - @star_fox_intro_1
 - @ateneocord_intro_1
 
 @npp_intro_2
-subtitle: Start the game.
+subtitle: Start the game. "Yes, yes. You've reached the office of the NPP..."
 go-to: difficulty_choose
 
 @blooky_intro_1
