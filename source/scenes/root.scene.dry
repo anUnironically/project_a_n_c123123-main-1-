@@ -652,7 +652,7 @@ But are they up to the task?
 
 Beneath the facades of unity, at the time Ateneocord needs them the most, lies a party on its knees. Paralyzed from indecision, its factions threaten to break apart its foundations unless fed like babies. The NPP demands a leader who leads them into the future, a leader with iron in their blood. They require only the strongest, the most ideologically pure. Their members have their own differing visions, their own beliefs, but they’ve only completed the first step. A step of unity.
 
-They keep to each other because they aren’t like *them*. Their reactionary enemies are down, but not out. In between rounds, the party tears itself apart while their enemies rest. The party, the nation, needs action. They need a radical who will push towards the second step. They need a visionary to ensure the party’s future. They need a firebrand, someone that they can unite under. They’ll need *you*. 
+They keep to each other because they aren’t like *them*. Their reactionary enemies are down, but not out. In between rounds, the party tears itself apart while their enemies rest. The party, the nation, needs action. They need a radical who will push towards the second step. They need a visionary to ensure the party’s future. They need a firebrand, someone that they can unite under. The ideal leader of the NPP is someone that can pull together the disparate gangs that make up the party bureaucracy, someone who believes in the work and possibility of leftism, and that a better world is ahead.
 
 Will you be the proper leadership they require? Or will you throw them into the dustbin of history?
 
@@ -667,7 +667,7 @@ Will you be the proper leadership they require? Or will you throw them into the 
 - @ateneocord_intro_1
 
 @npp_intro_2
-subtitle: Destiny calls. The game begins.
+subtitle: Start the game.
 go-to: difficulty_choose
 
 @blooky_intro_1
@@ -684,7 +684,7 @@ new-page: true
 
 @blooky_intro_2
 choose-if: impossible = 1
-unavailable-subtitle: Destiny calls
+unavailable-subtitle: No more compromises. Today is a time for choosing, a time for being firm.
 go-to: difficulty_choose
 
 @nao_intro_1
@@ -701,7 +701,7 @@ new-page: true
 
 @nao_intro_2
 choose-if: impossible = 1
-unavailable-subtitle: Destiny calls
+unavailable-subtitle: No more games with money. This new era will reject you, will lead you on. It has to.
 go-to: difficulty_choose
 
 @star_fox_intro_1
@@ -718,7 +718,7 @@ new-page: true
 
 @star_fox_intro_2
 choose-if: impossible = 1
-unavailable-subtitle: Destiny calls
+unavailable-subtitle: No more reaction. A system of patronage is a system build on sand. It will only sink. 
 go-to: difficulty_choose
 
 @ateneocord_intro_1
