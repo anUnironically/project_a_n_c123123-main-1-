@@ -29,6 +29,8 @@ NPP position: [? if spd_toleration : toleration ?][? if spd_in_government : in g
 
 Internal dissent: [+ dissent_percent : dissent +]
 
+Party Chairperson: [+ npp_party_chair +] ([+ npp_party_chair_faction +])
+
 = <p style="color: #2a3e96;">Government</p>
 
 President: [+ president +]
