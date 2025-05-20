@@ -879,6 +879,8 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 It is a bright time for Ateneocord. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. <span class="tooltip-new">Yuuto's<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Yuuto"><br>[+ yuuto_description +]</span></span> impeachment is paving the way for radical politics to be completely put out of the system entirely. All that is left is his trial. 
 
+You are the NPP Chairperson Robbie Rotten. Your goal is to guide the party into the future and have it intact.
+
 Now, the task of Server Democracy is to prepare for the next election. The TKDP and PDP coalition after Yuuto's loss has collapsed, and we stand to gain. Perhaps the next government will have a socialist majority.
 
 
