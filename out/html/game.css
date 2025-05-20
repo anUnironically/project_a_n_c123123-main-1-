@@ -597,9 +597,22 @@ bottom: 100%;
 right: 170%;
 margin-right: -170px;
 
-pointer-events: none;
+opacity: 0;
+  transition: all 1000ms;
+  transition-delay: 0.1s;
+  visibility: hidden;
 
 font-family: "Aldrich";
+}
+
+
+.tooltip-new:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-new:hover:after .tooltiptext {
+  opacity: 0;
 }
 
 .tooltip-new .tooltiptext img {
@@ -642,4 +655,15 @@ position: absolute;
   width: 100%;
   border: 2px solid #6FBCB5;
   line-height: 0;
+}
+
+.scrollbartext {
+  overflow-y:scroll;
+  max-height: 250px;
+  font-size: 90%;
+}
+
+.rightalign {
+  margin-right: 5px;
+  text-align: justify;
 }

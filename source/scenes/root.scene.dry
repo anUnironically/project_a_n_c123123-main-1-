@@ -588,14 +588,22 @@ Q.datuput_description = "Datuput: The Social and National Tyrant. His ideas will
 //special descriptions
 Q.yuuto_description = "The Devil Himself.";
 
+//not possible
+Q.impossible = 0;
+
 !}
 set-bg: img/map_2.jpg
 new-page: true
 audio: shuffle music/2020precrash/company.mp3 music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
 
+= Chapter One
+
 <div class="titleimage"><img src="img/big/ttnw.png"></div>
 
-Ateneocord in 2020 is at the center of change, the right-populism that once ruled the political structure has been pushed out. Reactionaries hold on to dear life for a comeback. The air is silent, for the first time in history, there is no one firmly at the helm. The throne in heaven, empty. The NPPs new beginning starts now, their power only slipping away as time progresses. Can *we* harness that change?
+<div class="scrollbartext">
+<div class="rightalign">
+
+Ateneocord in 2020 is at the center of change, the right-populism that once ruled the political structure has been pushed out. Reactionaries hold on to dear life for a comeback. The air is silent, for the first time in history, there is no one firmly at the helm. The throne in heaven, empty. The NPPs new beginning starts now, their lead can only slip away as time progresses. Can *we* harness that change?
 
 The atmosphere is damp. Somewhere in the city, in a tall building, a man sits in a dark room. Faint light spills over the window curtains to his table, illuminating a red phone. He’s here, hiding, not wanting to let anyone else know. A noise shoots out. It’s the phone.
 
@@ -609,16 +617,223 @@ This is a story about redemption, about love, and about hate. Most importantly, 
 
 Of course, this is all fictional. The times and events were adjusted for this game to work, but allow me to lead you to believe in things that never were.
 
-But if you don’t know the NPP, and you decide to laugh and point, just know this love letter wasn't intended for you.
+</div>
+</div>
 
 - @begin_info: Answer The Phone.
 
 @begin_info
+new-page: true
 
-<div class="titleimage"><img src="img/big/ttnw.png"></div>
+<div class="titleimage"><img src="img/big/begin_info.png"></div>
 
+= Pick A Party
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_1
+- @pdp_intro_1
+- @ateneocord_intro_1
+
+@npp_intro_1
+title: The NPP
+new-page: true
+
+= The NPP
+
+<div class="titleimage"><img src="img/big/npp_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+Radical. Visionary. Firebrand. These are some words that pop up in peoples heads whenever they hear about the New Progressive Party. The left-wing monolith, despite the odds against it, walks through the mud as the only left-populist party in Ateneocord. Communists, Socialists, Social Democrats, the party welcomes all brands of the left. The united front it wields, the largest and broadest in Atenean history. From their humble beginnings, the NPP now seems to be the kingmaker of the future after Yuuto’s fall.
+
+But are they up to the task?
+
+Beneath the facades of unity, at the time Ateneocord needs them the most, lies a party on its knees. Paralyzed from indecision, its factions threaten to break apart its foundations unless fed like babies. The NPP demands a leader who leads them into the future, a leader with iron in their blood. They require only the strongest, the most ideologically pure. Their members have their own differing visions, their own beliefs, but they’ve only completed the first step. A step of unity.
+
+They keep to each other because they aren’t like *them*. Their reactionary enemies are down, but not out. In between rounds, the party tears itself apart while their enemies rest. The party, the nation, needs action. They need a radical who will push towards the second step. They need a visionary to ensure the party’s future. They need a firebrand, someone that they can unite under. The ideal leader of the NPP is someone that can pull together the disparate gangs that make up the party bureaucracy, someone who believes in the work and possibility of leftism, and that a better world is ahead.
+
+Will you be the proper leadership they require? Or will you throw them into the dustbin of history?
+
+</div>
+</div>
+
+
+- @npp_intro_2: The NPP
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_1
+- @pdp_intro_1
+- @ateneocord_intro_1
+
+@npp_intro_2
+subtitle: Start the game. "Yes, yes. You've reached the office of the NPP..."
+go-to: difficulty_choose
+
+@blooky_intro_1
+title: Blooky's AMDG
+new-page: true
+
+= The AMDG
+
+<div class="titleimage"><img src="img/big/amdg_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+When the bells tolled for the TKDP, and Nao’s first government rose from the ground, Blooky was there. His party escorted them to the stage, taking half of the credit on any achievement Nao had made. He was a centerpiece, keeping the government together.
+
+When the bells tolled for Yuuto’s ascension, Blooky was there. Nao was personally thrown out by HDGP goons. The AMDG facilitated his rise, and was the PDP’s best man. The party shifted to the right, and supported fascist initiatives.
+
+When the bells tolled for redemption, Blooky was there. Yuuto was escorted out, the HDGP worked together with the NPP to deliver a landslide victory. Taking a heel turn with their rhetoric, finally shifting the AMDG to be an anti-PDP cornerstone of the government.
+
+When the bells toll for anyone, The AMDG will be there. The AMDG is a marriage between the HGDP and the Ateneo Communist Party. Secured among the popularity of Bisdaks and Davaoenos, the party is another important player in Ateneocord politics. Its constantly shifting allegiances and agendas places it around the center in comparison to Nao’s liberalism and the NPP’s leftism. Blooky’s uncertainty drives other parties on the hill insane, not knowing if they’ll oppose them or not. Their only established tenet is the preservation of Davaoeno political capital, and their consistent support makes sure even in the midst of all those shifting tides, they still come out on top.
+
+</div>
+</div>
+
+- @npp_intro_1
+- @blooky_intro_2: Blooky's AMDG
+- @nao_intro_1
+- @star_fox_intro_1
+- @pdp_intro_1
+- @ateneocord_intro_1
+
+@blooky_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: No more compromises. Today is a time for choosing, a time for being firm.
+go-to: difficulty_choose
+
+@nao_intro_1
+title: Nao's TKDP
+new-page: true
+
+= The TKDP
+
+<div class="titleimage"><img src="img/big/tkdp_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+Nao and her party entered the year with hope, with passion, and with love. The TKDP is the most socially and economically liberal party in Ateneocord, and the most alone one. Relying on the good graces of President Earthy and his cabinet, Nao has successfully fought against Yuuto and the PDP’s first iteration early on. When the NPP left, and its members remained dormant, Nao picked up the pace and stood against Yuuto at ever step of the way. Yet, with only the TKDP being the counterbalance to the reactionaries after the AMDG switched camps, it was left alone once again. With the return of the NPP to deliver the shocking upset landslide to the far-right government, Nao picked up the leftovers and started anew. Her position as a pro-establishment candidate made her Speaker under Earthy’s wishes. Yet, even this would be temporary, as a new election has been called after a no confidence vote. Even so, Nao will push on, as always. This era was supposed to be hers, Yuuto out and Blooky at a low, yet the thunder was stolen by those men in the Gucklandian mafia, what happened?
+
+The TKDP was the PDP’s predecessor. An Ateneocord led by Naomi Nakayama was always her dream, but to achieve that dream, more changes still need to be made. Get out of that shell, see what its like in the real world. How long will the TKDP hide in its facade? How long will Nao hide from herself when it's abundantly clear:
+
+That the world won’t wait for you.
+
+
+</div>
+</div>
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_2: Nao's TKDP
+- @star_fox_intro_1
+- @pdp_intro_1
+- @ateneocord_intro_1
+
+@nao_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: No more games with money. This new era will reject you, will lead you on. It has to.
+go-to: difficulty_choose
+
+@star_fox_intro_1
+title: Star Fox's LPPA
+new-page: true
+
+= The LPPA
+
+<div class="titleimage"><img src="img/big/lppa_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+If you die alone, expect vultures to hover over you. The LPPA is a party of political scavengers, searching for as much political capital it can get from dying parties. What differs Star Fox’s LPPA from the AMDG is its pivot towards libertarianism and supremacy of the market. While most of the other parties favor some control of the market, the LPPA rejects this ideal and promotes free reign and decentralization. Long sidelined by politics, the LPPA often joins the PDP in some legislative agendas in order to gain relevance. Star Fox’s clique is opportunistic, and have no principles except for killing the poor in exchange for power.
+
+An ideal member of the LPPA is like a vulture. One must know how to pick apart failing parties and legislation. The LPPA is a roadblock, a dark soul wanting to be fed. If you make an enemy of the power hungry Star Fox, they’ll raise hell on your agenda. Feeding it though, would be to sacrifice your soul and many others. It will not stop thirsting or craving. When you see this party, it's most likely busy being hovering birds in the middle of a cracking desert.
+
+
+</div>
+</div>
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_2: Star Fox's LPPA
+- @pdp_intro_1
+- @ateneocord_intro_1
+
+@star_fox_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: No more reaction. A system of patronage is a system build on sand. It will only sink. 
+go-to: difficulty_choose
+
+@pdp_intro_1
+title: The PDP
+new-page: true
+
+= PDP-LABAN
+
+<div class="titleimage"><img src="img/big/pdp_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+More contradicting than the NPP, more stable than Blooky, more passionate than Nao, and more opportunistic than Star Fox.
+
+How can we start talking about this abomination of a party. The PDP’s only goal is to achieve a national populist regime stripping the rights of dissenters and awarding “loyalists”. Along their path, they are frighteningly stable in their course and base while being able to flip-flop through policies just to sneak in a seat or two. At the moment, the PDP is at a crisis, Yuuto’s party has just fallen from grace after a dangerous set of moves that resulted in a landslide for the resurgent NPP and AMDG. While their opponents celebrate, the PDP regathers and prepares for a rebound under Yuuto… again.
+
+The PDP has to prove to everyone that the alt-right was right, that the rhetoric of eugenics and natural selection was on the right side of history. It will prove everyone right, even if it means trashing a country in the process.
+
+</div>
+</div>
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_1
+- @pdp_intro_2: The PDP
+- @ateneocord_intro_1
+
+@pdp_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: No more contradictions. The dangers of the future can be found in the past. We must not repeat them.
+go-to: difficulty_choose
+
+@ateneocord_intro_1
+title: Ateneocord.
+new-page: true
+
+= Ateneocord
+
+<div class="titleimage"><img src="img/big/ateneocord_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+One land, eight nations. Ateneocord is in a state of decay and stagnation. Nao’s failed agenda put them in the path of the PDP’s decay. After four grueling years, their ousting was masterminded by Blooky and Gucklandia’s NPP-HDGP coalition. Yet they are still in a transition state, Nao has once again been reappointed to speaker for the time being. Ateneocord stands at a crossroad: will it accept the far right rhetoric of the PDP and give into hate, or will it stand firm to egalitarian principles. 
+
+This land only rewards sensationalism, they do not wish for platforms nor works, but they favor names and recognition. An ideal leader here is one explosive and magnetic. Someone who can lash out and perform, anything to keep the cameras rolling. Ateneocord does not wish for a leader, it wishes for an actor. Your task will be to act like one.
+
+</div>
+</div>
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_1
+- @pdp_intro_1
+- @ateneocord_intro_2: Ateneocord.
+
+@ateneocord_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: Their people are a fleeting memory, only us great players remain in the stage of history.
+go-to: difficulty_choose
 
 @difficulty_choose
+new-page: true
 
 - @1928_easy: Begin (easy difficulty)
 - @1928_main: Begin (normal difficulty)
