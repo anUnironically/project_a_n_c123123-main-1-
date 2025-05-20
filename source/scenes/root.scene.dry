@@ -596,6 +596,8 @@ set-bg: img/map_2.jpg
 new-page: true
 audio: shuffle music/2020precrash/company.mp3 music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
 
+= Chapter One
+
 <div class="titleimage"><img src="img/big/ttnw.png"></div>
 
 <div class="scrollbartext">
@@ -614,8 +616,6 @@ This is a story about a group, a group who embody and desire change. A friend gr
 This is a story about redemption, about love, and about hate. Most importantly, this is a story about my appreciation for the NPP.
 
 Of course, this is all fictional. The times and events were adjusted for this game to work, but allow me to lead you to believe in things that never were.
-
-But if you don’t know the NPP, and you decide to laugh and point, just know this love letter wasn't intended for you.
 
 </div>
 </div>
@@ -674,7 +674,23 @@ go-to: difficulty_choose
 title: Blooky's AMDG
 new-page: true
 
+= The AMDG
+
 <div class="titleimage"><img src="img/big/amdg_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+When the bells tolled for the TKDP, and Nao’s first government rose from the ground, Blooky was there. His party escorted them to the stage, taking half of the credit on any achievement Nao had made. He was a centerpiece, keeping the government together.
+
+When the bells tolled for Yuuto’s ascension, Blooky was there. Nao was personally thrown out by HDGP goons. The AMDG facilitated his rise, and was the PDP’s best man. The party shifted to the right, and supported fascist initiatives.
+
+When the bells tolled for redemption, Blooky was there. Yuuto was escorted out, the HDGP worked together with the NPP to deliver a landslide victory. Taking a heel turn with their rhetoric, finally shifting the AMDG to be an anti-PDP cornerstone of the government.
+
+When the bells toll for anyone, The AMDG will be there. The AMDG is a marriage between the HGDP and the Ateneo Communist Party. Secured among the popularity of Bisdaks and Davaoenos, the party is another important player in Ateneocord politics. Its constantly shifting allegiances and agendas places it around the center in comparison to Nao’s liberalism and the NPP’s leftism. Blooky’s uncertainty drives other parties on the hill insane, not knowing if they’ll oppose them or not. Their only established tenet is the preservation of Davaoeno political capital, and their consistent support makes sure even in the midst of all those shifting tides, they still come out on top.
+
+</div>
+</div>
 
 - @npp_intro_1
 - @blooky_intro_2: Blooky's AMDG
@@ -691,7 +707,15 @@ go-to: difficulty_choose
 title: Nao's TKDP
 new-page: true
 
+= The TKDP
+
 <div class="titleimage"><img src="img/big/tkdp_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+</div>
+</div>
 
 - @npp_intro_1
 - @blooky_intro_1
@@ -708,7 +732,15 @@ go-to: difficulty_choose
 title: Star Fox's LPPA
 new-page: true
 
+= The LPPA
+
 <div class="titleimage"><img src="img/big/lppa_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+</div>
+</div>
 
 - @npp_intro_1
 - @blooky_intro_1
@@ -725,7 +757,15 @@ go-to: difficulty_choose
 title: Ateneocord.
 new-page: true
 
+= Ateneocord
+
 <div class="titleimage"><img src="img/big/ateneocord_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+</div>
+</div>
 
 - @npp_intro_1
 - @blooky_intro_1
@@ -735,10 +775,11 @@ new-page: true
 
 @ateneocord_intro_2
 choose-if: impossible = 1
-unavailable-subtitle: Destiny calls
+unavailable-subtitle: Their people are a fleeting memory, only us great players remain in the stage of history.
 go-to: difficulty_choose
 
 @difficulty_choose
+new-page: true
 
 - @1928_easy: Begin (easy difficulty)
 - @1928_main: Begin (normal difficulty)
