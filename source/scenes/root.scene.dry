@@ -633,6 +633,7 @@ new-page: true
 - @blooky_intro_1
 - @nao_intro_1
 - @star_fox_intro_1
+- @pdp_intro_1
 - @ateneocord_intro_1
 
 @npp_intro_1
@@ -664,6 +665,7 @@ Will you be the proper leadership they require? Or will you throw them into the 
 - @blooky_intro_1
 - @nao_intro_1
 - @star_fox_intro_1
+- @pdp_intro_1
 - @ateneocord_intro_1
 
 @npp_intro_2
@@ -696,6 +698,7 @@ When the bells toll for anyone, The AMDG will be there. The AMDG is a marriage b
 - @blooky_intro_2: Blooky's AMDG
 - @nao_intro_1
 - @star_fox_intro_1
+- @pdp_intro_1
 - @ateneocord_intro_1
 
 @blooky_intro_2
@@ -714,6 +717,13 @@ new-page: true
 <div class="scrollbartext">
 <div class="rightalign">
 
+Nao and her party entered the year with hope, with passion, and with love. The TKDP is the most socially and economically liberal party in Ateneocord, and the most alone one. Relying on the good graces of President Earthy and his cabinet, Nao has successfully fought against Yuuto and the PDP’s first iteration early on. When the NPP left, and its members remained dormant, Nao picked up the pace and stood against Yuuto at ever step of the way. Yet, with only the TKDP being the counterbalance to the reactionaries after the AMDG switched camps, it was left alone once again. With the return of the NPP to deliver the shocking upset landslide to the far-right government, Nao picked up the leftovers and started anew. Her position as a pro-establishment candidate made her Speaker under Earthy’s wishes. Yet, even this would be temporary, as a new election has been called after a no confidence vote. Even so, Nao will push on, as always. This era was supposed to be hers, Yuuto out and Blooky at a low, yet the thunder was stolen by those men in the Gucklandian mafia, what happened?
+
+The TKDP was the PDP’s predecessor. An Ateneocord led by Naomi Nakayama was always her dream, but to achieve that dream, more changes still need to be made. Get out of that shell, see what its like in the real world. How long will the TKDP hide in its facade? How long will Nao hide from herself when it's abundantly clear:
+
+That the world won’t wait for you.
+
+
 </div>
 </div>
 
@@ -721,6 +731,7 @@ new-page: true
 - @blooky_intro_1
 - @nao_intro_2: Nao's TKDP
 - @star_fox_intro_1
+- @pdp_intro_1
 - @ateneocord_intro_1
 
 @nao_intro_2
@@ -739,6 +750,11 @@ new-page: true
 <div class="scrollbartext">
 <div class="rightalign">
 
+If you die alone, expect vultures to hover over you. The LPPA is a party of political scavengers, searching for as much political capital it can get from dying parties. What differs Star Fox’s LPPA from the AMDG is its pivot towards libertarianism and supremacy of the market. While most of the other parties favor some control of the market, the LPPA rejects this ideal and promotes free reign and decentralization. Long sidelined by politics, the LPPA often joins the PDP in some legislative agendas in order to gain relevance. Star Fox’s clique is opportunistic, and have no principles except for killing the poor in exchange for power.
+
+An ideal member of the LPPA is like a vulture. One must know how to pick apart failing parties and legislation. The LPPA is a roadblock, a dark soul wanting to be fed. If you make an enemy of the power hungry Star Fox, they’ll raise hell on your agenda. Feeding it though, would be to sacrifice your soul and many others. It will not stop thirsting or craving. When you see this party, it's most likely busy being hovering birds in the middle of a cracking desert.
+
+
 </div>
 </div>
 
@@ -746,11 +762,44 @@ new-page: true
 - @blooky_intro_1
 - @nao_intro_1
 - @star_fox_intro_2: Star Fox's LPPA
+- @pdp_intro_1
 - @ateneocord_intro_1
 
 @star_fox_intro_2
 choose-if: impossible = 1
 unavailable-subtitle: No more reaction. A system of patronage is a system build on sand. It will only sink. 
+go-to: difficulty_choose
+
+@pdp_intro_1
+title: The PDP
+new-page: true
+
+= PDP-LABAN
+
+<div class="titleimage"><img src="img/big/pdp_intro.png"></div>
+
+<div class="scrollbartext">
+<div class="rightalign">
+
+More contradicting than the NPP, more stable than Blooky, more passionate than Nao, and more opportunistic than Star Fox.
+
+How can we start talking about this abomination of a party. The PDP’s only goal is to achieve a national populist regime stripping the rights of dissenters and awarding “loyalists”. Along their path, they are frighteningly stable in their course and base while being able to flip-flop through policies just to sneak in a seat or two. At the moment, the PDP is at a crisis, Yuuto’s party has just fallen from grace after a dangerous set of moves that resulted in a landslide for the resurgent NPP and AMDG. While their opponents celebrate, the PDP regathers and prepares for a rebound under Yuuto… again.
+
+The PDP has to prove to everyone that the alt-right was right, that the rhetoric of eugenics and natural selection was on the right side of history. It will prove everyone right, even if it means trashing a country in the process.
+
+</div>
+</div>
+
+- @npp_intro_1
+- @blooky_intro_1
+- @nao_intro_1
+- @star_fox_intro_1
+- @pdp_intro_2: The PDP
+- @ateneocord_intro_1
+
+@pdp_intro_2
+choose-if: impossible = 1
+unavailable-subtitle: No more contradictions. The dangers of the future can be found in the past. We must not repeat them.
 go-to: difficulty_choose
 
 @ateneocord_intro_1
@@ -764,6 +813,10 @@ new-page: true
 <div class="scrollbartext">
 <div class="rightalign">
 
+One land, eight nations. Ateneocord is in a state of decay and stagnation. Nao’s failed agenda put them in the path of the PDP’s decay. After four grueling years, their ousting was masterminded by Blooky and Gucklandia’s NPP-HDGP coalition. Yet they are still in a transition state, Nao has once again been reappointed to speaker for the time being. Ateneocord stands at a crossroad: will it accept the far right rhetoric of the PDP and give into hate, or will it stand firm to egalitarian principles. 
+
+This land only rewards sensationalism, they do not wish for platforms nor works, but they favor names and recognition. An ideal leader here is one explosive and magnetic. Someone who can lash out and perform, anything to keep the cameras rolling. Ateneocord does not wish for a leader, it wishes for an actor. Your task will be to act like one.
+
 </div>
 </div>
 
@@ -771,6 +824,7 @@ new-page: true
 - @blooky_intro_1
 - @nao_intro_1
 - @star_fox_intro_1
+- @pdp_intro_1
 - @ateneocord_intro_2: Ateneocord.
 
 @ateneocord_intro_2

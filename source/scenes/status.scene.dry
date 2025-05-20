@@ -134,7 +134,7 @@ Stahlhelm Militarization: [+ sh_militancy : militancy +]
 
 SA Militarization: [+ sa_militancy : militancy +]
 
-= Official military/paramilitaries
+= <p style="color: #2a3e96;">Official Defense Forces</p>
 
 Reichswehr: [+ reichswehr_strength +] thousand troops.
 
