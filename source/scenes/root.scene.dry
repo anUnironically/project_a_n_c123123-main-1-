@@ -557,10 +557,10 @@ Q.wasteofspace_description = "WasteofSpace: The Grassroot Organizer. Popular amo
 
 // NPP - C
 Q.remma_advisor = 1; // Remmacaronie
-Q.remma_description = "Remma: Gucklandia's Peacemaker";
+Q.remma_description = "Remma: Our resident peacemaker";
 
 Q.naomi_advisor = 0; // NAO
-Q.naomi_description = "Naomi: The Chrysanthemum Empress. Enemy of the workers, but can compromise.";
+Q.naomi_description = "Naomi: The Chrysanthemum Empress. Enemy of the workers with a question mark, but can compromise.";
 
 Q.paisco_advisor = 0; // PAISCO
 Q.paisco_description = "Paisco: Our kindhearted light, and symbol of NPP liberalism.";
@@ -587,6 +587,8 @@ Q.datuput_description = "Datuput: The Social and National Tyrant. His ideas will
 
 //special descriptions
 Q.yuuto_description = "The Devil Himself.";
+Q.blooky_description = "In another life, he could have been campaigning with us.";
+Q.star_fox_description = "Always hungry for power, aren't you Star Fox?";
 
 //not possible
 Q.impossible = 0;
