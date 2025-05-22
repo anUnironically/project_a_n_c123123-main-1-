@@ -589,6 +589,7 @@ Q.datuput_description = "Datuput: The Social and National Tyrant. His ideas will
 Q.yuuto_description = "The Devil Himself.";
 Q.blooky_description = "In another life, he could have been campaigning with us.";
 Q.star_fox_description = "Always hungry for power, aren't you Star Fox?";
+Q.earthy_description = "Nobody knows what goes on in his head.";
 
 //not possible
 Q.impossible = 0;
