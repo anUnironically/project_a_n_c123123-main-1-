@@ -867,12 +867,12 @@ Robbie Rotten of the NPP-R has been appointed Defense Minister.
 @no_more
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. Any leverage left over cannot be reused anywhere. We have to choose wisely. ?][? if leverage < 10 : We do not have much leverage left. ?]
-on-arrival: center_dissent +=5 if labor_minister_party != "NPP"; radical_dissent +=5 if labor_minister_party != "NPP"; youth_dissent +=5 if labor_minister_party != "NPP"; solidarist_dissent +=5 if labor_minister_party != "NPP"; center_dissent +=5 if interior_minister_party != "NPP"; radical_dissent +=5 if interior_minister_party != "NPP"; youth_dissent +=5 if interior_minister_party != "NPP"; solidarist_dissent +=5 if interior_minister_party != "NPP"; center_dissent +=5 if finance_minister_party != "NPP"; radical_dissent +=5 if finance_minister_party != "NPP"; youth_dissent +=5 if finance_minister_party != "NPP"; solidarist_dissent +=5 if finance_minister_party != "NPP"; youth_dissent -= 15 if agriculture_minister_party = "NPP"
+on-arrival: center_dissent -=5 if labor_minister_party = "NPP"; radical_dissent -=5 if labor_minister_party = "NPP"; youth_dissent -=5 if labor_minister_party = "NPP"; solidarist_dissent -=5 if labor_minister_party = "NPP";center_dissent +=10 if labor_minister_party != "NPP"; radical_dissent +=10 if labor_minister_party != "NPP"; youth_dissent +=10 if labor_minister_party != "NPP"; solidarist_dissent +=10 if labor_minister_party != "NPP"; center_dissent +=5 if interior_minister_party != "NPP"; radical_dissent +=5 if interior_minister_party != "NPP"; youth_dissent +=5 if interior_minister_party != "NPP"; solidarist_dissent +=5 if interior_minister_party != "NPP"; center_dissent +=5 if finance_minister_party != "NPP"; radical_dissent +=5 if finance_minister_party != "NPP"; youth_dissent +=5 if finance_minister_party != "NPP"; solidarist_dissent +=5 if finance_minister_party != "NPP"; youth_dissent -= 15 if agriculture_minister_party = "NPP"
 tags: mins_1928
 
 This coalition arrangement is tolerable to all. Our party has reviewed its agenda for this government.
 
-**Labor** - [? if labor_minister_party = "NPP" : **<p style="color:#008000;">Success - Our control</p>** ?][? if labor_minister_party != "NPP" : **<p style="color:#990000;">Failure - No control, +5 Dissent</p>** ?]
+**Labor** - [? if labor_minister_party = "NPP" : **<p style="color:#008000;">Success - Our control, -5 Dissent</p>** ?][? if labor_minister_party != "NPP" : **<p style="color:#990000;">Failure - No control, +10 Dissent</p>** ?]
 
 **Interior** - [? if interior_minister_party = "NPP" : **<p style="color:#008000;">Success - Our control</p>** ?][? if interior_minister_party != "NPP" : **<p style="color:#990000;">Failure - No control, +5 Dissent</p>** ?]
 
