@@ -461,13 +461,13 @@ subtitle: The first step to revolutionary socialism.
 on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 100;
 go-to: ministries
 
-[? if npp_party_chair != "Clueless" : ?]
+[? if npp_party_chair != "Clueless" : No one has slept yet. You approach <span class="tooltip-new">Clueless<span class="tooltiptext"><img src="img/portraits/Clueless.png" alt="Leader"><br>[+ clueless_description +]</span></span> at one in the morning as you ask him if he’s ready for the speakership role. He accepts the nomination, and the office can finally rest. We expected this new majority to be energizing, to be life giving. But, all we can think about is the hard part that comes next. The next morning our youths are filled with glee, taking to the streets in celebration of our historic victory. ?]
 
-[? if npp_party_chair = "Clueless" : ?]
+[? if npp_party_chair = "Clueless" : The floor is littered with campaign materials, markers, and scissors. It’s one in the morning when <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> meets you and asks if you’re interested in the position of Speaker. You gladly accept, but he mentions that probably means you’ll have to give up party chair. You still haven’t slept. No one has. The late night results kept everyone up. Now your task of true land reform is up in the air. Let’s not overextend here, party unity will define your success. ?]
 
 <div class="container">
 <div class="image"><img src="img/event/clueless_poster.png"></div>
-<div class="text">Our agenda has been revised to pursue a more activist stance in empowering workers and the devolution of labor hierarchy. </div></div>
+<div class="text">Clueless’ program is in full swing as government troops are used to protect farmers, land is being forcibly reorganized, and minimum wage is on its way to be doubled. Outcry from the middle class springs into action as right wing movements capture the elite rage felt against his new agenda. While farmers praise your decision, suburbia burns with rage. This majority isn’t the magic pill that you think it will be. </div></div>
 
 @S_remma_majority
 title: Remmacaronie for Speaker
@@ -475,11 +475,18 @@ subtitle: The NPP-C's man, this time with nothing holding him back.
 on-arrival: npp_in_government = 1; speaker = "Remma"; speaker_party = "NPP"; workers_pdp -= 5; workers_ppm -= 5;
 go-to: ministries
 
-It's chilling. The moment our coalition steps into power, our opposition fumbles. No more confidence during "redemption day", no more gains by the radical right. The best feeling of all, we're no longer tied at the hip to the bourgeois. We're free.
-
 <div class="container">
 <div class="image"><img src="img/event/convention_2.png"></div>
-<div class="text">Remma's moderation and pragmatism pushes through, but this time with no hindrances whatsoever. The idea of fully stocked shelves entices many within the nation. This newfound optimism breaks down the PDP and other opposition parties, finally allowing the NPP to rule alone. </div></div>
+<div class="text">
+
+[? if npp_party_chair != "Remma" : Euphoria. <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> lets out an energy of hopefulness, our majority has been held. You call him to ask if he’s willing to be Speaker. Despite his reluctance, he accepts.  ?]
+
+[? if npp_party_chair = "Remma" : You feel a sense of relief, the NPP can now rule alone. Macalintal rings you if you’re interested in the speakership. Now it is your job to keep the majority. Can you handle it? ?]
+
+</div></div>
+
+Outside, the crowd cheers and gathers. Their screams and jeers are more genuine, coming more from the bottom of their stomach. The moment we step into power, our enemies fumble, no more “rabid mob” or “fly-in majority”, this is something real, something tangible. The best feeling of all, we’re no longer tied to the hip to those bourgeois bastards. We’re free.
+
 
 @S_macalintal_majority
 title: Leon Macalintal for Speaker
@@ -489,10 +496,13 @@ go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/convention_1.png"></div>
-<div class="text">Macalintal's victory inspires </div></div>
+<div class="text">
+[? if npp_party_chair != "Macalintal" : Macalintal has always been behind the scenes scheming. This absolute majority was years in the making, and now it is here. We expected something happy, something filled with jeers and shouts, yet you sit with Macalintal silently. “This majority will mean nothing,” he says, “If we do not know how to keep it”. You ask if it means he doesn’t think we will. He doesn’t respond. ?]
+[? if npp_party_chair = "Macalintal" : You’ve always been behind the scenes scheming. This absolute majority was years in the making, and now it is here. We expected something happy, something filled with jeers and shouts, yet you sit here silently. Remma shows up to your office, telling you about the decision to have you stand as Speaker. “We’re free”, he says, “no more dealing and talking about coalitions”. You let out a small laugh, he’s the last person you’d expect to say that. ?]
+</div></div>
 
-The speaker himself is okay with our plans for giving in some ground. His agenda can now be pushed on with full steam. May our trust in him be worth the investment.
-
+[? if npp_party_chair != "Macalintal" : Outside, his supporters are living the scenario we expected, huge crowds mobilize to celebrate what seems to be the final victory against reaction. Looking outside only reveals a crowd as tight as a pack of sardines. They endlessly stretch from street to street. We have to keep this up. ?]
+[? if npp_party_chair = "Macalintal" : Outside, your supporters are living the scenario we expected, huge crowds mobilize to celebrate what seems to be the final victory against reaction. Looking outside only reveals a crowd as tight as a pack of sardines. They endlessly stretch from street to street. We have to keep this up, but can we? ?]
 
 @S_fh_star
 title: Star Fox for Speaker
@@ -541,9 +551,12 @@ go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/convention_1.png"></div>
-<div class="text">Macalintal's past hostility to Davaoenos has left the AMDG in a tense state. If we are to continue with the "grand master plan" that the man has prepared, we have to make some concessions.</div></div>
+<div class="text">
+[? if npp_party_chair != "Macalintal" : Blooky puts down a 5 feet tall paper pile. Demands, demands, demands. A list of agendas are placed on Macalintal’s desk, and with his diplomatic attitude, an agreement is quickly finalized. Blooky personally likes Macalintal, and the government can move forward with minimal changes. Leon pumps up study committees to investigate potential welfare programs, as our agenda stands in the spotlight, our dealings make sure that it isn’t as scrutinized as it should be. ?]
+[? if npp_party_chair = "Macalintal" : Blooky puts down a 5 feet tall paper pile in front of you. He demands a list of agreements, and with your cool attitude you successfully strike a deal with him. Blooky personally likes you, and the government can move forward with minimal changes. We pump up study committees to investigate potential welfare programs, as our agenda stands in the spotlight, our dealings make sure that it isn’t as scrutinized as it should be. ?]
+</div></div>
 
-The speaker himself is okay with our plans for giving in some ground. His agenda can now be pushed on with full steam. May our trust in him be worth the investment.
+The name <span class="tooltip-new">Macalintal<span class="tooltiptext"><img src="img/portraits/Macalintal.png" alt="Leader"><br>[+ macalintal_description +]</span></span> rings around Ateneocord. As a backbencher, the party always expected him to be behind the scenes. The new Speaker puts out an agenda aimed in creating a “Great Society”. New talking points released has us acting like giveaway hosts, promising a hundred or so welfare systems to prevent families from falling down the brink. Macalintal is the pragmatic leadership this party needs as his political ability allows us to push through bills smoothly.
 
 @S_remma
 title: Remmacaronie for Speaker
@@ -553,9 +566,12 @@ go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/convention_2.png"></div>
-<div class="text">Remma's moderation and pragmatism pushes through, giving us more leverage in choosing ministries. His Speakership agenda will revolve around a public works program and focus on the idea of State Businesses.</div></div>
+<div class="text">
+[? if npp_party_chair != "Remma" : This is a position he’s been fighting for his entire life, at least he looked like he was fighting for it for his entire life. All those posters on the wall, those rapports with friends, and how he’s essentially a legend in Ateneocord. Remma is the most well known Ateneocord member with a wide appeal. He looks like the perfect match, except you can tell that he doesn’t want it. There’s something inside him that gnaws at his conscience. He does not feel right seeing all these things about himself, about how he’s the man. Yet he accepts your call to serve in the Speakership, the coalition sees it as fit anyway. ?]
+[? if npp_party_chair = "Remma" : You stare at the wall blankly to try and take your mind off things. This is it, you’re Speaker. While Blooky has some doubts and wants to hold the position himself, Macalintal et al. organizes your ascension into the position. You do not feel that it is right to think about it. But it’s better than Star Fox or Yuuto anyway. ?]
+</div></div>
 
-His "New Deal" is seen with skepticism amongst sects of our coalition members. The Party is more than willing though to accept his proposal. Perhaps this can be the start of a socialist economy.
+There is no strong pushback to a Remma Speakership, the candidacy moves on just fine. Our agenda is now focused on this New Deal and proper economic change. The foreboding feeling does not go away. The Speaker does not feel that something is right.
 
 @S_robbie
 title: Robbie Rotten for Speaker
@@ -736,7 +752,7 @@ go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/convention_1.png"></div>
-<div class="text">You feel like you’re next on death row as you press the buttons to call up Blooky. You inform him of the party decision to allow him to be speaker with concessions. He accepts quickly, but it doesn’t shake off the feeling that you’ll be targeted by the left for compromise. Soon enough, as the vote begins, members of your party storm out in protest. One of our MPs give a street interview calling him an opportunist. It will be a long night.
+<div class="text">You feel like you’re next on death row as you press the buttons to call up Blooky. You inform him of the party decision to allow him to be speaker with concessions. He accepts quickly, but it doesn’t shake off the feeling that you’ll be targeted by the left for compromise. Soon enough, as the vote begins, members of your party storm out in protest. A clip of one of our MPs calling him an opportunist goes viral. It will be a long night.
 </div></div>
 
 @ministries
