@@ -579,7 +579,7 @@ on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidaris
 
 <div class="container">
 <div class="image"><img src="img/event/blooky.png"></div>
-<div class="text">The coalition locks in place, the halls feel stiff. No majority is held. As <span class="tooltip-new">Blooky<span class="tooltiptext"><img src="img/portraits/Blooky.png" alt="Leader"><br>[+ blooky_description +]</span></span> runs against our agenda, seeing us as too radical and self-serving, he casts his vote for himself. MPs in the hall move like statues, stiff in anticipation. No one gets a majority. As expected, the pushback is severe. Now, our next step is to find a way to break the deadlock. Are we ready?</div></div>
+<div class="text">The coalition locks in place, the halls feel stiff. No majority is held. As Blooky runs against our agenda, seeing us as too radical and self-serving, he casts his vote for himself. MPs in the hall move like statues, stiff in anticipation. No one gets a majority. As expected, the pushback is severe. Now, our next step is to find a way to break the deadlock. Are we ready?</div></div>
 
 - @S_robbie_superfail: It's Robbie or Bust! Another election we must!
 - @S_robbie_challenge: One more round. Someone will crack eventually.
@@ -593,7 +593,7 @@ go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/disappointment.png"></div>
-<div class="text">The vote proceeds in the halls of parliament. One by one, the name <span class="tooltip-new">"Blooky"<span class="tooltiptext"><img src="img/portraits/Blooky.png" alt="Leader"><br>[+ blooky_description +]</span></span> pops up in succession. Each time they do, it feels like a knife is thrusted to your stomach and turned. There is no victory to be seen here, your staff privately congratulates Blooky in his victory. We have to stop the bleeding. As he accepts the position, you can just feel his laughter through the fake words of unity and compromise.</div></div>
+<div class="text">The vote proceeds in the halls of parliament. One by one, the name Blooky pops up in succession. Each time they do, it feels like a knife is thrusted to your stomach and turned. There is no victory to be seen here, your staff privately congratulates Blooky in his victory. We have to stop the bleeding. As he accepts the position, you can just feel his laughter through the fake words of unity and compromise.</div></div>
 
 
 @S_robbie_negotiate
@@ -615,9 +615,9 @@ choose-if: remma_favors_remaining > 0 and remma_advisor = 1
 subtitle: Remma, the peacemaker as always, will find a way.
 on-arrival: remma_favors_remaining -= 1;
 
-[? if npp_party_chair != "Remma" : There’s just something in the man that makes the party palpable to others. Remma shows up to his house with food to start off on the right foot. Agendas, welfare, dealing with Yuuto, and budgets are discussed. Rounds of bargaining begin, and they act like two dogs splitting up the hunt. With rationality, Remma’s sweet talk is felt as Blooky announces they’ve drafted a reasonable agreement. A thinner line now exists between the party and the AMDG. ?]
+[? if npp_party_chair != "Remma" : There’s just something <span class="tooltip-new">in the man<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> that makes the party palpable to others. Remma shows up to his house with food to start off on the right foot. Agendas, welfare, dealing with <span class="tooltip-new">Yuuto<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Leader"><br>[+ yuuto_description +]</span></span>, and budgets are discussed. Rounds of bargaining begin, and they act like two dogs splitting up the hunt. With rationality, Remma’s sweet talk is felt as <span class="tooltip-new">Blooky<span class="tooltiptext"><img src="img/portraits/Blooky.png" alt="Leader"><br>[+ blooky_description +]</span></span> announces they’ve drafted a reasonable agreement. A thinner line now exists between the party and the AMDG. ?]
 
-[? if npp_party_chair = "Remma" : TThere’s just something in you that makes the party palpable to others. You show up to his house with food so we can start off on the right foot. Agendas, welfare, dealing with Yuuto, and budgets are discussed. Rounds of bargaining begin, and you feel like two wolves splitting up the hunt. With rationality, you see your sweet talk felt as Blooky announces we've drafted a reasonable agreement. A thinner line now exists between the party and the AMDG. ?]
+[? if npp_party_chair = "Remma" : There’s just something in you that makes the party palpable to others. You show up to his house with food so we can start off on the right foot. Agendas, welfare, dealing with <span class="tooltip-new">Yuuto<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Leader"><br>[+ yuuto_description +]</span></span>, and budgets are discussed. Rounds of bargaining begin, and you feel like two wolves splitting up the hunt. With rationality, you see your sweet talk felt as <span class="tooltip-new">Blooky<span class="tooltiptext"><img src="img/portraits/Blooky.png" alt="Leader"><br>[+ blooky_description +]</span></span> announces we've drafted a reasonable agreement. A thinner line now exists between the party and the AMDG. ?]
 
 - @S_robbie_success: A lull in the fighting.
 
@@ -744,6 +744,8 @@ go-to: ministries_proper
 
 The curtains close on the political stage, now it’s time for the backroom deals. We are given a set of ministries to choose from. Some positions are considered more important than others, and our party prefers some to be picked. Our party controlling a certain ministry will make us steer the course of that specific department. Likewise, leaving the rest to our coalition partners will allow them to hold final say in those fields. Pick wisely.
 
+Party Ministry Goals: Labor, Interior, Finance
+
 @ministries_proper
 
 - #mins_1928
@@ -751,7 +753,7 @@ The curtains close on the political stage, now it’s time for the backroom deal
 
 @labor
 title: Labor Ministry
-subtitle: The Labor Ministry allows us to pass more wide sweeping labor laws and enforce workers protections even with a reactionary Speaker. Likewise, allowing our enemies to get Labor will hamper our mission to protect the weak. **This post considered important by our party.**
+subtitle: The Labor Ministry is our turf.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
@@ -761,9 +763,11 @@ go-to: ministries_proper
 
 Ka Filipino of the NPP-Y has been appointed labor minister.
 
+The Labor Ministry allows us to pass more wide sweeping labor laws and enforce workers protections even with a reactionary Speaker. Likewise, allowing our enemies to get Labor will hamper our mission to protect the weak. **This post considered important by our party.**
+
 @interior
 title: Interior Ministry
-subtitle: The Interior Ministry allows us to direct investigations towards the far right and highten democratic protections. Likewise, allowing our enemies to get Interior will leave the government ambivalent to anti-democratic crusading. **This post considered important by our party.**
+subtitle: The Interior Ministry controls national security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
@@ -773,9 +777,11 @@ go-to: ministries_proper
 
 [? if speaker != "Macalintal" : Leon Macalintal ?][? if speaker = "Macalintal" : WasteofSpace ?] of the NPP-R has been appointed Interior Minister.
 
+The Interior Ministry allows us to direct investigations towards the far right and highten democratic protections. Likewise, allowing our enemies to get Interior will leave the government ambivalent to anti-democratic crusading. **This post considered important by our party.**
+
 @finance
 title: Finance Ministry
-subtitle: The Finance Ministry allows us to raise taxes and get emergency funds for our welfare schemes. Likewise, allowing our enemies to get Finance will leave us begging for extra funds at the mercy of the Bourgeois. **This post considered important by our party.**
+subtitle: The Finance Ministry allows us to decide on tax policy.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -785,9 +791,11 @@ go-to: ministries_proper
 
 Icota of the NPP-S has been appointed Finance Minister.
 
+The Finance Ministry allows us to raise taxes and get emergency funds for our welfare schemes. Likewise, allowing our enemies to get Finance will leave us begging for extra funds at the mercy of the Bourgeois. **This post considered important by our party.**
+
 @economic
 title: Economic Ministry
-subtitle: The Economic Ministry will allow us to drive Ateneocord with our public works program. Without it, we are helpless in deciding how to manage the economy. **This post considered important by our party, but is not a priority.**
+subtitle: The Economic Ministry controls economic policy.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -797,9 +805,11 @@ go-to: ministries_proper
 
 Clueless Partisan of the NPP-Y has been appointed Economic Minister.
 
+The Economic Ministry will allow us to drive Ateneocord with our public works program. Without it, we are helpless in deciding how to manage the economy. **This post considered important by our party, but is not a priority.**
+
 @justice
 title: Justice Ministry
-subtitle: The Justice Ministry controls the courts, and will decide if our decisions are pushed through and enforced. An enemy Justice Ministry will deny our decisions and executive orders. **This post considered important by our party, but is not a priority.**
+subtitle: The Justice Ministry controls the courts.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -809,9 +819,11 @@ go-to: ministries_proper
 
 Remma of the NPP-C has been appointed Justice Minister.
 
+The Justice Ministry controls the courts, and will decide if our decisions are pushed through and enforced. An enemy Justice Ministry will deny our decisions and executive orders. **This post considered important by our party, but is not a priority.**
+
 @foreign
 title: Foreign Ministry
-subtitle: This is usually the domain of Star Fox of the LPPA or one of Blooky's men. This Ministry handles our relations with PSHS and other lands, it is not considered important. Its most important agenda as of the moment is to get closer relations for our economies. **This post is considered dumb to take. Getting it will actively anger our party who wishes other ministries instead.**
+subtitle: This is usually the domain of Star Fox of the LPPA or one of Blooky's men. 
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -821,10 +833,11 @@ go-to: ministries_proper
 
 Paisco of the NPP-C has been appointed Foreign Minister.
 
+This Ministry handles our relations with PSHS and other lands, it is not considered important. Its most important agenda as of the moment is to get closer relations for our economies. **This post is considered dumb to take. Getting it will actively anger our party who wishes other ministries instead.**
 
 @agriculture
 title: Agricultural Ministry
-subtitle: This is not our usual domain. This Ministry handles agricultural policy and while the NPP-C writes it off, the NPP-Y seeks this as an oppurtunity to get.
+subtitle: This is not our usual domain. 
 unavailable-subtitle: We do not have enough leverage.
 choose-if: leverage >= 10 
 view-if: agriculture_minister_party != "NPP"
@@ -834,9 +847,11 @@ tags: mins_1928
 
 Ka San of the NPP-Y has been appointed Agriculture Minister.
 
+This Ministry handles agricultural policy and while the NPP-C writes it off, **the NPP-Y seeks this as an oppurtunity to get.**
+
 @reichswehr
 title: Ministry of Defense
-subtitle: The Ministry responsible for the armed "moderating" forces is not typically our domain; The LPPA traditionally holds this spot with bourgeois General Eclipse will be displeased. **This post is critical, but leaving it alone will be fine. [? if npp_party_chair != "Robbie" : Robbie personally has his eyes on this position though. ?][? if npp_party_chair = "Robbie" : You personally have your eyes on this position though. ?]**
+subtitle: The Ministry responsible for the armed "moderating" forces is not typically our domain. The LPPA traditionally holds this spot with bourgeois General Eclipse will be displeased.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 15 
@@ -846,14 +861,27 @@ go-to: ministries_proper
 
 Robbie Rotten of the NPP-R has been appointed Defense Minister.
 
+**This post is critical, but leaving it alone will be fine. [? if npp_party_chair != "Robbie" : Robbie personally has his eyes on this position though. ?][? if npp_party_chair = "Robbie" : You personally have your eyes on this position though. ?]**
 
 
 @no_more
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. Any leverage left over cannot be reused anywhere. We have to choose wisely. ?][? if leverage < 10 : We do not have much leverage left. ?]
+on-arrival: center_dissent +=5 if labor_minister_party != "NPP"; radical_dissent +=5 if labor_minister_party != "NPP"; youth_dissent +=5 if labor_minister_party != "NPP"; solidarist_dissent +=5 if labor_minister_party != "NPP"; center_dissent +=5 if interior_minister_party != "NPP"; radical_dissent +=5 if interior_minister_party != "NPP"; youth_dissent +=5 if interior_minister_party != "NPP"; solidarist_dissent +=5 if interior_minister_party != "NPP"; center_dissent +=5 if finance_minister_party != "NPP"; radical_dissent +=5 if finance_minister_party != "NPP"; youth_dissent +=5 if finance_minister_party != "NPP"; solidarist_dissent +=5 if finance_minister_party != "NPP"; youth_dissent -= 15 if agriculture_minister_party = "NPP"
 tags: mins_1928
 
-This coalition arrangement is tolerable to all.
+This coalition arrangement is tolerable to all. Our party has reviewed its agenda for this government.
+
+**Labor** - [? if labor_minister_party = "NPP" : **<p style="color:#008000;">Success - Our control</p>** ?][? if labor_minister_party != "NPP" : **<p style="color:#990000;">Failure - No control, +5 Dissent</p>** ?]
+
+**Interior** - [? if interior_minister_party = "NPP" : **<p style="color:#008000;">Success - Our control</p>** ?][? if interior_minister_party != "NPP" : **<p style="color:#990000;">Failure - No control, +5 Dissent</p>** ?]
+
+**Finance** - [? if finance_minister_party = "NPP" : **<p style="color:#008000;">Success - Our control</p>** ?][? if finance_minister_party != "NPP" : **<p style="color:#990000;">Failure - No control, +5 Dissent</p>** ?]
+
+[? if agricultural_minister_party = "NPP" : **Agriculture** - The NPP-Y considers this a **<p style="color:#008000;">Success. -15 NPP-Y Dissent</p>** ?]
+
+We *will* get dissent if we do not get these ministries. After our review of the agenda, we can move on with the government work.
+
 
 (The cards have been updated in Government Affairs, new options will show up depending on the ministries and Speaker we have chosen)
 
