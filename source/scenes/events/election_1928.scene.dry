@@ -417,9 +417,7 @@ go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/convention_3.png"></div>
-<div class="text">Our factions are in revolt as they view Star Fox as a schemer. All major non-solidarists have resigned from our oversight board. Our base worries that we have forgotten about the rights of workers.</div></div>
-
-Star Fox will be speaker, we cannot force the right to support our schemes. However, they allow us more leeway in ministry picking than the "Democratic" coalition ever could.
+<div class="text">You can feel it in your bones. The party will regret this decision one way or another. Our office looks pale, everyone thinks we’ve sold our souls to the devil for a few cookies. You try to cheer your staff up, yet you know that you think the same. As the votes confirm for Star Fox reluctantly, some of our MPs don’t even show up at all. This Administration will be a long one.</div></div>
 
 
 @fallout_coalition
@@ -507,14 +505,14 @@ go-to: ministries
 @S_fh_star
 title: Star Fox for Speaker
 subtitle: We all know Star Fox only cares about power. Supporting the LPPA will satisfy his desires and give us some leverage.
-on-arrival: npp_in_government = 1; speaker = "Star Fox"; speaker_party = "LPPA"; leverage += 10; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15; d_relation += 10; lppa_relation += 15; macalintal_favors_remaining += 1
+on-arrival: npp_in_government = 1; speaker = "Star Fox"; speaker_party = "LPPA"; leverage += 18; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15; d_relation += 10; lppa_relation += 15; macalintal_favors_remaining += 1
 go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/pro_republic_1.png"></div>
-<div class="text">Our support allows the conservative Star Fox to enter the speakership. His uphill election is helped by our "special favors".<br><br>The LPPA owes us one.</div></div>
+<div class="text">You can feel his grin through the phone. Your body shudders as you call the rest of the party to confirm for Star Fox. The public is baffled, and we’ve lost some of our key supporters. All of this for pieces of chocolate? The extra leverage we’ve gotten is not enough to wash away the feeling of guilt and disgust. You’re gonna have to swallow that slime.</div></div>
 
-AMDG would have never allowed us this leeway in ministries anyway. Our main gripe with Star Fox is policy. The workers expect us to stop his bourgeois and anti-authoritarian tendencies.
+It's your fault.
 
 @S_nao_npp
 title: Naomi for Speaker
@@ -525,9 +523,7 @@ go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/convention_2.png"></div>
-<div class="text">With the TKDP being a fully fledged member of the NPP, there is no more complaints about Nao being speaker. We still may have to watch her corporatist excesses though, something our base hopes that we remember.</div></div>
-
-With this new coalition, we can finally begin the process of reconstructing Ateneocord.
+<div class="text">“Our majority has come”. Nao smiles with a huge grin, your joint sessions of planning and unification were all worth it. We’ve unseated Yuuto and his reactionaries, yet chills still ring down your spine. You sit across Nao, looking at her in the eye. Now comes the hard part: working together. You hope that the NPP coalition stays intact. It has to.</div></div>
 
 @S_nao
 title: Naomi for Speaker
@@ -538,14 +534,18 @@ go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/convention_2.png"></div>
-<div class="text">Our support allows Nao to triumph during speaker elections. Blooky is outmaneuvered and Nao rewards us with some promised concessions and a stronger position for ministries. Our party members, however, view this as a wasted chance to capture the speakership.</div></div>
+<div class="text">
 
-AMDG would have never allowed us this leeway in ministries anyway. Our main gripe with Nao is policy. The workers expect us to stop her worst excesses. Nao owes us one for maintaining her power.
+[? if npp_party_chair = "Remma" : Nao greets you by slapping your ass. The usual. The offer of Speakership and your efforts to bridge the gap between the progressive parties have bore fruit as she allows us greater leverage against Blooky and the AMDG. As the votes slowly but surely ring “Naomi”, each repetition brings her to almost jump. It’s her time to shine this time, Yuuto and his bastards are now out. ?]
+
+[? if npp_party_chair != "Remma" : Your offer of Speakership sends her in a fit of glee as she runs across the room jumping. With a healthy working relationship, our parties will make sure we get our common agendas together. Remma comments that this could be the start of something new, as he himself is wishing for a unified caucus between the TKDP and NPP. As the votes slowly but surely ring “Naomi”, each repetition brings her to almost jump. It’s her time to shine this time, Yuuto and his bastards are now out. ?]
+</div></div>
+
 
 
 @S_macalintal
 title: Leon Macalintal for Speaker
-subtitle: Macalintal's history of combativeness with Davaoenos has left them wanting move leverage in exchange for his tenure.
+subtitle: Macalintal's unknown position in the public eye will warrant concessions from Davaoenos.
 on-arrival: npp_in_government = 1; speaker = "Macalintal"; speaker_party = "NPP"; leverage -= 10;
 go-to: ministries
 
