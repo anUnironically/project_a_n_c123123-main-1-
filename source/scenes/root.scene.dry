@@ -547,40 +547,40 @@ Q.macalintal_favors_remaining = 2;
 
 // NPP - R
 Q.barnabus_advisor = 1; //BARNABUSS
-Q.barnabus_description = "Robbie Rotten: The Establishment's Favorite Son";
+Q.barnabus_description = "Our favorite son.";
 
 Q.macalintal_advisor = 1; //MACALINTALLL 
-Q.macalintal_description = "Leon Macalintal: Gucklandian Mafia Boss";
+Q.macalintal_description = "Gucklandian Mafia Boss";
 
 Q.wasteofspace_advisor = 0; //WASTEOFSPACE 
-Q.wasteofspace_description = "WasteofSpace: The Grassroot Organizer. Popular amongst our base";
+Q.wasteofspace_description = "The Grassroot Organizer. Popular amongst our base";
 
 // NPP - C
 Q.remma_advisor = 1; // Remmacaronie
-Q.remma_description = "Remma: Our resident peacemaker";
+Q.remma_description = "Our resident peacemaker";
 
 Q.naomi_advisor = 0; // NAO
 Q.naomi_description = "The Chrysanthemum Empress. She can compromise.";
 
 Q.paisco_advisor = 0; // PAISCO
-Q.paisco_description = "Paisco: Our kindhearted light.";
+Q.paisco_description = "The bleeding heart";
 
 // NPP - Y
 Q.clueless_advisor = 0; //CLUELESS
-Q.clueless_description = "Clueless Partisan: SDE's Commander-in-Chief";
+Q.clueless_description = "The eyes of youthfulness";
 
 Q.kafil_advisor = 0; //KA FIL
-Q.kafil_description = "Ka Filipino: A real wild card.";
+Q.kafil_description = "A real wild card.";
 
 Q.kasan_advisor = 0; //SANTI
-Q.kasan_description = "Ka San: NPP's Whiz Kid.";
+Q.kasan_description = "The Whiz Kid.";
 
 // NPP - S
 Q.shooter_advisor = 0; //SHOOTER
-Q.shooter_description = "Shooter: Totalitarian in Chief.";
+Q.shooter_description = "Totalitarian in Chief.";
 
 Q.icota_advisor = 0; //ICOTA
-Q.icota_description = "Icota: Will kill Davaoenos for fun.";
+Q.icota_description = "Will kill Davaoenos for fun.";
 
 Q.datuput_advisor = 0; //DATUPUT
 Q.datuput_description = "Datuput: The Social and National Tyrant. His ideas will make your head implode.";

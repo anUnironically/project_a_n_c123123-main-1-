@@ -566,23 +566,23 @@ go-to: S_robbie_success if (d_relation > 55 and (in_democratic_coalition = 0 or 
 on-arrival: npp_in_government = 1; speaker = "Robbie Rotten"; speaker_party = "NPP"; leverage -= 5; radical_dissent -= 20; center_dissent -= 10; solidarist_dissent -= 10; youth_dissent -= 10; workers_npp += 6; new_middle_npp += 3; old_middle_npp += 3; rural_npp += 3;
 go-to: ministries 
 
-[? if in_full_npp_coalition = 0 : Despite the half-AMDG[? if in_star_coalition : /LPPA ?] walk out, our coalition stays intact. Our good relations with the AMDG and TKDP have paid off and a solution was finally put on paper for this candidacy to go through. ?] Robbie Rotten's victory supercharges our base and allows the government to focus on preventing a PDP return. 
+The AMDG walks out, along with more conservative to moderate parliament members. Despite their temper tantrum, you watch as the votes roll up and you manage to clinch another victory for the NPP. The relations between the parties have paid off. Robbie Rotten for Speaker. Doesn’t that have a ring to it? [? if npp_party_chair = "Robbie" : <span class="tooltip-new">Clueless<span class="tooltiptext"><img src="img/portraits/Clueless.png" alt="Leader"><br>[+ clueless_description +]</span></span> and <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> call you up on your victory. Immediately like bureaucrats, they start planning for sessions and the path our government will take on. You three draft bills, orders, talking points, and all those political planning. You find happiness in the mundane, the future will look bright. ?][? if npp_party_chair != "Robbie" : <span class="tooltip-new">Robbie<span class="tooltiptext"><img src="img/portraits/Robbie.png" alt="Leader"><br>[+ robbie_description +]</span></span> is in his office when you call him for the decision. He sounds like a kid on a night before a sleepover, too excited to plan what to do next. He drafts a set of legislative agendas like how a boy plans an itinerary. Our base is pleased that we have a member actively fighting reactionaries in the forefront. ?]
 
 <div class="container">
 <div class="image"><img src="img/event/convention_2.png"></div>
-<div class="text">Robbie's platforms include heavily persecuting corrupt businesses, the administration, and the far-right especially. His edge on bringing the establishment to the negotiating table has alienated some TKDP voters.</div></div>
+<div class="text">Our agenda has been revised to pursue a more activist stance in fighting off Yuuto and corrupt establishments. The new parliament opens up with a speech about defending democracy and fighting off these reactionaries. Some conservatives are uneasy about the opening. After a few rounds of inter-party meetings and negotiations, the government finally forms, and the confirmation votes pass through smoothly. We can only hope this continues on in the future.</div></div>
+
+A large set of new legislative priorities have been set upon parliament, an anti-Nazi act, Administrator Accountability, and expelling of the movement as a whole. As our base rallies and poll numbers from workers shoot up in excitement, the right rallies around and unites in the face of our victory. A fight looms. This will not be as easy as you thought. 
 
 @S_robbie_deadlock
 on-arrival: leverage -= 5; radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5; youth_dissent += 5; workers_npp += 6; new_middle_npp -= 3; old_middle_npp -= 3; rural_npp -= 3; leverage -= 5;
 
-The coalition is on fire! Due to his anti-Davaoeno rhetoric calling them "enablers" of Yuuto, Davaoeno members of parliament block his candidacy from passing Parliament. Our partners worry about his populist anti-establishment stance and wish to extract more concessions for his speakership. Blooky has called him out and now has cast his vote instead for himself. 
-
 <div class="container">
 <div class="image"><img src="img/event/blooky.png"></div>
-<div class="text">The AMDG rally has raised people to vote for their candidate, but the NPP-C and their connections can still be used to push the candidacy of Robbie through. Our next steps are crucial in keeping this coalition stable.</div></div>
+<div class="text">The coalition locks in place, the halls feel stiff. No majority is held. As Blooky runs against our agenda, seeing us as too radical and self-serving, he casts his vote for himself. MPs in the hall move like statues, stiff in anticipation. No one gets a majority. As expected, the pushback is severe. Now, our next step is to find a way to break the deadlock. Are we ready?</div></div>
 
 - @S_robbie_superfail: It's Robbie or Bust! Another election we must!
-- @S_robbie_challenge: We will challenge Blooky! Enter into a coalition primary against him.
+- @S_robbie_challenge: One more round. Someone will crack eventually.
 - @S_robbie_backdoor
 - @S_robbie_favor_called
 - @S_robbie_negotiate
@@ -591,9 +591,10 @@ The coalition is on fire! Due to his anti-Davaoeno rhetoric calling them "enable
 on-arrival: radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5; youth_dissent += 5; speaker = "Blooky"; speaker_party = "AMDG";
 go-to: ministries
 
-Blooky's votes are too much for the NPP to overcome, and Robbie is easily defeated. All our factions are in disarray.
+<div class="container">
+<div class="image"><img src="img/event/blooky.png"></div>
+<div class="text">The vote proceeds in the halls of parliament. One by one, the name “Blooky” pops up in succession. Each time they do, it feels like a knife is thrusted to your stomach and turned. There is no victory to be seen here, your staff privately congratulates Blooky in his victory. We have to stop the bleeding. As he accepts the position, you can just feel his laughter through the fake words of unity and compromise.</div></div>
 
-How could we have thrown out such a position like that?
 
 @S_robbie_negotiate
 title: Perhaps a funding scheme would appease them?
@@ -625,7 +626,7 @@ on-arrival: macalintal_favors_remaining -= 1;
 
 The SDE takes to the streets at night. <span class="tooltip-new">Macalintal's<span class="tooltiptext"><img src="img/portraits/Macalintal.jpg" alt="Leon."><br>[+ macalintal_description +]</span></span> guards personally accompany them. Soon they arrive at houses. A few bumps and statements here and there, nothing special. The floor is packed the next day by AMDG deserters, seemingly supportive of the anti-Yuutoist stance. 
 
-Blooky is unseated even before the voting period commences. Robbie has claimed victory.
+Blooky is unseated even before the voting period commences, and Robbie has claimed victory.
 
 - @S_robbie_success: All in favor of Robbie Rotten, raise your hand.
 
@@ -636,7 +637,7 @@ go-to: S_robbie_defeat if npp_r <= ( d_r + (fallout_coalition + 5 - (d_r + npp_r
 
 The vote commences and both sides fight fiercely.
 
-[? if npp_r > ( d_r + ( fallout_coalition + 5 - (d_r + npp_r) ) ) : Robbie comes out on top, and by defeating Blooky head on, has destroyed AMDG's political capital. We have more to gain in picking ministries ?]
+[? if npp_r > ( d_r + ( fallout_coalition + 5 - (d_r + npp_r) ) ) : The NPP comes out on top, and by defeating Blooky head on, has destroyed AMDG's political capital. We have more to gain in picking ministries ?]
 
 @S_robbie_superfail
 subtitle: This will cause significant internal dissent amongst our party outside the NPP-R, and will lead to increased distrust from the bourgeois parties.
