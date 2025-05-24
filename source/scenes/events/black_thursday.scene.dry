@@ -6,13 +6,7 @@ tags: event
 view-if: year = 2022 and month >= 10
 max-visits: 1
 face-image: img/bankrun.jpg
-
-= Black Thursday
-
-- @dcc_proper: The economy screams.
-
-@dcc_proper
-audio: shuffle music/special/delcastilliocrash.mp3 music/2021-2023/bananaboat.mp3 music/2021-2023/summertime.mp3 music/2021-2023/coffecold.mp3 music/2021-2023/unknownsoldier.mp3 music/2021-2023/whilemyguitargentlyweeps.mp3 music/2024-2026/backintheussr.mp3 music/2024-2026/californiadreaming.mp3 music/2024-2026/siklabsideb.mp3 music/2024-2026/tnocuttingties.mp3
+audio: music/special/delcastilliocrash.mp3 shuffle music/2021-2023/bananaboat.mp3 music/2021-2023/summertime.mp3 music/2021-2023/coffecold.mp3 music/2021-2023/unknownsoldier.mp3 music/2021-2023/whilemyguitargentlyweeps.mp3 music/2024-2026/backintheussr.mp3 music/2024-2026/californiadreaming.mp3 music/2024-2026/siklabsideb.mp3 music/2024-2026/tnocuttingties.mp3
 
 = Black Thursday
 
