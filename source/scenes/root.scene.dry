@@ -878,7 +878,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 2020
 
-Ateneocord is in a tense state. <span class="tooltip-new">Yuuto<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Yuuto"><br>[+ yuuto_description +]</span></span> has just been pushed out, and his impeachment is paving the way for the removal of radicalism in the country entirely. All that's left is his trial. <span class="tooltip-new">Nao<span class="tooltiptext"><img src="img/portraits/Naomi.png" alt="Leader"><br>[+ yuuto_description +]</span></span> has been appointed temporarily in his absence
+Ateneocord is in a tense state. <span class="tooltip-new">Yuuto<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Yuuto"><br>[+ yuuto_description +]</span></span> has just been pushed out, and his impeachment is paving the way for the removal of radicalism in the country entirely. All that's left is his trial. <span class="tooltip-new">Nao<span class="tooltiptext"><img src="img/portraits/Naomi.png" alt="Leader"><br>[+ naomi_description +]</span></span> has been appointed temporarily in his absence
 
 You are the NPP Chairperson Robbie Rotten. Your goal is to guide the party into the future and have it intact.
 
