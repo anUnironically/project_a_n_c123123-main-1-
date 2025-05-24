@@ -805,7 +805,7 @@ go-to: ministries_proper
 
 Clueless Partisan of the NPP-Y has been appointed Economic Minister.
 
-The Economic Ministry will allow us to drive Ateneocord with our public works program. Without it, we are helpless in deciding how to manage the economy. **This post considered important by our party, but is not a priority.**
+The Economic Ministry will allow us to drive Ateneocord with our public works program. Without it, we are helpless in deciding how to manage the economy. **This post is not a priority.**
 
 @justice
 title: Justice Ministry
@@ -819,7 +819,7 @@ go-to: ministries_proper
 
 Remma of the NPP-C has been appointed Justice Minister.
 
-The Justice Ministry controls the courts, and will decide if our decisions are pushed through and enforced. An enemy Justice Ministry will deny our decisions and executive orders. **This post considered important by our party, but is not a priority.**
+The Justice Ministry controls the courts, and will decide if our decisions are pushed through and enforced. An enemy Justice Ministry will deny our decisions and executive orders. **This post is not a priority.**
 
 @foreign
 title: Foreign Ministry
@@ -872,13 +872,13 @@ tags: mins_1928
 
 This coalition arrangement is tolerable to all. Our party has reviewed its agenda for this government.
 
-**Labor** - [? if labor_minister_party = "NPP" : **<p style="color:#008000;">Success - Our control, -5 Dissent</p>** ?][? if labor_minister_party != "NPP" : **<p style="color:#990000;">Failure - No control, +10 Dissent</p>** ?]
+**Labor** - [? if labor_minister_party = "NPP" : **<span style="color:#008000;">Success - Our control, -5 Dissent</span>** ?][? if labor_minister_party != "NPP" : **<span style="color:#990000;">Failure - No control, +10 Dissent</span>** ?]
 
-**Interior** - [? if interior_minister_party = "NPP" : **<p style="color:#008000;">Success - Our control</p>** ?][? if interior_minister_party != "NPP" : **<p style="color:#990000;">Failure - No control, +5 Dissent</p>** ?]
+**Interior** - [? if interior_minister_party = "NPP" : **<span style="color:#008000;">Success - Our control</span>** ?][? if interior_minister_party != "NPP" : **<span style="color:#990000;">Failure - No control, +5 Dissent</span>** ?]
 
-**Finance** - [? if finance_minister_party = "NPP" : **<p style="color:#008000;">Success - Our control</p>** ?][? if finance_minister_party != "NPP" : **<p style="color:#990000;">Failure - No control, +5 Dissent</p>** ?]
+**Finance** - [? if finance_minister_party = "NPP" : **<span style="color:#008000;">Success - Our control</span>** ?][? if finance_minister_party != "NPP" : **<span style="color:#990000;">Failure - No control, +5 Dissent</span>** ?]
 
-[? if agricultural_minister_party = "NPP" : **Agriculture** - The NPP-Y considers this a **<p style="color:#008000;">Success. -15 NPP-Y Dissent</p>** ?]
+[? if agricultural_minister_party = "NPP" : **Agriculture** - The NPP-Y considers this a **<span style="color:#008000;">Success. -15 NPP-Y Dissent</span>** ?]
 
 We *will* get dissent if we do not get these ministries. After our review of the agenda, we can move on with the government work.
 

@@ -571,7 +571,7 @@ table {
   text-decoration: underline;
   text-shadow: 0 0 10px rgba(135, 206, 250, 0.6), 0 0 20px rgba(135, 206, 250, 0.4), 0 0 30px rgba(135, 206, 250, 0.2);
   transition: color 0.3sease, text-shadow 0.3sease;
-  margin-left: 5px;
+  margin-left: -15px;
 }
 
 .tooltip-new .tooltiptext {
@@ -638,7 +638,7 @@ position: absolute;
  column-gap: 1px;
   width: 134%; /* Make sure it stretches */
   max-width: 500%; /* Prevent overflow constraints */
- margin-bottom: -20px;
+ margin-bottom: 0px;
 }
 
 .container img {
