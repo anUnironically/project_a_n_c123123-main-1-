@@ -6,7 +6,7 @@ tags: event
 view-if: year = 2022 and month >= 10
 max-visits: 1
 face-image: img/bankrun.jpg
-audio: music/special/delcastilliocrash.mp3 shuffle music/2021-2023/bananaboat.mp3 music/2021-2023/summertime.mp3 music/2021-2023/coffecold.mp3 music/2021-2023/unknownsoldier.mp3 music/2021-2023/whilemyguitargentlyweeps.mp3 music/2024-2026/backintheussr.mp3 music/2024-2026/californiadreaming.mp3 music/2024-2026/siklabsideb.mp3 music/2024-2026/tnocuttingties.mp3
+audio: music/special/delcastilliocrash.mp3
 
 = Black Thursday
 
@@ -18,10 +18,12 @@ As always, it is the capitalists' crisis, and the workers' burden.
 - @do_something: We must do something to stop the suffering...
 
 @cap
+audio: shuffle music/2021-2023/bananaboat.mp3 music/2021-2023/summertime.mp3 music/2021-2023/coffecold.mp3 music/2021-2023/unknownsoldier.mp3 music/2021-2023/whilemyguitargentlyweeps.mp3 music/2024-2026/backintheussr.mp3 music/2024-2026/californiadreaming.mp3 music/2024-2026/siklabsideb.mp3 music/2024-2026/tnocuttingties.mp3
 
 Perhaps this is simply one of the periodic crises of capitalism. Perhaps this moment will simply pass.
 
 @do_something
 on-arrival: crisis_urgency += 1
+audio: shuffle music/2021-2023/bananaboat.mp3 music/2021-2023/summertime.mp3 music/2021-2023/coffecold.mp3 music/2021-2023/unknownsoldier.mp3 music/2021-2023/whilemyguitargentlyweeps.mp3 music/2024-2026/backintheussr.mp3 music/2024-2026/californiadreaming.mp3 music/2024-2026/siklabsideb.mp3 music/2024-2026/tnocuttingties.mp3
 
 What can we do to staunch the workers' suffering? It is becoming a hotly debated question.
