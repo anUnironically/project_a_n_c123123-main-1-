@@ -547,40 +547,40 @@ Q.macalintal_favors_remaining = 2;
 
 // NPP - R
 Q.barnabus_advisor = 1; //BARNABUSS
-Q.barnabus_description = "Robbie Rotten: The Establishment's Favorite Son";
+Q.barnabus_description = "Our favorite son.";
 
 Q.macalintal_advisor = 1; //MACALINTALLL 
-Q.macalintal_description = "Leon Macalintal: The Nations Schemer and the Davaoeno's enemy";
+Q.macalintal_description = "Gucklandian Mafia Boss";
 
 Q.wasteofspace_advisor = 0; //WASTEOFSPACE 
-Q.wasteofspace_description = "WasteofSpace: The Grassroot Organizer. Popular amongst our base";
+Q.wasteofspace_description = "The Grassroot Organizer. Popular amongst our base";
 
 // NPP - C
 Q.remma_advisor = 1; // Remmacaronie
-Q.remma_description = "Remma: Our resident peacemaker";
+Q.remma_description = "Our resident peacemaker";
 
 Q.naomi_advisor = 0; // NAO
-Q.naomi_description = "Naomi: The Chrysanthemum Empress. Enemy of the workers with a question mark, but can compromise.";
+Q.naomi_description = "The Chrysanthemum Empress. She can compromise.";
 
 Q.paisco_advisor = 0; // PAISCO
-Q.paisco_description = "Paisco: Our kindhearted light, and symbol of NPP liberalism.";
+Q.paisco_description = "The bleeding heart";
 
 // NPP - Y
 Q.clueless_advisor = 0; //CLUELESS
-Q.clueless_description = "Clueless Partisan: The SDE's Commander-in-Chief and a democratic fighter.";
+Q.clueless_description = "The eyes of youthfulness";
 
 Q.kafil_advisor = 0; //KA FIL
-Q.kafil_description = "Ka Filipino: A red wild card.";
+Q.kafil_description = "A real wild card.";
 
 Q.kasan_advisor = 0; //SANTI
-Q.kasan_description = "Ka San: NPP's Whiz Kid. Has this magical appeal to the youth around her.";
+Q.kasan_description = "The Whiz Kid.";
 
 // NPP - S
 Q.shooter_advisor = 0; //SHOOTER
-Q.shooter_description = "Shooter: Totalitarian in Chief. A Nationalist and Progressive.";
+Q.shooter_description = "Totalitarian in Chief.";
 
 Q.icota_advisor = 0; //ICOTA
-Q.icota_description = "Icota: Anti-Yuuto organizer, will kill Davaoenos for fun.";
+Q.icota_description = "Will kill Davaoenos for fun.";
 
 Q.datuput_advisor = 0; //DATUPUT
 Q.datuput_description = "Datuput: The Social and National Tyrant. His ideas will make your head implode.";
@@ -589,6 +589,7 @@ Q.datuput_description = "Datuput: The Social and National Tyrant. His ideas will
 Q.yuuto_description = "The Devil Himself.";
 Q.blooky_description = "In another life, he could have been campaigning with us.";
 Q.star_fox_description = "Always hungry for power, aren't you Star Fox?";
+Q.earthy_description = "Nobody knows what goes on in his head.";
 
 //not possible
 Q.impossible = 0;
@@ -878,6 +879,8 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 = 2020
 
 It is a bright time for Ateneocord. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. <span class="tooltip-new">Yuuto's<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Yuuto"><br>[+ yuuto_description +]</span></span> impeachment is paving the way for radical politics to be completely put out of the system entirely. All that is left is his trial. 
+
+You are the NPP Chairperson Robbie Rotten. Your goal is to guide the party into the future and have it intact.
 
 Now, the task of Server Democracy is to prepare for the next election. The TKDP and PDP coalition after Yuuto's loss has collapsed, and we stand to gain. Perhaps the next government will have a socialist majority.
 
