@@ -375,7 +375,7 @@ on-arrival: npp_in_government = 1; in_full_house_coalition = 1; radical_dissent 
 
 [? if year = 2020 and fallout_coalition < 50: Your team watches the election broadcast from headquarters. Suddenly, a chill feeling runs down your spine. The anti-Yuuto coalition that rode the no confidence wave now has found itself flat on its ass. A call from <span class="tooltip-new">Blooky<span class="tooltiptext"><img src="img/portraits/Blooky.png" alt="Blooky"><br>[+ blooky_description +]</span></span> arrives, saying that we can't govern alone. Dread reaches your body, it's time to talk with <span class="tooltip-new">him.<span class="tooltiptext"><img src="img/portraits/StarFox.png" alt="StarFox"><br>[+ star_fox_description +]</span></span> ?]
 [? if year != 2020 and fallout_coalition < 50 : Your team watches the election broadcast from headquarters. The results show that our old allies had slumped, and once again we have to rely on the work of <span class="tooltip-new">Star Fox<span class="tooltiptext"><img src="img/portraits/StarFox.png" alt="StarFox"><br>[+ star_fox_description +]</span></span> to keep the government stable. . ?]
-[? if fallout_coalition >= 50 : What are you doing? The phone rings and callers from [? if npp_party_chair != "Robbie" : <span class="tooltip-new">Robbie<span class="tooltiptext"><img src="img/portraits/Robbie.png" alt="StarFox"><br>[+ barnabus_description +]</span></span> ?][? if npp_party_chair = "Robbie" : <span class="tooltip-new">Macalintal<span class="tooltiptext"><img src="img/portraits/Macalintal.jpg" alt="StarFox"><br>[+ macalintal_description +]</span></span> ?] to [? if npp_party_chair != "Remma" : <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Robbie.png" alt="StarFox"><br>[+ remma_description +]</span></span> ?][? if npp_party_chair = "Remma" : <span class="tooltip-new">Clueless<span class="tooltiptext"><img src="img/portraits/Clueless.png" alt="StarFox"><br>[+ clueless_description +]</span></span> ?] are hounding your decision to compromise. They scream about a coalition that was just there! You lament in your room, sure that they'll someday see the light to your plans. For now, the Party stands divided and broken at your "betrayal". ?]
+[? if fallout_coalition >= 50 : What are you doing? The phone rings and callers from [? if npp_party_chair != "Robbie" : <span class="tooltip-new">Robbie<span class="tooltiptext"><img src="img/portraits/Robbie.png" alt="StarFox"><br>[+ barnabus_description +]</span></span> ?][? if npp_party_chair = "Robbie" : <span class="tooltip-new">Macalintal<span class="tooltiptext"><img src="img/portraits/Macalintal.jpg" alt="StarFox"><br>[+ macalintal_description +]</span></span> ?] to [? if npp_party_chair != "Remma" : <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="StarFox"><br>[+ remma_description +]</span></span> ?][? if npp_party_chair = "Remma" : <span class="tooltip-new">Clueless<span class="tooltiptext"><img src="img/portraits/Clueless.png" alt="StarFox"><br>[+ clueless_description +]</span></span> ?] are hounding your decision to compromise. They scream about a coalition that was just there! You lament in your room, sure that they'll someday see the light to your plans. For now, the Party stands divided and broken at your "betrayal". ?]
 
 The delegates we've amassed together is enough for a "Full House". Just enough to make a working majority. We've already fought off <span class="tooltip-new">Yuuto<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Blooky"><br>[+ yuuto_description +]</span></span>, but fighters on our side lament that we've turned towards compromise. Phone calls coming into our office are filled with students angry about our failure to form a better coalition.
 
@@ -566,7 +566,7 @@ go-to: S_robbie_success if (d_relation > 55 and (in_democratic_coalition = 0 or 
 on-arrival: npp_in_government = 1; speaker = "Robbie Rotten"; speaker_party = "NPP"; leverage -= 5; radical_dissent -= 20; center_dissent -= 10; solidarist_dissent -= 10; youth_dissent -= 10; workers_npp += 6; new_middle_npp += 3; old_middle_npp += 3; rural_npp += 3;
 go-to: ministries 
 
-The AMDG walks out, along with more conservative to moderate parliament members. Despite their temper tantrum, you watch as the votes roll up and you manage to clinch another victory for the NPP. The relations between the parties have paid off. Robbie Rotten for Speaker. Doesn’t that have a ring to it? [? if npp_party_chair = "Robbie" : <span class="tooltip-new">Clueless<span class="tooltiptext"><img src="img/portraits/Clueless.png" alt="Leader"><br>[+ clueless_description +]</span></span> and <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> call you up on your victory. Immediately like bureaucrats, they start planning for sessions and the path our government will take on. You three draft bills, orders, talking points, and all those political planning. You find happiness in the mundane, the future will look bright. ?][? if npp_party_chair != "Robbie" : <span class="tooltip-new">Robbie<span class="tooltiptext"><img src="img/portraits/Robbie.png" alt="Leader"><br>[+ robbie_description +]</span></span> is in his office when you call him for the decision. He sounds like a kid on a night before a sleepover, too excited to plan what to do next. He drafts a set of legislative agendas like how a boy plans an itinerary. Our base is pleased that we have a member actively fighting reactionaries in the forefront. ?]
+Some of the AMDG walks out, along with more conservative to moderate parliament members. Despite their temper tantrum, you watch as the votes roll up and you manage to clinch another victory for the NPP. The relations between the parties have paid off. Robbie Rotten for Speaker. Doesn’t that have a ring to it? [? if npp_party_chair = "Robbie" : <span class="tooltip-new">Clueless<span class="tooltiptext"><img src="img/portraits/Clueless.png" alt="Leader"><br>[+ clueless_description +]</span></span> and <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> call you up on your victory. Immediately like bureaucrats, they start planning for sessions and the path our government will take on. You three draft bills, orders, talking points, and all those political planning. You find happiness in the mundane, the future will look bright. ?][? if npp_party_chair != "Robbie" : <span class="tooltip-new">Robbie<span class="tooltiptext"><img src="img/portraits/Robbie.png" alt="Leader"><br>[+ robbie_description +]</span></span> is in his office when you call him for the decision. He sounds like a kid on a night before a sleepover, too excited to plan what to do next. He drafts a set of legislative agendas like how a boy plans an itinerary. Our base is pleased that we have a member actively fighting reactionaries in the forefront. ?]
 
 <div class="container">
 <div class="image"><img src="img/event/convention_2.png"></div>
@@ -592,8 +592,8 @@ on-arrival: radical_dissent += 10; center_dissent += 5; solidarist_dissent += 5;
 go-to: ministries
 
 <div class="container">
-<div class="image"><img src="img/event/blooky.png"></div>
-<div class="text">The vote proceeds in the halls of parliament. One by one, the name “Blooky” pops up in succession. Each time they do, it feels like a knife is thrusted to your stomach and turned. There is no victory to be seen here, your staff privately congratulates Blooky in his victory. We have to stop the bleeding. As he accepts the position, you can just feel his laughter through the fake words of unity and compromise.</div></div>
+<div class="image"><img src="img/event/disappointment.png"></div>
+<div class="text">The vote proceeds in the halls of parliament. One by one, the name Blooky pops up in succession. Each time they do, it feels like a knife is thrusted to your stomach and turned. There is no victory to be seen here, your staff privately congratulates Blooky in his victory. We have to stop the bleeding. As he accepts the position, you can just feel his laughter through the fake words of unity and compromise.</div></div>
 
 
 @S_robbie_negotiate
@@ -604,29 +604,31 @@ subtitle: -2 resources. Tell the secretary to send Blooky a message.
 on-arrival: resources -= 2; workers_d += 4; new_middle_npp -= 5; old_middle_npp -= 5;
 go-to: S_robbie_success
 
-Some people call it corruption, others say strategy. Whatever they say, our "transfer of resources" maintains the coalition's cohesion, and Robbie is sworn in as Speaker. Members of the middle class decry this as 'vote buying', but our party is satisfied with the news?
+[? if npp_party_chair != "Remma" : <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> is sent talking to <span class="tooltip-new">"Blooky"<span class="tooltiptext"><img src="img/portraits/Blooky.png" alt="Leader"><br>[+ blooky_description +]</span></span>, offering him funding and a better position for his party when the next election comes. He accepts, but only with a high price. The next morning, Blooky announces his support for our slate. Conspiracy theories arise from the middle class, saying we had blackmail or threatened to shoot his dog. The sudden change is picked up with concern, as some middle class voters turn away from us. Nevertheless, the votes can now push through with our support.  ?]
+[? if npp_party_chair = "Remma" : You ring up Blooky's office, offering him funding and a better position for his party when the next election comes. He accepts, but only with a high price. The next morning, Blooky announces his support for our slate. Conspiracy theories arise from the middle class, saying we had blackmail or threatened to shoot his dog. The sudden change is picked up with concern, as some middle class voters turn away from us. Nevertheless, the session can now push through with our support. ?]
+
 
 @S_robbie_favor_called
-title: Remma can negotiate a truce between the AMDG and NPP. That's his use after all.
-unavailable-subtitle: [? if remma_advisor = 0 : "You expect me to kiss your feet after you've trashed me?" ?][? if macalintal_favors_remaining <= 0 and macalintal_advisor = 1 : "Even I have limits, I can't compromise for a cow in a slaughterhouse." ?] ;
+title: [? if npp_party_chair != "Remma" : Remma can negotiate a truce between the AMDG and NPP. That's his use after all. ?][? if npp_party_chair = "Remma" : You can negotiate a truce between the AMDG and NPP. This is what everyone expects when you say "Remma". ?]
+unavailable-subtitle: [? if remma_advisor = 0 and npp_party_chair != "Remma" : "I don't want to kiss your feet, you've already kicked me hard enough" ?][? if remma_advisor = 0 and npp_party_chair = "Remma" : They've kicked you out of the main circle, they don't want your solutions for now. ?][? if remma_favors_remaining <= 0 and remma_advisor = 1 : "Even I have limits, I can't compromise for a cow in a slaughterhouse." ?];
 choose-if: remma_favors_remaining > 0 and remma_advisor = 1
 subtitle: Remma, the peacemaker as always, will find a way.
 on-arrival: remma_favors_remaining -= 1;
 
-Days, hours, weeks pass by. Remma is trapped in a back and forth between the NPP and AMDG. Never sleeping, we send him to fight for a way through. Soon enough, the HQ phone rings, and he reports a breakthrough.
+[? if npp_party_chair != "Remma" : There’s just something <span class="tooltip-new">in the man<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> that makes the party palpable to others. Remma shows up to his house with food to start off on the right foot. Agendas, welfare, dealing with <span class="tooltip-new">Yuuto<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Leader"><br>[+ yuuto_description +]</span></span>, and budgets are discussed. Rounds of bargaining begin, and they act like two dogs splitting up the hunt. With rationality, Remma’s sweet talk is felt as <span class="tooltip-new">Blooky<span class="tooltiptext"><img src="img/portraits/Blooky.png" alt="Leader"><br>[+ blooky_description +]</span></span> announces they’ve drafted a reasonable agreement. A thinner line now exists between the party and the AMDG. ?]
+
+[? if npp_party_chair = "Remma" : There’s just something in you that makes the party palpable to others. You show up to his house with food so we can start off on the right foot. Agendas, welfare, dealing with <span class="tooltip-new">Yuuto<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Leader"><br>[+ yuuto_description +]</span></span>, and budgets are discussed. Rounds of bargaining begin, and you feel like two wolves splitting up the hunt. With rationality, you see your sweet talk felt as <span class="tooltip-new">Blooky<span class="tooltiptext"><img src="img/portraits/Blooky.png" alt="Leader"><br>[+ blooky_description +]</span></span> announces we've drafted a reasonable agreement. A thinner line now exists between the party and the AMDG. ?]
 
 - @S_robbie_success: A lull in the fighting.
 
 @S_robbie_backdoor
 title: Pull some strings.
-unavailable-subtitle: [? if macalintal_advisor = 0 : "You've retired me. I would have been useful here, would have." ?][? if macalintal_favors_remaining <= 0 and macalintal_advisor = 1 : "You can't keep asking me, I'm not superman. Even I have limits." ?] ;
+unavailable-subtitle: [? if macalintal_advisor = 0 and npp_party_chair = "Macalintal" : You're temporarily locked out of the bigger decision making. No solutions from you will come for now. ?][? if macalintal_advisor = 0 and npp_party_chair != "Macalintal" : "You've retired me. I would have been useful here." ?][? if macalintal_favors_remaining <= 0 and macalintal_advisor = 1 : "You can't keep asking me, I'm not superman. Even I have limits." ?] ;
 choose-if: macalintal_favors_remaining > 0 and macalintal_advisor = 1
 subtitle: Macalintal's worth shines bright.
 on-arrival: macalintal_favors_remaining -= 1;
 
-The SDE takes to the streets at night. <span class="tooltip-new">Macalintal's<span class="tooltiptext"><img src="img/portraits/Macalintal.jpg" alt="Leon."><br>[+ macalintal_description +]</span></span> guards personally accompany them. Soon they arrive at houses. A few bumps and statements here and there, nothing special. The floor is packed the next day by AMDG deserters, seemingly supportive of the anti-Yuutoist stance. 
-
-Blooky is unseated even before the voting period commences, and Robbie has claimed victory.
+The SDE takes to the streets at night. [? if npp_party_chair != "Macalintal" : <span class="tooltip-new">Macalintal's<span class="tooltiptext"><img src="img/portraits/Macalintal.jpg" alt="Leon."><br>[+ macalintal_description +]</span></span> ?][? if npp_party_chair = "Macalintal" : Your ?] guards personally accompany them. Soon they arrive at houses. A few bumps and statements here and there, nothing special. The floor is packed the next day by AMDG deserters, seemingly supportive of the anti-Yuutoist stance. Blooky is unseated even before the voting period commences, and Robbie has claimed victory.
 
 - @S_robbie_success: All in favor of Robbie Rotten, raise your hand.
 
@@ -635,9 +637,7 @@ on-arrival: d_relation -= 10; tkdp_relation -= 5; leverage += 8 if npp_r > ( d_r
 subtitle: Fighting Blooky head on will be risky. If we lose here, then no negotiations will take place. Some of our party members dissent as they feel that these "purity tests" are not worth it. It does not help that the more moderate wings of our coalition actively support Blooky's candidacy.
 go-to: S_robbie_defeat if npp_r <= ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) ); S_robbie_success if npp_r > ( d_r + (fallout_coalition + 5 - (d_r + npp_r)) )
 
-The vote commences and both sides fight fiercely.
-
-[? if npp_r > ( d_r + ( fallout_coalition + 5 - (d_r + npp_r) ) ) : The NPP comes out on top, and by defeating Blooky head on, has destroyed AMDG's political capital. We have more to gain in picking ministries ?]
+One more vote. The air around you feels colder, you decide to make no moves and push through with sheer force alone. Party cadres watch from their chairs in anticipation.
 
 @S_robbie_superfail
 subtitle: This will cause significant internal dissent amongst our party outside the NPP-R, and will lead to increased distrust from the bourgeois parties.
@@ -716,29 +716,35 @@ choose-if: youth_strength >= 30
 on-arrival: npp_in_government = 1; speaker = "Clueless Partisan"; speaker_party = "NPP"; rb_strength += 150; sh_strength -= 70; sa_strength -= 70; youth_strength += 10; youth_dissent -= 20; radicalization += 2; leverage -= 5
 go-to: ministries
 
-With the urgency of the PDP resurgence, Clueless' victory supercharges the SDE and inspires a surge in recruitment. 
+[? if npp_party_chair = "Clueless" : The floor is littered with campaign materials, markers, and scissors. Your morning is opened by a call from the office. <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> congratulates you on your appointment, it’s well deserved after all. You’ve been fighting <span class="tooltip-new">Yuuto<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Leader"><br>[+ yuuto_description +]</span></span> when the NPP was out, forming the SDE and holding your ground in elections. These tireless campaigns were all worth it. What was once fringe has now become the national agenda. <span class="tooltip-new">Macalintal<span class="tooltiptext"><img src="img/portraits/Macalintal.png" alt="Leader"><br>[+ macalintal_description +]</span></span> shows up with <span class="tooltip-new">Ka Filipino<span class="tooltiptext"><img src="img/portraits/KaFil.png" alt="Leader"><br>[+ kafil_description +]</span></span> shortly after a call, they give you roses. Your favorite. ?]
+
+
+[? if npp_party_chair != "Clueless" : You call up <span class="tooltip-new">Clueless<span class="tooltiptext"><img src="img/portraits/Macalintal.png" alt="Leader"><br>[+ macalintal_description +]</span></span> in the morning, informing him of the party decision to appoint him as Speaker. He answers with a tired voice, you can tell he just woke up. The morning is marked by discussion on policy. The Youth caucus holds a party in announcement of the decision, as a new way is pushed forward. Land reform is on everyone’s minds now, and as the possibility of it happening enters Parliament’s minds, your office is swamped with calls from alarmed coalition members. This will be harder than we think.  ?]
 
 <div class="container">
 <div class="image"><img src="img/event/clueless_poster.png"></div>
-<div class="text">Our radical rhetoric is put on full swing and the fight against authoritarianism begins. A new wind of change blows through the land, culminating in the arrest of Milkman, Yuuto's second in command, in a high profile arrest.</div></div>
+<div class="text">Clueless’ ideals are felt in the agenda as government troops are used to protect farmers, anti-work penalties are stripped off, and minimum wage is on its way to be doubled. Parliament offices sweat as they review the contents of the bill, the cost of it being far more than everyone expects. The party uses tricks and graphs to trick the audience into thinking less about the cost impact. But as disenfranchised opposition members take to the streets, you can feel that our first obstacle is coming ahead. </div></div>
 
 
 @S_blooky
 title: Blooky for Speaker
 subtitle: We will accept and support Blooky's candidacy for the speakership. Although there is opposition within our party, this will allow us more freedom in choosing ministries.
-unavailable-subtitle: The NPP-C is against this decision, we should be the leaders of this coalition, not them.
-choose-if: center_strength < 35 and center_dissent < 30
+unavailable-subtitle: The NPP-C is against this decision, we should be the leaders of this coalition, not them. [? if npp_party_chair_faction = "NPP-C" : We also control the Party at this point, this will not push through. ?]
+choose-if: (center_strength < 35 and center_dissent < 30) and npp_party_chair_faction != "NPP-C"
 on-arrival: npp_in_government = 1; speaker = "Blooky"; speaker_party = "AMDG"; leverage += 5; radical_dissent += 15; center_dissent += 15; youth_dissent += 15; solidarist_dissent += 15; d_relation += 10
 go-to: ministries
 
 <div class="container">
 <div class="image"><img src="img/event/convention_1.png"></div>
-<div class="text">Blooky's victory is unexpected, and launches the party into disarray. A walkout ensues, and members of our coalition take to the streets. On TV, one of our party cadres call Blooky "The PDP from 7-Eleven". Nevertheless, the decision gets pushed through.</div></div>
+<div class="text">You feel like you’re next on death row as you press the buttons to call up Blooky. You inform him of the party decision to allow him to be speaker with concessions. He accepts quickly, but it doesn’t shake off the feeling that you’ll be targeted by the left for compromise. Soon enough, as the vote begins, members of your party storm out in protest. One of our MPs give a street interview calling him an opportunist. It will be a long night.
+</div></div>
 
 @ministries
 go-to: ministries_proper
 
-Now, as the debate has settled, we can start picking our positions in government. Our party controlling a certain ministry will make us steer the course of that specific department. Likewise, leaving the rest to our coalition partners will allow them to hold final say in those fields. Pick wisely.
+The curtains close on the political stage, now it’s time for the backroom deals. We are given a set of ministries to choose from. Some positions are considered more important than others, and our party prefers some to be picked. Our party controlling a certain ministry will make us steer the course of that specific department. Likewise, leaving the rest to our coalition partners will allow them to hold final say in those fields. Pick wisely.
+
+Party Ministry Goals: Labor, Interior, Finance
 
 @ministries_proper
 
@@ -747,7 +753,7 @@ Now, as the debate has settled, we can start picking our positions in government
 
 @labor
 title: Labor Ministry
-subtitle: Taking the Labor Ministry is expected of us.
+subtitle: The Labor Ministry is our turf.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
@@ -757,9 +763,11 @@ go-to: ministries_proper
 
 Ka Filipino of the NPP-Y has been appointed labor minister.
 
+The Labor Ministry allows us to pass more wide sweeping labor laws and enforce workers protections even with a reactionary Speaker. Likewise, allowing our enemies to get Labor will hamper our mission to protect the weak. **This post considered important by our party.**
+
 @interior
 title: Interior Ministry
-subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+subtitle: The Interior Ministry controls national security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
@@ -769,9 +777,11 @@ go-to: ministries_proper
 
 [? if speaker != "Macalintal" : Leon Macalintal ?][? if speaker = "Macalintal" : WasteofSpace ?] of the NPP-R has been appointed Interior Minister.
 
+The Interior Ministry allows us to direct investigations towards the far right and highten democratic protections. Likewise, allowing our enemies to get Interior will leave the government ambivalent to anti-democratic crusading. **This post considered important by our party.**
+
 @finance
 title: Finance Ministry
-subtitle: The Finance Ministry controls the government budget and taxes.
+subtitle: The Finance Ministry allows us to decide on tax policy.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -781,9 +791,11 @@ go-to: ministries_proper
 
 Icota of the NPP-S has been appointed Finance Minister.
 
+The Finance Ministry allows us to raise taxes and get emergency funds for our welfare schemes. Likewise, allowing our enemies to get Finance will leave us begging for extra funds at the mercy of the Bourgeois. **This post considered important by our party.**
+
 @economic
 title: Economic Ministry
-subtitle: The Economic Ministry controls broader economic policy.
+subtitle: The Economic Ministry controls economic policy.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -792,6 +804,8 @@ on-arrival: leverage -= 10; economic_minister_party = "NPP"; economic_minister =
 go-to: ministries_proper
 
 Clueless Partisan of the NPP-Y has been appointed Economic Minister.
+
+The Economic Ministry will allow us to drive Ateneocord with our public works program. Without it, we are helpless in deciding how to manage the economy. **This post is not a priority.**
 
 @justice
 title: Justice Ministry
@@ -805,9 +819,11 @@ go-to: ministries_proper
 
 Remma of the NPP-C has been appointed Justice Minister.
 
+The Justice Ministry controls the courts, and will decide if our decisions are pushed through and enforced. An enemy Justice Ministry will deny our decisions and executive orders. **This post is not a priority.**
+
 @foreign
 title: Foreign Ministry
-subtitle: This is usually the domain of Star Fox of the LPPA.
+subtitle: This is usually the domain of Star Fox of the LPPA or one of Blooky's men. 
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -817,10 +833,11 @@ go-to: ministries_proper
 
 Paisco of the NPP-C has been appointed Foreign Minister.
 
+This Ministry handles our relations with PSHS and other lands, it is not considered important. Its most important agenda as of the moment is to get closer relations for our economies. **This post is considered dumb to take. Getting it will actively anger our party who wishes other ministries instead.**
 
 @agriculture
 title: Agricultural Ministry
-subtitle: This is not our usual domain.
+subtitle: This is not our usual domain. 
 unavailable-subtitle: We do not have enough leverage.
 choose-if: leverage >= 10 
 view-if: agriculture_minister_party != "NPP"
@@ -830,26 +847,41 @@ tags: mins_1928
 
 Ka San of the NPP-Y has been appointed Agriculture Minister.
 
+This Ministry handles agricultural policy and while the NPP-C writes it off, **the NPP-Y seeks this as an oppurtunity to get.**
+
 @reichswehr
 title: Ministry of Defense
-subtitle: The Ministry responsible for the armed "moderating" forces is not typically our domain; The LPPA traditionally holds this spot with bourgeois General Eclipse will be displeased.
+subtitle: The Ministry responsible for the armed "moderating" forces is not typically our domain. The LPPA traditionally holds this spot with bourgeois General Eclipse will be displeased.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 15 
 view-if: reichswehr_minister_party != "NPP"
-on-arrival: leverage -= 15; reichswehr_minister_party = "NPP"; reichswehr_minister = "Rotten"
+on-arrival: leverage -= 15; reichswehr_minister_party = "NPP"; reichswehr_minister = "Robbie"
 go-to: ministries_proper
 
 Robbie Rotten of the NPP-R has been appointed Defense Minister.
 
+**This post is critical, but leaving it alone will be fine. [? if npp_party_chair != "Robbie" : Robbie personally has his eyes on this position though. ?][? if npp_party_chair = "Robbie" : You personally have your eyes on this position though. ?]**
 
 
 @no_more
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. Any leverage left over cannot be reused anywhere. We have to choose wisely. ?][? if leverage < 10 : We do not have much leverage left. ?]
+on-arrival: center_dissent -=5 if labor_minister_party = "NPP"; radical_dissent -=5 if labor_minister_party = "NPP"; youth_dissent -=5 if labor_minister_party = "NPP"; solidarist_dissent -=5 if labor_minister_party = "NPP";center_dissent +=10 if labor_minister_party != "NPP"; radical_dissent +=10 if labor_minister_party != "NPP"; youth_dissent +=10 if labor_minister_party != "NPP"; solidarist_dissent +=10 if labor_minister_party != "NPP"; center_dissent +=5 if interior_minister_party != "NPP"; radical_dissent +=5 if interior_minister_party != "NPP"; youth_dissent +=5 if interior_minister_party != "NPP"; solidarist_dissent +=5 if interior_minister_party != "NPP"; center_dissent +=5 if finance_minister_party != "NPP"; radical_dissent +=5 if finance_minister_party != "NPP"; youth_dissent +=5 if finance_minister_party != "NPP"; solidarist_dissent +=5 if finance_minister_party != "NPP"; youth_dissent -= 15 if agriculture_minister_party = "NPP"
 tags: mins_1928
 
-This coalition arrangement is tolerable to all.
+This coalition arrangement is tolerable to all. Our party has reviewed its agenda for this government.
+
+**Labor** - [? if labor_minister_party = "NPP" : **<span style="color:#008000;">Success - Our control, -5 Dissent</span>** ?][? if labor_minister_party != "NPP" : **<span style="color:#990000;">Failure - No control, +10 Dissent</span>** ?]
+
+**Interior** - [? if interior_minister_party = "NPP" : **<span style="color:#008000;">Success - Our control</span>** ?][? if interior_minister_party != "NPP" : **<span style="color:#990000;">Failure - No control, +5 Dissent</span>** ?]
+
+**Finance** - [? if finance_minister_party = "NPP" : **<span style="color:#008000;">Success - Our control</span>** ?][? if finance_minister_party != "NPP" : **<span style="color:#990000;">Failure - No control, +5 Dissent</span>** ?]
+
+[? if agricultural_minister_party = "NPP" : **Agriculture** - The NPP-Y considers this a **<span style="color:#008000;">Success. -15 NPP-Y Dissent</span>** ?]
+
+We *will* get dissent if we do not get these ministries. After our review of the agenda, we can move on with the government work.
+
 
 (The cards have been updated in Government Affairs, new options will show up depending on the ministries and Speaker we have chosen)
 
@@ -903,7 +935,7 @@ tags: drop_mins_1928
 go-to: ministries_proper
 
 @drop_reichswehr
-title: Drop the Reichswehr Ministry.
+title: Drop the Defense Ministry.
 view-if: reichswehr_minister_party = "NPP"
 on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Eclipse"; leverage += 15;
 tags: drop_mins_1928
