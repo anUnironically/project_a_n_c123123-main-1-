@@ -32,7 +32,7 @@ if (Q.difficulty >= 0) {
 } else {
     window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
 }
-if (spd_in_government = 1 and coalition_dissent > 0) {
+if (spd_in_government = 1 && coalition_dissent > 0) {
     coalition_dissent -= 1;
 }
 !}
