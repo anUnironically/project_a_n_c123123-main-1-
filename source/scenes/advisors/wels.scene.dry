@@ -24,17 +24,17 @@ choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: {!
 Q.advisor_action_timer = 6;
+z_relation += 5; 
+ddp_relation += 5; 
+dvp_relation += 5;
 if (Q.difficulty >= 0) {
     window.dendryUI.dendryEngine.state.currentHands['main'] = [];
 } else {
     window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
 }
-
-coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; 
-z_relation += 5; 
-ddp_relation += 5; 
-dvp_relation += 5
-
+if (spd_in_government = 1 and coalition_dissent > 0) {
+    coalition_dissent -= 1;
+}
 !}
 
 @party_discipline
