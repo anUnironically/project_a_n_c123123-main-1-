@@ -50,6 +50,12 @@ Q.dissent_percent = 5;
 Q.npp_party_chair = "Robbie";
 Q.npp_party_chair_faction = "NPP-R";
 
+//card slots 
+Q.main_card_slots = 3;
+//time for advisors to reset
+Q.advisor_timer_limit = 6;
+
+
 // factions
 // Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist']; //OLD
 
@@ -880,7 +886,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 Ateneocord is in a tense state. <span class="tooltip-new">Yuuto<span class="tooltiptext"><img src="img/portraits/Yuuto.png" alt="Yuuto"><br>[+ yuuto_description +]</span></span> has just been pushed out, and his impeachment is paving the way for the removal of radicalism in the country entirely. All that's left is his trial. <span class="tooltip-new">Nao<span class="tooltiptext"><img src="img/portraits/Naomi.png" alt="Leader"><br>[+ naomi_description +]</span></span> has been appointed temporarily in his absence
 
-You are the NPP Chairperson Robbie Rotten. Your goal is to guide the party into the future and have it intact.
+You are the NPP Chairperson <span class="tooltip-new">Robbie Rotten<span class="tooltiptext"><img src="img/portraits/Robbie.png" alt="Leader"><br>[+ barnabus_description +]</span></span. Your goal is to guide the party into the future and have it intact.
 
 Now, the task of Server Democracy is to prepare for the next election. The TKDP and PDP coalition after Yuuto's loss has collapsed, and we stand to gain. Perhaps the next government will have a socialist majority.
 

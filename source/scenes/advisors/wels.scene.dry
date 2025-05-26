@@ -11,15 +11,15 @@ Remmacaronie is the main leader of the NPP-C. One of the first organizers of the
 
 Instrumental in Yuuto's removal, his new plan is to integrate and allow the TKDP into the NPP coalition. This has been hindered by members of the NPP-R and NPP-A decrying the TKDP as Yuuto's lapdogs, which was not entirely false. Remma's plan, however, if successful will guarantee an iron NPP grip on the Parliament.
 
-- @clear_agenda
+- @national_unity
 - @party_discipline
 - @emergency_fundraising
 - @snap_election
 - @root: Return to main
 
-@clear_agenda
-title: Clear the agenda
-subtitle: Removes all cards from the hand.
+@national_unity
+title: National Unity
+subtitle: Reduces coalition dissent. Remma will walk to our partners' offices to make sure that they'll be with us on the agenda.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: {!
@@ -29,9 +29,13 @@ if (Q.difficulty >= 0) {
 } else {
     window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
 }
-!}
 
-All items from our agenda have been cleared.
+coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; 
+z_relation += 5; 
+ddp_relation += 5; 
+dvp_relation += 5
+
+!}
 
 @party_discipline
 title: Party Discipline

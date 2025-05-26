@@ -7,9 +7,9 @@ view-if: macalintal_advisor = 1
 
 = Leon Macalintal
 
-Leon Macalintal is the current Gucklandian Interior Minister and is part of the original party trio of McGucket, Macalintal, and <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/WelsOtto.jpg" alt="Remma"><br>[+ remma_description +]</span></span>. A member of the NPP-Radikal, he believes in no compromise with any bourgeois parties in contrast to the NPP-Center. Instead, he supports building up our support base of the urban proletariat and making grassroots organization more expansive.
+Leon Macalintal is the current Gucklandian Interior Minister and is part of the original party trio of span class="tooltip-new">Robbie<span class="tooltiptext"><img src="img/portraits/Robbie.jpg" alt="Remma"><br>[+ barnabus_description +]</span></span>, Macalintal, and <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/WelsOtto.jpg" alt="Remma"><br>[+ remma_description +]</span></span>. A member of the NPP-Radikal, he believes in no compromise with any bourgeois parties in contrast to the NPP-Center. Instead, he supports building up our support base of the urban proletariat and making grassroots organization more expansive.
 
-He cooperates closely with the NPP-Anarchists, and has a close working relations with its caucus leader: Clueless Partisan. Macalintal is known to be scheming and is expert with realpolitik in Ateneocord. As one of the more dominant older personalities of the NPP, he has clashed with Yuuto and Blooky in the past, making Davaoenos slightly negative towards him.
+He cooperates closely with the NPP-Youth, and has a close working relations with its caucus leader: Clueless Partisan. Macalintal is known to be scheming and is expert with realpolitik in Ateneocord. As one of the more dominant older personalities of the NPP, he has clashed with Yuuto and Blooky in the past, making Davaoenos slightly negative towards him.
 
 After Yuuto's ousting, Macalintal does not oppose the TKDP coalition plans unlike many in his caucus like McGucket who calls them "Yuuto's lapdogs" as they were instrumental in keeping him in power. He is not, however, fully accepting yet until the TKDP can shrug off its Yuutoist past properly.
 
@@ -22,17 +22,17 @@ After Yuuto's ousting, Macalintal does not oppose the TKDP coalition plans unlik
 
 @realpolitik
 title: Realpolitik
-subtitle: Decreases bourgeois support. Macalintal's strategic positioning allows us to compromise with local state-level governments.
+subtitle: Decreases bourgeois support. Our support for economic reform have enticed many members of the population just screaming to be tapped into.
 choose-if: advisor_action_timer <= 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 5; ddp_relation += 5; dvp_relation += 5
+on-arrival: advisor_action_timer = advisor_timer_limit; 
 
 We have improved our relations with the Z, [+ ddp_name +], and DVP, and reduced tensions with the coalition.
 
 
 @left_organization
 title: Grassroot Organizations
-subtitle: Increases support within Proletarians. While this angers the NPP-C and NPP-U factions, Macalintal will work with the NPP-R and the NPP-A to expand more "radical" grassroot organizing.
+subtitle: Increases support within Proletarians. While this angers the NPP-C and NPP-U factions, Macalintal will work with the NPP-R and the NPP-Y to expand more "radical" grassroot organizing.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
@@ -43,7 +43,7 @@ We have reduced dissent among the anti-toleration factions.
 title: Strategy Meeting
 subtitle: Removes all cards from the hand. Macalintal will organize a party meeting to align and get our priorities fixed.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > advisor_timer_limit : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: {!
 Q.advisor_action_timer = 6;
 if (Q.difficulty >= 0) {
