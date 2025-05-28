@@ -192,3 +192,25 @@ Unemployed: NPP: [+ unemployed_npp_display +]%, AMDG: [+ unemployed_d_display +]
 Davaoenos: NPP: [+ davao_npp_display +]%, AMDG: [+ davao_d_display +]%, TKDP: [+ davao_tkdp_display +]%, WXS: [+ davao_wxs_display +]%, DVP: [+ davao_lppa_display +]%; DNVP: [+ davao_ppm_display +]%, NSDAP: [+ davao_pdp_display +]%, Others: [+ davao_other_display +]% [? if sapd_formed: SAPD: [+ davao_sapd_display +]% ?]
 
 Support for Server Democracy: [+ pro_republic_disp +]%
+
+@social
+
+= <p style="color: #2a3e96;">Balance of Power</p>
+
+Remma: 
+
+Shooter:
+
+Robbie Rotten:
+
+Paisco:
+
+Ka San:
+
+Clueless Partisan:
+
+Ka Filipino:
+
+Leon Macalintal:
+
+Nakayama:
