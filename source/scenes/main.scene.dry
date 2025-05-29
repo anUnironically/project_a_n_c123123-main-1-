@@ -9,7 +9,6 @@ if (Q.advisor_action_timer <= 0) {
 } else {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
 }
-!}
  
  // you cant put a variable for card slots so im doing this spaghetti thing
 
@@ -24,6 +23,8 @@ if (Q.main_card_slots <= 3) {
 } else {
     max-cards: 6 //prevent overflow
 }
+
+!}
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
