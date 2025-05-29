@@ -50,6 +50,11 @@ Q.dissent_percent = 5;
 Q.party_achievements = 0;
 Q.party_reputation = 0;
 
+//gov anger
+Q.gov_popularity_con = 0;
+Q.gov_popularity_npp = -1;
+Q.gov_popularity_auth = 0;
+
 //CANDIDATE STRENGTHS
 Q.remma_str = 1;
 Q.shooter_str = 0;
