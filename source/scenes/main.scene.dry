@@ -9,7 +9,21 @@ if (Q.advisor_action_timer <= 0) {
 } else {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
 }
-max-cards: 6
+!}
+max-cards: {!
+
+if (Q.main_card_slots <= 3) {
+    3;
+} else if (Q.main_card_slots == 4) {
+    4;
+} else if (Q.main_card_slots == 5) {
+    5;
+} else if (Q.main_card_slots == 6) {
+    6;
+} else {
+    6;
+}
+
 !}
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
