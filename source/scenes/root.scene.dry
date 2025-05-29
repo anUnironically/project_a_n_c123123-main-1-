@@ -51,15 +51,32 @@ Q.party_achievements = 0;
 Q.party_reputation = 0;
 
 //CANDIDATE STRENGTHS
-Q.remma_str = 0;
+Q.remma_str = 1;
 Q.shooter_str = 0;
-Q.robbie_str = 0;
-Q.macalintal_str = 0;
+Q.robbie_str = 1.5;
+Q.macalintal_str = 0.5;
 Q.kafil_str = 0;
-Q.clueless_str = 0;
-Q.kasan_str = 0;
+Q.clueless_str = 0.5;
+Q.kasan_str = 0.5;
 Q.naomi_str = 0;
 Q.paisco_str = 0;
+
+//If knocked out
+Q.remma_dropout = 0;
+Q.shooter_dropout = 0;
+Q.robbie_dropout = 0;
+Q.macalintal_dropout = 0;
+Q.kafil_dropout = 0;
+Q.clueless_dropout = 0;
+Q.kasan_dropout = 0;
+Q.naomi_dropout = 0;
+Q.paisco_dropout = 0;
+
+//If available
+Q.shooter_intro = 0;
+Q.naomi_intro = 0;
+Q.paisco_intro = 0;
+Q.kasan_intro = 0;
 
 //PARTY CHAIRPERSON 
 Q.npp_party_chair = "Robbie";
