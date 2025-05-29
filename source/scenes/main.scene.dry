@@ -9,20 +9,8 @@ if (Q.advisor_action_timer <= 0) {
 } else {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
 }
- 
- // you cant put a variable for card slots so im doing this spaghetti thing
 
-if (Q.main_card_slots <= 3) {
-    max-cards: 3
-} else if (Q.main_card_slots == 4) {
-    max-cards: 4
-} else if (Q.main_card_slots == 5) {
-    max-cards: 5
-} else if (Q.main_card_slots == 6) {
-    max-cards: 6
-} else {
-    max-cards: 6 //prevent overflow
-}
+max-cards: 6
 
 !}
 
