@@ -195,22 +195,22 @@ Support for Server Democracy: [+ pro_republic_disp +]%
 
 @social
 
-= <p style="color: #2a3e96;">Balance of Power</p>
+= <p style="color: #2a3e96;">Candidate Strengths</p>
 
-Remma: 
+Remma: [+ remma_str +]
 
-Shooter:
+Shooter: [+ shooter_str +]
 
-Robbie Rotten:
+Robbie Rotten: [+ robbie_str +]
 
-Paisco:
+Paisco: [+ paisco_str +]
 
-Ka San:
+Ka San: [+ kasan_str +]
 
-Clueless Partisan:
+Clueless Partisan: [+ clueless_str +]
 
-Ka Filipino:
+Ka Filipino: [+ kafil_str +]
 
-Leon Macalintal:
+Leon Macalintal: [+ macalintal_str +]
 
-Nakayama:
+Nakayama: [+ naomi_str +]

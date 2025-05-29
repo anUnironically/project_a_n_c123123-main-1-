@@ -46,6 +46,21 @@ Q.dues = 2;
 Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
+//party achievements and reputation
+Q.party_achievements = 0;
+Q.party_reputation = 0;
+
+//CANDIDATE STRENGTHS
+Q.remma_str = 0;
+Q.shooter_str = 0;
+Q.robbie_str = 0;
+Q.macalintal_str = 0;
+Q.kafil_str = 0;
+Q.clueless_str = 0;
+Q.kasan_str = 0;
+Q.naomi_str = 0;
+Q.paisco_str = 0;
+
 //PARTY CHAIRPERSON 
 Q.npp_party_chair = "Robbie";
 Q.npp_party_chair_faction = "NPP-R";
