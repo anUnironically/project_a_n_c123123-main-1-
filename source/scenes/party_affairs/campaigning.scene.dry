@@ -76,6 +76,7 @@ on-arrival: unemployed_npp += 6*(1-dissent); resources -= 1; unemployed_npp -= 3
 <div class="text">We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?]</div></div>
 
 @davao_campaign
+title: We have to talk to Davao at some point, let's schedule a rally.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
