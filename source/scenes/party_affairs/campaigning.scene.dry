@@ -58,7 +58,6 @@ if (Q.nationalization_progress >= 1) {
 
 @new_middle
 title: [? if npp_party_chair == "Clueless" or npp_party_chair == "Macalintal" or npp_party_chair == "Remma" : Why can't we work with the intelligentsia? We came from there, we can negotiate. ?][? if npp_party_chair == "Ka San" or npp_party_chair == "Ka Fil" : I know how to talk to these elitistas, let’s send them an olive branch, we gotta build up our revolutionary potential. ?][? if npp_party_chair == "Robbie" : We met in school, remember? These students are just like us, let’s give them and their parents a visit. ?][? if npp_party_chair == "Shooter" : I hate these educated elites with a passion, but c’mon there’s gotta be something we have to give them. ?][? if npp_party_chair == "Nakayama" : Yes. My people. College students. I’ll be accepted this time. Surely. Let’s visit their families too.  ?][? if npp_party_chair == "Paisco" : The local government offices on the list look nice, why don’t we give them a visit? ?]
-subtitle: -1 res
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
