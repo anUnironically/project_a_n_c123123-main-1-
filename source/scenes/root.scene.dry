@@ -50,6 +50,15 @@ Q.dissent_percent = 5;
 Q.party_achievements = 0;
 Q.party_reputation = 0;
 
+//economic plans
+Q.new_deal_progress = 0;
+Q.great_society_progress = 0;
+Q.mak_plan_progress = 0;
+Q.totalist_charter_progress = 0;
+
+//other stuff
+Q.totalism_seen = 0;
+
 //gov anger
 Q.gov_popularity_con = -3;
 Q.gov_popularity_npp = -1;
