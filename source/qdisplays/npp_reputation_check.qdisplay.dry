@@ -1,10 +1,10 @@
 
 # NPP reputation check
 
-(..-5) We have been <span style="color:#990000;">***abandoned***</span> as stagnant (<span style="color:#990000;">**[+ party_reputation +]**</span>)
-(-4..-3) We are seen as <span style="color:#990000;">***snakes***</span> not to be trusted (<span style="color:#990000;">**[+ party_reputation +]**</span>)
-(-2..-1) Our voters are <span style="color:#DEBD8B;">***mistrusting***</span> of our party schematics (<span style="color:#DEBD8B;">**[+ party_reputation +]**</span>)
-(0..0) The wider electorate is <span style="color:#DEBD8B;">***split***</span> on our authenticity (<span style="color:#DEBD8B;">**[+ party_reputation +]**</span>)
-(1..2) We are <span style="color:#DEBD8B;">***credible enough***</span> to be seen as people who at least try(<span style="color:#DEBD8B;">**[+ party_reputation +]**</span>)
-(3..4) We are percieved as <span style="color:#008000;">***genuine fighters***</span> for the working class (<span style="color:#008000;">**[+ party_reputation +]**</span>)
-(5..) The NPP is considered as <span style="color:#008000;">***the nation's conscience***</span> (<span style="color:#008000;">**[+ party_reputation +]**</span>)
+(..-5) We have been <span style="color:#990000;">**abandoned**</span> as stagnant (<span style="color:#990000;">**[+ party_reputation +]**</span>)
+(-4..-3) We are seen as <span style="color:#990000;">**snakes**</span> not to be trusted (<span style="color:#990000;">**[+ party_reputation +]**</span>)
+(-2..-1) Our voters are <span style="color:#DEBD8B;">**mistrusting**</span> of our party schematics (<span style="color:#DEBD8B;">**[+ party_reputation +]**</span>)
+(0..0) The wider electorate is <span style="color:#DEBD8B;">**split**</span> on our authenticity (<span style="color:#DEBD8B;">**[+ party_reputation +]**</span>)
+(1..2) We are <span style="color:#DEBD8B;">**credible enough**</span> to be seen as people who at least try(<span style="color:#DEBD8B;">**[+ party_reputation +]**</span>)
+(3..4) We are percieved as <span style="color:#008000;">**genuine fighters**</span> for the working class (<span style="color:#008000;">**[+ party_reputation +]**</span>)
+(5..) The NPP is considered as <span style="color:#008000;">**the nation's conscience**</span> (<span style="color:#008000;">**[+ party_reputation +]**</span>)

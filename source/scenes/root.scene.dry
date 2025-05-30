@@ -52,6 +52,7 @@ Q.party_reputation = 0;
 
 //economic plans
 Q.new_deal_progress = 0;
+Q.new_deal_adopted = 0;
 Q.great_society_progress = 0;
 Q.mak_plan_progress = 0;
 Q.totalist_charter_progress = 0;
