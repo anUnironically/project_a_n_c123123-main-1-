@@ -15,7 +15,7 @@ tags: party_affairs
 [? if npp_party_chair == "Robbie" : A picture of <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span>, our former <span class="tooltip-new">Chancellor<span class="tooltiptext"><img src="img/portraits/Chancellor.png" alt="Leader"><br>[+ chancellor_description +]</span></span>, the old cabinet, and <span class="tooltip-new">you<span class="tooltiptext"><img src="img/portraits/Robbie.png" alt="Leader"><br>[+ barnabus_description +]</span></span> sits on the desk. You’re alone for a while before the former shows up. We’re gonna do the usual anyway, put up some posters, edit some paragraphs, then publish them all in the hopes of better poll numbers. Usually, you have fun doing these types of things. There’s something different today. You ask Remma if this planning session would be happier if we had them by our side. He doesn't answer, but he’s shaken to the core. You weep. ?]
 [? if npp_party_chair == "Macalintal" : Get the ball rolling. That’s what <span class="tooltip-new">you've<span class="tooltiptext"><img src="img/portraits/Macalintal.png" alt="Leader"><br>[+ macalintal_description +]</span></span>, always been saying, as long as we start early we’ll be able to jump up our results. <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span>, interrupts your musings as he talks about how there's a free opportunity to hold a campaign, those meet-and-greets whatever. You tell him that you’ve never felt like it was right for you to be the one going out for this. He replies that you’re the chairperson anyway. He trusts you to make decisions. Do you? ?]
 [? if npp_party_chair == "Shooter" : Ever since you’ve come into the scene, you’ve always pushed for the NPP to gather more casually and closely. No more of those LARP agreements whatever, you gotta act tough for the cameras. This time, you’re in a bar as <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> and <span class="tooltip-new">Santi<span class="tooltiptext"><img src="img/portraits/KaSan.png" alt="Leader"><br>[+ kasan_description +]</span></span> talk to you about our next event. Before you order another round, Santi asks you if you’ll slip up and say that word again before she laughs. Remma ignores her at the side, and tells you that he’ll be with you at your next destination. ?]
-[? if npp_party_chair == "Naomi" : You’ve always hated showing yourself off to others. At least that’s what you’ve convinced yourself to believe. As you sit with <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> discussing your next places to campaign, you just wish for a place where you can be yourself and be accepted. <span class="tooltip-new">Naomi<span class="tooltiptext"><img src="img/portraits/Naomi.png" alt="Leader"><br>[+ naomi_description +]</span></span> hate it when you feel like you’re only taken seriously with a mask on. Remma snaps you out of your thinking, and asks if you’re willing to go to one more event. You ask him if they’ll like you. He doesn’t tell you anything that you could have told yourself. He asks you to believe, to have faith. ?]
+[? if npp_party_chair == "Nakayama" : You’ve always hated showing yourself off to others. At least that’s what you’ve convinced yourself to believe. As you sit with <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> discussing your next places to campaign, you just wish for a place where you can be yourself and be accepted. <span class="tooltip-new">Naomi<span class="tooltiptext"><img src="img/portraits/Naomi.png" alt="Leader"><br>[+ naomi_description +]</span></span> hate it when you feel like you’re only taken seriously with a mask on. Remma snaps you out of your thinking, and asks if you’re willing to go to one more event. You ask him if they’ll like you. He doesn’t tell you anything that you could have told yourself. He asks you to believe, to have faith. ?]
 [? if npp_party_chair == "Danni" : What to do. What to do. <span class="tooltip-new">You<span class="tooltiptext"><img src="img/portraits/Paisco.png" alt="Leader"><br>[+ paisco_description +]</span></span> were never sure when you took up this position in the first place. The only thing you can think about is if you’ll do something wrong. You're scared of messing up, of doing nothing. <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> assures you that you’re a good person, but what does it mean when you can’t do anything at all? The list of potential places Remma shows you looks like a word search, you can’t decipher any of these terms. But you have the energy to at least try. ?]
 [? if npp_party_chair == "Ka Fil" : All these exercises, all these events, it’s all <span class="tooltip-new">your<span class="tooltiptext"><img src="img/portraits/KaFil.png" alt="Leader"><br>[+ kafil_description +]</span></span> calling. You’re the expert in getting people riled up. You’re the expert in making things look funny, appealing, and strong. <span class="tooltip-new">Remma<span class="tooltiptext"><img src="img/portraits/Remma.png" alt="Leader"><br>[+ remma_description +]</span></span> and <span class="tooltip-new">Macalintal<span class="tooltiptext"><img src="img/portraits/Macalintal.png" alt="Leader"><br>[+ macalintal_description +]</span></span> come over for the usual, asking you to do these things for the party. Is that all you’re good for??]
 
@@ -29,15 +29,32 @@ tags: party_affairs
 - @return_campaign
 
 @workers
-title: We can always try with the urban working class, they're our people.
+title: [? if npp_party_chair == "Clueless" or npp_party_chair == "Macalintal" or npp_party_chair == "Remma" : We can always try with the urban working class, they're our people. ?][? if npp_party_chair == "Ka San" or npp_party_chair == "Ka Fil" : I’ve done this a hundred times before, let’s get back into the unions. ?][? if npp_party_chair == "Robbie" : You know, they always loved talking about unionizing, let’s visit our workers. ?][? if npp_party_chair == "Shooter" : Lets move to the docks, the factories, and the trade unions. Remind them who’s boss. ?][? if npp_party_chair == "Nakayama" : Alright, let’s try something new. I’ve never been around workers before but we can manage with our new merging. ?][? if npp_party_chair == "Paisco" : Uhh the urban workers, maybe I can try connecting with these humble people. ?]
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_npp += 6*(1-dissent); workers_npp -= 2 if unemployed >= 15; workers_npp -= 2 if unemployed >= 25;  resources -= 1; workers_npp += 3*(1-dissent) if nationalization_progress >= 1;
+on-arrival: {!
+
+resources -= 1; 
+
+if (Q.unemployment >= 15) {
+    Q.workers_npp -= 2;
+}
+if (Q.unemployment >= 25) {
+    Q.workers_npp -= 2;
+}
+if (Q.nationalization_progress >= 1) {
+    Q.workers_npp += 3*(1-dissent);
+}
+
+!}
 
 <div class="container">
 <div class="image"><img src="img/event/labor_2.png"></div>
-<div class="text">We have increased our campaigning among the workers. [? if unemployed < 15: Our traditional base is with us all the way in fighting the enemies of the proletariat. ?][? if unemployed >= 15: The high levels of unemployment make our campaign more difficult, with some people calling us insensitive. ?]</div></div>
+<div class="text">
+[? if unemployed < 15: Our traditional base is with us all the way in fighting the enemies of the proletariat. ?]
+[? if unemployed >= 15: The high levels of unemployment make our campaign more difficult, with some people calling us insensitive. ?]
+</div></div>
 
 @new_middle
 title: Why can't we work with the intelligentsia? We came from there, we can negotiate.
