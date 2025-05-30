@@ -27,6 +27,8 @@ NPP position: [? if spd_toleration : toleration ?][? if spd_in_government : in g
 
 [? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
 
+[? if npp_in_government = 0 : [+ gov_popularity_con : gov_popularity_check_c +] ?] [? if npp_in_government = 1 : [+ gov_popularity_npp : gov_popularity_check_npp +] ?]
+
 Internal dissent: [+ dissent_percent : dissent +]
 
 Party Chairperson: [+ npp_party_chair +] ([+ npp_party_chair_faction +])
@@ -40,7 +42,7 @@ Parliament Speaker: [+ speaker +] ([+ speaker_party +])
 Parliament composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="New Progressive Party">NPP</span>!}: [+ spd_r +]%
+{!<span class="tooltip-text" title="New Progressive Party">NPP</span>!}: [+ npp_r +]%
 [? if sapd_formed and sapd_r > 0: Anarchists: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
 {!<span class="tooltip-text" title="Ad Majorem Dei Gloriam - HDGP + ACP">AMDG</span>!}: [+ d_r +]%

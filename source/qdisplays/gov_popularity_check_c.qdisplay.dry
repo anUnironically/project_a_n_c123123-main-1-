@@ -1,0 +1,10 @@
+
+# Populairty display
+
+(..-5) The current right-wing government is <span style="color:#008000;">*rotting*</span> (<span style="color:#008000;">*[+ gov_popularity_con +]*</span>)
+(-4..-3) The people are <span style="color:#008000;">*enraged*</span> at the conservative administration (<span style="color:#008000;">*[+ gov_popularity_con +]*</span>)
+(-2..-1) The bourgeois coalition is on <span style="color:#DEBD8B;">*thin ice*</span> (<span style="color:#DEBD8B;">*[+ gov_popularity_con +]*</span>)
+(0..0) The people are <span style="color:#DEBD8B;">*indifferent*</span> to the government (<span style="color:#DEBD8B;">*[+ gov_popularity_con +]*</span>)
+(1..2) The people are <span style="color:#DEBD8B;">*warming up*</span> to the bourgeois government (<span style="color:#DEBD8B;">*[+ gov_popularity_con +]*</span>)
+(3..4) The people are <span style="color:#990000;">*fawning*</span> over the current right-wing government (<span style="color:#990000;">*[+ gov_popularity_con +]*</span>)
+(5..) The people are <span style="color:#990000;">*obsessed*</span> with conservative rule (<span style="color:#990000;">*[+ gov_popularity_con +]*</span>)
