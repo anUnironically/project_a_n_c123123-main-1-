@@ -18,7 +18,7 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 - @unemployed
 - @davao_campaign
 - @discard_campaign
-- @easy_discard
+- @return_campaign
 
 @workers
 title: We can always try with the urban working class, they're our people.
@@ -85,8 +85,14 @@ on-arrival: catholics_npp += 6*(1-dissent); resources -= 1
 
 <div class="container">
 <div class="image"><img src="img/event/blooky.png"></div>
-<div class="text">We have increased our campaigning among Catholics. Although their main representation lies in the AMDG, we can sap some of their voters away.</div></div>
+<div class="text">We have increased our campaigning among Davaoenos. Although their main representation lies in the AMDG, we can sap some of their voters away.</div></div>
 
 @discard_campaign
-title: This isn't that much of a priority, let's just come back later?
+title: But we can't campaign right now, let's try next time.
+subtitle: Discard card.
 go-to: root
+
+@return_campaign
+title: This isn't that much of a priority, let's just come back later?
+subtitle: Return to hand.
+go-to: easy_discard

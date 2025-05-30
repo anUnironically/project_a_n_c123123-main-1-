@@ -643,6 +643,7 @@ Q.yuuto_description = "The Devil Himself.";
 Q.blooky_description = "In another life, he could have been campaigning with us.";
 Q.star_fox_description = "Always hungry for power, aren't you Star Fox?";
 Q.earthy_description = "Nobody knows what goes on in his head.";
+Q.chancellor_description = "Where has the time gone?";
 
 //not possible
 Q.impossible = 0;
@@ -650,7 +651,7 @@ Q.impossible = 0;
 !}
 set-bg: img/map_2.jpg
 new-page: true
-audio: shuffle music/2020precrash/company.mp3 music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
+audio: shuffle music/2020precrash/company.mp3 music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/dearboy.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
 
 = Chapter One
 
