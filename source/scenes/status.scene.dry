@@ -29,10 +29,6 @@ NPP position: [? if spd_toleration : toleration ?][? if spd_in_government : in g
 
 [? if npp_in_government = 0 : [+ gov_popularity_con : gov_popularity_check_c +] ?] [? if npp_in_government = 1 : [+ gov_popularity_npp : gov_popularity_check_npp +] ?]
 
-[+ party_reputation : npp_reputation_check +]
-
-[+ party_achievements : npp_achievement_check +]
-
 Internal dissent: [+ dissent_percent : dissent +]
 
 Party Chairperson: [+ npp_party_chair +] ([+ npp_party_chair_faction +])
@@ -200,6 +196,12 @@ Davaoenos: NPP: [+ davao_npp_display +]%, AMDG: [+ davao_d_display +]%, TKDP: [+
 Support for Server Democracy: [+ pro_republic_disp +]%
 
 @social
+
+= <p style="color: #2a3e96;">Status of the Party</p>
+
+[+ party_reputation : npp_reputation_check +]
+
+[+ party_achievements : npp_achievement_check +]
 
 = <p style="color: #2a3e96;">Candidate Strengths</p>
 
