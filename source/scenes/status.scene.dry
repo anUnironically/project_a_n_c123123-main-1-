@@ -29,7 +29,7 @@ NPP position: [? if spd_toleration : toleration ?][? if spd_in_government : in g
 
 [? if npp_in_government = 0 : [+ gov_popularity_con : gov_popularity_check_c +] ?] [? if npp_in_government = 1 : [+ gov_popularity_npp : gov_popularity_check_npp +] ?]
 
-[+ party_reputation : npp_reputation_chck +]
+[+ party_reputation : npp_reputation_check +]
 
 [+ party_achievements : npp_achievement_check +]
 
