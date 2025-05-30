@@ -86,6 +86,6 @@ on-arrival: catholics_npp += 6*(1-dissent); resources -= 1
 <div class="image"><img src="img/event/blooky.png"></div>
 <div class="text">We have increased our campaigning among Catholics. Although their main representation lies in the AMDG, we can sap some of their voters away.</div></div>
 
-@davao_campaign
+@discard_campaign
 title: This isn't that much of a priority, let's just come back later?
 go-to: root
