@@ -1,0 +1,10 @@
+
+# Populairty display
+
+(..-5) Our government is <span style="color:#990000;">***languishing***</span> (<span style="color:#990000;">**[+ gov_popularity_npp +]**</span>)
+(-4..-3) There is <span style="color:#990000;">***widespread rage***</span> towards our work (<span style="color:#990000;">**[+ gov_popularity_npp +]**</span>)
+(-2..-1) We are <span style="color:#DEBD8B;">***barely managing***</span> with our popularity (<span style="color:#DEBD8B;">**[+ gov_popularity_npp +]**</span>)
+(0..0) Our constituents in our government are <span style="color:#DEBD8B;">***waiting and seeing***</span>(<span style="color:#DEBD8B;">**[+ gov_popularity_npp +]**</span>)
+(1..2) People have an <span style="color:#DEBD8B;">***encouraging***</span> attitude towards our work (<span style="color:#DEBD8B;">**[+ gov_popularity_npp +]**</span>)
+(3..4) The public is <span style="color:#008000;">***grateful***</span> with our efforts (<span style="color:#008000;">**[+ gov_popularity_npp +]**</span>)
+(5..) The nation is <span style="color:#008000;">***star-struck***</span> with our leftist rule (<span style="color:#008000;">**[+ gov_popularity_npp +]**</span>)

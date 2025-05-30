@@ -1,0 +1,8 @@
+
+# NPP achievement check
+
+(..0) We have <span style="color:#990000;">***no achievements***</span> whatsoever (<span style="color:#990000;">**[+ party_reputation +]**</span>)
+(1..1) We <span style="color:#DEBD8B;">*barely*</span> have achievements accomplished(<span style="color:#DEBD8B;">**[+ party_reputation +]**</span>)
+(2..2) We have some <span style="color:#DEBD8B;">***notable***</span> achievements (<span style="color:#008000;">**[+ party_reputation +]**</span>)
+(3..3) The party has done <span style="color:#DEBD8B;">***much***</span> for this country (<span style="color:#008000;">**[+ party_reputation +]**</span>)
+(4..) The NPP has had <span style="color:#008000;">***tons***</span> of achievements (<span style="color:#008000;">**[+ party_reputation +]**</span>)
