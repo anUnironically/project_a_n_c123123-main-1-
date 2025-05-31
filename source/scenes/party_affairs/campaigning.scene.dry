@@ -96,8 +96,9 @@ on-arrival: rural_npp += 5*(1-dissent); resources -= 1; rural_npp += 3*(1-dissen
 <div class="container">
 <div class="image"><img src="img/event/farmer_1.png"></div>
 <div class="text">
-[? if rural_policy < 2: We have not historically campaigned much among the farmers, and they do not trust us. ?]
-[? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
+[? if rural_policy < 2 and npp_party_chair != "Shooter" and npp_party_chair != "Ka San" : Rural work still has the conservative brain rot in them. Some of them at least, you meet with more progressive farmers who want change, but you’ll need to be able to talk to the majority. We're starting small for now. Just make sure to not make it small forever.. ?]
+[? if rural_policy >= 2 and npp_party_chair != "Shooter" and npp_party_chair != "Ka San" : A chill runs down your spine as peasants exclaim “at least this is a good woke”. They still have the same mindsets of old, but that’s what we're here for. Our achievements in helping the rural poor and uplifting them with economic liberalism have energized them towards the left. Even if in the social side they fall behind, this is progress. ?]
+[? if npp_party_chair == "Shooter" or npp_party_chair == "Ka San" : You match their energy, their cries of change. Your campaign emboldens farmers to turn out for the NPP en-masse. But we can only pretend to feel like them, we can only masquerade. We feel the anger, the rage. We do not feel the dejection, the soul-sucking power of capital. At least not fully. ?]
 </div></div>
 
 @unemployed
@@ -110,7 +111,8 @@ on-arrival: unemployed_npp += 6*(1-dissent); resources -= 1; unemployed_npp -= 3
 <div class="container">
 <div class="image"><img src="img/event/sad_citizen_1.png"></div>
 <div class="text">
-We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?]</div></div>
+[? if welfare < 0: You can only see frowning faces as the homeless and unemployed around you have doubts with your promises. Our cost-cutting of welfare is ironically one of the shots frequently thrown to us from right-wing circles. We try calling a few homeless shelters to talk, but they only hang up when we bring up the strength of the poor man’s spirit.?]
+[? if welfare >= 0: You tour around the ones who have it the least, the destitute. As you try to talk about the future, they only ask about our famous party history. They want to know how you storm down parliament gates, how you enjoy the banquet after your conquest. They do not ask about how to beat the elites, but rather how to be part of something greater. They long for purpose. The revolutionary ideal is only a distraction for them. You feel down. ?]</div></div>
 
 @davao_campaign
 title: We have to talk to Davao at some point, let's schedule a rally.
