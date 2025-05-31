@@ -52,8 +52,9 @@ if (Q.nationalization_progress >= 1) {
 <div class="container">
 <div class="image"><img src="img/event/labor_2.png"></div>
 <div class="text">
-[? if unemployed < 15: Our traditional base is with us all the way in fighting the enemies of the proletariat. ?]
-[? if unemployed >= 15: The high levels of unemployment make our campaign more difficult, with some people calling us insensitive. ?]
+[? if unemployed < 15 and npp_party_chair != "Shooter" and npp_party_chair != "Santi": The proletariat likes people who aren’t sentimental, who are men of action. You shake their hands, feeling their calluses, a few rallies bring up images of hope. Their stares convert into heavy weights placed on your shoulders. If you fail them, you’ve damned a thousand souls into thinking there’s a way out. ?]
+[? if unemployed >= 15 and npp_party_chair != "Shooter" and npp_party_chair != "Santi": You try going house to house, convincing people of your cause. But they just want to hear about the economy. On how you’ve failed. If only they trusted you to talk about something else ?]
+[? if npp_party_chair = "Shooter" or npp_party_chair = "Santi": Their anger is something raw, something terrifying. While your rallies are filled with chants of revolution and breaking the backs of the elite, you have to remind yourself that others can harness this emotion too. ?]
 </div></div>
 
 @new_middle
@@ -65,7 +66,10 @@ on-arrival: new_middle_npp += 6*(1-dissent); new_middle_npp -= 4 if socialism <=
 
 <div class="container">
 <div class="image"><img src="img/event/labor_1.png"></div>
-<div class="text">We have increased our campaigning among the new middle class. [? if socialism <= 49 : The popular antipathy towards socialism among this group makes our campaign more difficult. ?] [? if socialism > 49: With our new inroads, we have an easier time increasing support among the middle class than before. ?]</div></div>
+<div class="text">
+[? if socialism <= 49 : The first question received in your summit is about if our policies will remove personal delivery drivers. What a joke. These students, professors, and civil servants that gathered here will think of themselves first. They’ll fuck off to the nearest country if it means getting a single dime more, and they’ll forget about the ones left behind here. The poor, the ones who need their help the most. You feel your head ache as you realise these people are no more than performative, but we’ll be able to change that. We just have to make them comfortable with the idea of fighting for the greater good. We just need more prodding.  ?] 
+[? if socialism > 49: You pose for the cameras as you shake hands with left-wing student organizations, NGOs, and civil servant unions They are star-struck by your “revolutionary” fervor and position, seemingly advising you on your next moves. You have no problems talking about and affirming their want for radical change, but their idealism impales a stake at your heart. If only you could kill them all. If only it were that easy.  ?]
+</div></div>
 
 @old_middle
 title: [? if npp_party_chair == "Clueless" or npp_party_chair == "Macalintal" or npp_party_chair == "Remma" : The middle class, despite its elitist roots, cannot be ignored. I'll have to harden my heart and ring up some landlords. ?][? if npp_party_chair == "Ka San" or npp_party_chair == "Ka Fil" : Evil, devil spawn. Some of the younger ones are redeemable, let’s shave them off so we have potential allies for a united front.  ?][? if npp_party_chair == "Robbie" : Businesses are my people. Do you remember when we all gathered at my house? We haven’t even finished the dinosaur rock you gave us. I wish we all came again. ?][? if npp_party_chair == "Shooter" : You told me about these open-minded small businesses we can talk to? Maybe I’ll try marketing socialism to them. ?][? if npp_party_chair == "Nakayama" : Businesses. I love businesses, I wish I ran one alone and peacefully. Don’t you think we can get along?  ?][? if npp_party_chair == "Paisco" : I can tour the suburbs, not that different from where we came from, aren’t they? ?]
@@ -76,7 +80,11 @@ on-arrival: old_middle_npp += 5*(1-dissent); resources -= 1; old_middle_npp -= 3
 
 <div class="container">
 <div class="image"><img src="img/event/labor_1.png"></div>
-<div class="text">We have increased our campaigning among the old middle class. [? if nationalism >= 51: The high levels of nationalism among this group make our campaign more difficult. ?] [? if nationalism < 51: With anti-authorianism spreading, we have an easier time increasing support among the middle class than before. ?]</div></div>
+<div class="text">
+[? if authorianism >= 51 and npp_party_chair != "Nakayama": Expectedly, these fat-asses close off their ears whenever we try to speak. They don’t understand that what we’re doing is for the greater good. One less vacation to Switzerland is less important compared to a high wage and a fully employed society. We just have to hope they see the light. They talk about “strong” leader, one that embodies a man of action. But you know that all they want is a leader of hatred. You can’t help but scowl.  ?] 
+[? if authorianism < 51 and npp_party_chair != "Nakayama": It’s like a comedy show as we try to speak coded language about the “conspiracy for all of us to be dependent on the fascist system” and “how welfare makes us more individualistic with more financial freedom”. In a way, it slightly works as our polls bump up with the middle class. Let’s hope it continues. ?]
+[? if npp_party_chair == "Nakayama" : It’s like a comedy show as we try to speak coded language about the “conspiracy for all of us to be dependent on the fascist system” and “how welfare makes us more individualistic with more financial freedom”. In a way, it slightly works as our polls bump up with the middle class. Let’s hope it continues. ?]
+</div></div>
 
 @rural
 title: [? if npp_party_chair == "Clueless" or npp_party_chair == "Macalintal" or npp_party_chair == "Remma" : Peasants and farmers have always been our type, we just haven't reached out to them enough.  ?][? if npp_party_chair == "Ka San" or npp_party_chair == "Ka Fil" : Peasants love me! I’ve been to the Haciendas again and again  ?][? if npp_party_chair == "Robbie" : I've been to Bicol frequently, I can talk to those living near the farms. Do you remember when we did scouting together along the grass? ?][? if npp_party_chair == "Shooter" : Farmers are MY people. They’ll take me seriously, and see that I actually want things done.  ?][? if npp_party_chair == "Nakayama" : Oh, rural areas? I guess I can try something new.   ?][? if npp_party_chair == "Paisco" : Rural areas, can you tell me about the problems they face again? I can make a speech or two bridging the gap between the cities and farms. ?]
@@ -87,7 +95,10 @@ on-arrival: rural_npp += 5*(1-dissent); resources -= 1; rural_npp += 3*(1-dissen
 
 <div class="container">
 <div class="image"><img src="img/event/farmer_1.png"></div>
-<div class="text">We have increased our campaigning among farmers. [? if rural_policy < 2: We have not historically campaigned much among the farmers, and they do not trust us. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]</div></div>
+<div class="text">
+[? if rural_policy < 2: We have not historically campaigned much among the farmers, and they do not trust us. ?]
+[? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
+</div></div>
 
 @unemployed
 title: [? if npp_party_chair == "Clueless" or npp_party_chair == "Macalintal" or npp_party_chair == "Remma" : Unemployed citizens are always the ones who get the short end of the stick. We have to show that we care, that we try.  ?][? if npp_party_chair == "Ka San" or npp_party_chair == "Ka Fil" : The right always cares about “freedoms”, but they never care about our freedom from hunger, from hatred. Let’s talk to the homeless. ?][? if npp_party_chair == "Robbie" : Their compassion is something I could never forget. They always gave coins to the homeless.   ?][? if npp_party_chair == "Shooter" : When people don’t have jobs, they fall into this stupid hole. We can channel this energy for us. For our movement.  ?][? if npp_party_chair == "Nakayama" : Unemployment is a bit scary, we can probably use it as a way to spook the working class into hating Yuuto because it really is his fault. ?][? if npp_party_chair == "Paisco" : The homeless are always treated less than human. Can we do anything about it? ?]
@@ -98,7 +109,8 @@ on-arrival: unemployed_npp += 6*(1-dissent); resources -= 1; unemployed_npp -= 3
 
 <div class="container">
 <div class="image"><img src="img/event/sad_citizen_1.png"></div>
-<div class="text">We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?]</div></div>
+<div class="text">
+We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?]</div></div>
 
 @davao_campaign
 title: We have to talk to Davao at some point, let's schedule a rally.
