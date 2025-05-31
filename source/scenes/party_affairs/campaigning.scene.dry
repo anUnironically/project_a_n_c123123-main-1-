@@ -50,7 +50,7 @@ if (Q.nationalization_progress >= 1) {
 !}
 
 <div class="container">
-<div class="image"><img src="img/event/labor_2.png"></div>
+<div class="image"><img src="img/event/workers_1.png"></div>
 <div class="text">
 [? if unemployed < 15 and npp_party_chair != "Shooter" and npp_party_chair != "Santi": The proletariat likes people who aren’t sentimental, who are men of action. You shake their hands, feeling their calluses, a few rallies bring up images of hope. Their stares convert into heavy weights placed on your shoulders. If you fail them, you’ve damned a thousand souls into thinking there’s a way out. ?]
 [? if unemployed >= 15 and npp_party_chair != "Shooter" and npp_party_chair != "Santi": You try going house to house, convincing people of your cause. But they just want to hear about the economy. On how you’ve failed. If only they trusted you to talk about something else ?]
@@ -65,7 +65,7 @@ unavailable-subtitle: Not enough resources.
 on-arrival: new_middle_npp += 6*(1-dissent); new_middle_npp -= 4 if socialism <= 49; resources -= 1;
 
 <div class="container">
-<div class="image"><img src="img/event/labor_1.png"></div>
+<div class="image"><img src="img/event/fun_students_1.png"></div>
 <div class="text">
 [? if socialism <= 49 : The first question received in your summit is about if our policies will remove personal delivery drivers. What a joke. These students, professors, and civil servants that gathered here will think of themselves first. They’ll fuck off to the nearest country if it means getting a single dime more, and they’ll forget about the ones left behind here. The poor, the ones who need their help the most. You feel your head ache as you realise these people are no more than performative, but we’ll be able to change that. We just have to make them comfortable with the idea of fighting for the greater good. More prodding is needed.  ?] 
 [? if socialism > 49: You pose for the cameras as you shake hands with left-wing student organizations, NGOs, and civil servant unions They are star-struck by your “revolutionary” fervor and position, seemingly advising you on your next moves. You have no problems talking about and affirming their want for radical change, but their idealism impales a stake at your heart. If only you could kill them all. If only it were that easy.  ?]
@@ -79,7 +79,7 @@ unavailable-subtitle: Not enough resources.
 on-arrival: old_middle_npp += 5*(1-dissent); resources -= 1; old_middle_npp -= 3 if authoritarianism >= 51
 
 <div class="container">
-<div class="image"><img src="img/event/labor_1.png"></div>
+<div class="image"><img src="img/event/big_money_1.png"></div>
 <div class="text">
 [? if authoritarianism >= 51 and npp_party_chair != "Nakayama": Expectedly, these fat-asses close off their ears whenever we try to speak. They don’t understand that what we’re doing is for the greater good. One less vacation to Switzerland is less important compared to a high wage and a fully employed society. We just have to hope they see the light. They talk about “strong” leader, one that embodies a man of action. But you know that all they want is a leader of hatred. You can’t help but scowl.  ?] 
 [? if authoritarianism < 51 and npp_party_chair != "Nakayama": It’s like a comedy show as we try to speak coded language about the “conspiracy for all of us to be dependent on the fascist system” and “how welfare makes us more individualistic with more financial freedom”. In a way, it slightly works as our polls bump up with the middle class. Let’s hope it continues. ?]
