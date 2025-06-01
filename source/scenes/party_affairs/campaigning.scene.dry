@@ -35,7 +35,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: {!
 
-resources -= 1; 
+Q.resources -= 1; 
 
 if (Q.unemployment >= 15) {
     Q.workers_npp -= 2;
@@ -62,7 +62,18 @@ title: [? if npp_party_chair == "Clueless" or npp_party_chair == "Macalintal" or
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: new_middle_npp += 6*(1-dissent); new_middle_npp -= 4 if socialism <= 49; resources -= 1;
+on-arrival: {!
+
+Q.resources -= 1; 
+
+Q.new_middle_npp += 6*(1-dissent); 
+Q.resources -= 1;
+
+if (Q.socialism <= 49) {
+    Q.new_middle_npp -= 4;
+}
+
+!}
 
 <div class="container">
 <div class="image"><img src="img/event/fun_students_1.png"></div>
@@ -76,7 +87,18 @@ title: [? if npp_party_chair == "Clueless" or npp_party_chair == "Macalintal" or
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: old_middle_npp += 5*(1-dissent); resources -= 1; old_middle_npp -= 3 if authoritarianism >= 51
+on-arrival: {!
+
+Q.resources -= 1; 
+
+Q.old_middle_npp += 5*(1-dissent);
+Q.resources -= 1;
+
+if (Q.authoritarianism <= 49) {
+    Q.old_middle_npp -= 3
+}
+
+!}
 
 <div class="container">
 <div class="image"><img src="img/event/big_money_1.png"></div>
@@ -91,7 +113,17 @@ title: [? if npp_party_chair == "Clueless" or npp_party_chair == "Macalintal" or
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_npp += 5*(1-dissent); resources -= 1; rural_npp += 3*(1-dissent) if rural_policy >= 2
+on-arrival: {!
+
+Q.resources -= 1; 
+Q.rural_npp += 5*(1-dissent);
+
+if (Q.rural_policy >= 2) {
+    Q.rural_npp += 3*(1-dissent)
+}
+
+!}
+
 
 <div class="container">
 <div class="image"><img src="img/event/farmer_1.png"></div>
@@ -106,7 +138,25 @@ title: [? if npp_party_chair == "Clueless" or npp_party_chair == "Macalintal" or
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: unemployed_npp += 6*(1-dissent); resources -= 1; unemployed_npp -= 3 if welfare < 0; unemployed_npp += 6*(1-dissent) if new_deal_adopted = 1; unemployed_npp += 3*(1-dissent) if welfare >= 2;
+on-arrival: {!
+
+Q.resources -= 1; 
+Q.unemployed_npp += 6*(1-dissent); 
+if (Q.welfare < 0) {
+    Q.unemployed_npp -= 3
+}
+if (Q.new_deal_adopted = 1) {
+    Q.unemployed_npp += 6*(1-dissent)
+}
+if (Q.welfare >= 2) {
+    Q.unemployed_npp += 3*(1-dissent)
+}
+
+
+!}
+
+
+unemployed_npp += 6*(1-dissent); Q.resources -= 1; unemployed_npp -= 3 if welfare < 0; unemployed_npp += 6*(1-dissent) if new_deal_adopted = 1; unemployed_npp += 3*(1-dissent) if welfare >= 2;
 
 <div class="container">
 <div class="image"><img src="img/event/sad_citizen_1.png"></div>
