@@ -47,6 +47,10 @@ if (Q.nationalization_progress >= 1) {
     Q.workers_npp += 3*(1-dissent);
 }
 
+if (Q.npp_party_chair == "Shooter" or Q.npp_party_chair == "Ka San") {
+    Q.workers_npp += 3*(1-dissent);
+}
+
 !}
 
 <div class="container">
@@ -98,6 +102,10 @@ if (Q.authoritarianism <= 49) {
     Q.old_middle_npp -= 3
 }
 
+if (Q.npp_party_chair == "Nakayama") {
+    Q.old_middle_npp += 4*(1-dissent)
+}
+
 !}
 
 <div class="container">
@@ -119,6 +127,9 @@ Q.resources -= 1;
 Q.rural_npp += 5*(1-dissent);
 
 if (Q.rural_policy >= 2) {
+    Q.rural_npp += 3*(1-dissent)
+}
+if (Q.npp_party_chair == "Shooter" or Q.npp_party_chair == "Ka San") {
     Q.rural_npp += 3*(1-dissent)
 }
 
