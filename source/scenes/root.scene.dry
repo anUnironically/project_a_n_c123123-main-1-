@@ -514,9 +514,9 @@ Q.tariffs = 0;
 Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
-// did the SPD vote against the previous government in a vote of no confidence?
+// did the NPP vote against the previous government in a vote of no confidence?
 Q.npp_no_confidence = 0;
-// was the last SPD government taken down in a vote of no confidence by right-wing coalition partners?
+// was the last NPP government taken down in a vote of no confidence by right-wing coalition partners?
 Q.no_confidence_against_npp = 0;
 
 // Advisors/Leaders
@@ -617,7 +617,7 @@ Q.remma_advisor = 1; // Remmacaronie
 Q.remma_description = "Our resident peacemaker";
 
 Q.naomi_advisor = 0; // NAO
-Q.naomi_description = "The Chrysanthemum Empress. She can compromise.";
+Q.naomi_description = "The Chrysanthemum Empress";
 
 Q.paisco_advisor = 0; // PAISCO
 Q.paisco_description = "The bleeding heart";
@@ -630,7 +630,7 @@ Q.kafil_advisor = 0; //KA FIL
 Q.kafil_description = "A real wild card.";
 
 Q.kasan_advisor = 0; //SANTI
-Q.kasan_description = "The Whiz Kid.";
+Q.kasan_description = "Whiz Kid.";
 
 // NPP - S
 Q.shooter_advisor = 0; //SHOOTER
@@ -655,7 +655,7 @@ Q.impossible = 0;
 !}
 set-bg: img/map_2.jpg
 new-page: true
-audio: shuffle music/2020precrash/company.mp3 music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/dearboy.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
+audio: shuffle music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/dearboy.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
 
 = Chapter One
 
