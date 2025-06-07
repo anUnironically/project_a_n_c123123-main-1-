@@ -1,7 +1,7 @@
 title: Fundraising
 new-page: true
 view-if: fundraising_timer <= 0 and (not historical_mode)
-on-arrival: fundraising_timer = 12; month_actions += 1
+on-arrival: fundraising_timer = 10; month_actions += 1
 frequency: 300
 is-card: true
 card-image: img/fundraising_1.png
@@ -9,19 +9,21 @@ tags: party_affairs
 
 = Fundraising
 
-For better or for worse, the party cannot exist without money.
+The party is bracing for impact as it’s the time of year again where the big boss collects union dues. Our members have better things to do, and in a fair world, you wouldn’t have to do this. But this isn’t a fair world, and you’re working hard to make sure it will be a just one. Reports from the PBO (Party Budget Office) indicate that our potential future projects will depend on these funds we get as our base. As the papers on your desk fall flat and stare into you the various calculations and whatnot of the year, how do we collect our funds?
 
-- @maintain: Maintain our current dues.
-- @reduce: Reduce dues.
-- @increase: Increase dues.
+- @maintain
+- @reduce
+- @increase
 
 @maintain
+title: Lets keep ourselves close.
 subtitle: [+ dues +] resources gained.
 on-arrival: resources += dues;
 
 We maintain our current dues.
 
 @reduce
+title: Maintain our current dues.
 subtitle: [+ dues - 1 +] resources gained.
 choose-if: dues > 1
 on-arrival: dues -= 1; resources += dues; left_dissent -= 8; center_dissent -= 8; reformist_dissent -= 8; labor_dissent -= 8
@@ -29,6 +31,7 @@ on-arrival: dues -= 1; resources += dues; left_dissent -= 8; center_dissent -= 8
 Our current members appreciate this, but no one decides to join a party because of the low dues.
 
 @increase
+title: Maintain our current dues.
 subtitle: [+ dues + 1 +] resources gained. [? if unemployed >= 15 : Given the present economic situation, this may be painful. ?][? if dues >= 4 : Dues are already rather high; increasing them might reduce our membership. ?]
 on-arrival: dues += 1; resources += dues; workers_spd -= 3; unemployed_spd -= 3; workers_spd -= 10 if unemployed >= 15; unemployed_spd -= 10 if unemployed >= 15; workers_spd -= 3*dues if dues >= 5; unemployed_spd -= 3*dues if dues >= 5
 view-if: dues <= 4
