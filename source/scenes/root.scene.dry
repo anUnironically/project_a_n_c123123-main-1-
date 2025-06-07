@@ -655,7 +655,7 @@ Q.impossible = 0;
 !}
 set-bg: img/map_2.jpg
 new-page: true
-audio: shuffle music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/dearboy.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
+audio: play music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/dearboy.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
 
 = Chapter One
 
