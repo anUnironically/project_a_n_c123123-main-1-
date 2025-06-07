@@ -166,9 +166,6 @@ if (Q.welfare >= 2) {
 
 !}
 
-
-unemployed_npp += 6*(1-dissent); Q.resources -= 1; unemployed_npp -= 3 if welfare < 0; unemployed_npp += 6*(1-dissent) if new_deal_adopted = 1; unemployed_npp += 3*(1-dissent) if welfare >= 2;
-
 <div class="container">
 <div class="image"><img src="img/event/sad_citizen_1.png"></div>
 <div class="text">
