@@ -47,7 +47,7 @@ if (Q.nationalization_progress >= 1) {
     Q.workers_npp += 3*(1-dissent);
 }
 
-if (Q.npp_party_chair == "Shooter" or Q.npp_party_chair == "Ka San") {
+if (Q.npp_party_chair == "Shooter" || Q.npp_party_chair == "Ka San") {
     Q.workers_npp += 3*(1-dissent);
 }
 
@@ -129,7 +129,7 @@ Q.rural_npp += 5*(1-dissent);
 if (Q.rural_policy >= 2) {
     Q.rural_npp += 3*(1-dissent)
 }
-if (Q.npp_party_chair == "Shooter" or Q.npp_party_chair == "Ka San") {
+if (Q.npp_party_chair == "Shooter" || Q.npp_party_chair == "Ka San") {
     Q.rural_npp += 3*(1-dissent)
 }
 
