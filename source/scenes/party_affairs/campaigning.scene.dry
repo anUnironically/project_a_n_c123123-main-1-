@@ -36,6 +36,7 @@ unavailable-subtitle: Not enough resources.
 on-arrival: {!
 
 Q.resources -= 1; 
+Q.workers_npp += (1 + (3*(1-Q.dissent)));
 
 if (Q.unemployment >= 15) {
     Q.workers_npp -= 2;
@@ -44,11 +45,11 @@ if (Q.unemployment >= 25) {
     Q.workers_npp -= 2;
 }
 if (Q.nationalization_progress >= 1) {
-    Q.workers_npp += 3*(1-dissent);
+    Q.workers_npp += 3*(1-Q.dissent);
 }
 
-if (Q.npp_party_chair == "Shooter" or Q.npp_party_chair == "Ka San") {
-    Q.workers_npp += 3*(1-dissent);
+if (Q.npp_party_chair == "Shooter" || Q.npp_party_chair == "Ka San") {
+    Q.workers_npp += 3*(1-Q.dissent);
 }
 
 !}
@@ -70,7 +71,7 @@ on-arrival: {!
 
 Q.resources -= 1; 
 
-Q.new_middle_npp += 6*(1-dissent); 
+Q.new_middle_npp += 6*(1-Q.dissent); 
 Q.resources -= 1;
 
 if (Q.socialism <= 49) {
@@ -95,7 +96,7 @@ on-arrival: {!
 
 Q.resources -= 1; 
 
-Q.old_middle_npp += 5*(1-dissent);
+Q.old_middle_npp += 5*(1-Q.dissent);
 Q.resources -= 1;
 
 if (Q.authoritarianism <= 49) {
@@ -103,7 +104,7 @@ if (Q.authoritarianism <= 49) {
 }
 
 if (Q.npp_party_chair == "Nakayama") {
-    Q.old_middle_npp += 4*(1-dissent)
+    Q.old_middle_npp += 4*(1-Q.dissent)
 }
 
 !}
@@ -124,13 +125,13 @@ unavailable-subtitle: Not enough resources.
 on-arrival: {!
 
 Q.resources -= 1; 
-Q.rural_npp += 5*(1-dissent);
+Q.rural_npp += 5*(1-Q.dissent);
 
 if (Q.rural_policy >= 2) {
-    Q.rural_npp += 3*(1-dissent)
+    Q.rural_npp += 3*(1-Q.dissent)
 }
-if (Q.npp_party_chair == "Shooter" or Q.npp_party_chair == "Ka San") {
-    Q.rural_npp += 3*(1-dissent)
+if (Q.npp_party_chair == "Shooter" || Q.npp_party_chair == "Ka San") {
+    Q.rural_npp += 3*(1-Q.dissent)
 }
 
 !}
@@ -152,22 +153,19 @@ unavailable-subtitle: Not enough resources.
 on-arrival: {!
 
 Q.resources -= 1; 
-Q.unemployed_npp += 6*(1-dissent); 
+Q.unemployed_npp += 6*(1-Q.dissent); 
 if (Q.welfare < 0) {
     Q.unemployed_npp -= 3
 }
 if (Q.new_deal_adopted = 1) {
-    Q.unemployed_npp += 6*(1-dissent)
+    Q.unemployed_npp += 6*(1-Q.dissent)
 }
 if (Q.welfare >= 2) {
-    Q.unemployed_npp += 3*(1-dissent)
+    Q.unemployed_npp += 3*(1-Q.dissent)
 }
 
 
 !}
-
-
-unemployed_npp += 6*(1-dissent); Q.resources -= 1; unemployed_npp -= 3 if welfare < 0; unemployed_npp += 6*(1-dissent) if new_deal_adopted = 1; unemployed_npp += 3*(1-dissent) if welfare >= 2;
 
 <div class="container">
 <div class="image"><img src="img/event/sad_citizen_1.png"></div>
@@ -181,7 +179,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 view-if: peoples_party == 1
-on-arrival: catholics_npp += 6*(1-dissent); resources -= 1
+on-arrival: catholics_npp += 6*(1-Q.dissent); resources -= 1
 
 <div class="container">
 <div class="image"><img src="img/event/blooky.png"></div>

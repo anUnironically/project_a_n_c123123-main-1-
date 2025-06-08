@@ -11,32 +11,61 @@ tags: party_affairs
 
 The party is bracing for impact as it’s the time of year again where the big boss collects union dues. Our members have better things to do, and in a fair world, you wouldn’t have to do this. But this isn’t a fair world, and you’re working hard to make sure it will be a just one. Reports from the PBO (Party Budget Office) indicate that our potential future projects will depend on these funds we get as our base. As the papers on your desk fall flat and stare into you the various calculations and whatnot of the year, how do we collect our funds?
 
-- @maintain
 - @reduce
+- @maintain
 - @increase
 
 @maintain
-title: Lets keep ourselves close.
-subtitle: [+ dues +] resources gained.
+title: [? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" : There’s nothing wrong with keeping what’s working. ?][? if npp_party_chair == "Macalintal" or npp_party_chair == "Clueless" or npp_party_chair == "Ka San" : They’ll get over it soon, everyone’s like this yearly. I just have to be present and make things work. ?][? if npp_party_chair == "Ka Fil" : Lets just get the dues Maintained man.  ?][? if npp_party_chair == "Shooter" : Dude we’re going to be broke if we don't find a way to get funds. ?][? if npp_party_chair == "Nakayama" : Ehh, money is money. Tell them to cough up the cash. ?][? if npp_party_chair == "Paisco" : We need it for our campaigns and such right? I'm sure they’ll understand ?]
+subtitle: [+ dues +] resources gained. Maintain our dues.
 on-arrival: resources += dues;
 
-We maintain our current dues.
+<div class="container">
+<div class="image"><img src="img/event/lean_1.png"></div>
+<div class="text">
+
+[? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" : Nothing special today, a few members beg for more leniency as one of them pleads that they’ll go out with friends tomorrow. That could have been you. ?]
+[? if npp_party_chair == "Macalintal" or npp_party_chair == "Clueless" or npp_party_chair == "Ka San" : Just as any other day, you come to your men to collect what rightfully belongs to the party. You watch as some of your members rearrange their gala plans. It’s not that deep, you think to yourself. Yet you only feel rot inside, as if you’ve thrown a wrench into someone's plans. ?]
+[? if npp_party_chair == "Ka Fil" : Your members expected you to reduce the dues, and your betrayal sends them in a demoralized state. But it’s not your fault, there's things we have to do. We won’t have missed opportunities this time. ?]
+[? if npp_party_chair == "Shooter" : You scare a younger member into giving you a little bit extra for some coffee on the way back to HQ. Paying for your drink, you think about if all of this will make you seem serious. Would you be loved if you were tough first? ?]
+[? if npp_party_chair == "Nakayama" : As your juniors cough up the cash, you see a small group flocking around a poster of Santi. They talk about how tough she is, how she leads our militia with murderous intent and how prideful they are of her. You laugh, you know she’s not all that. If only you had a mask like she does ?]
+[? if npp_party_chair == "Paisco" : They never understand. It’s always like this. Every time we collect, they try to find excuses or other ways, but some people are honest and give you the money. You just hope they understand deep inside. They have to. ?]
+
+</div></div>
 
 @reduce
-title: Maintain our current dues.
-subtitle: [+ dues - 1 +] resources gained.
+title: [? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" : Let’s decrease the dues this time, get our members buttered up to make things smoother from now on. ?][? if npp_party_chair == "Macalintal" or npp_party_chair == "Clueless" or npp_party_chair == "Ka San" : When I worked in Gazette and PubRes, the way to get things moving was to give them a bit more time. Let’s delay some of the dues, our token of goodwill. ?][? if npp_party_chair == "Ka Fil" : You know what I like? Sisig. You know what to do to get Sisig? Earn money. Lower the dues. ?][? if npp_party_chair == "Shooter" : They’ll like us more when they have a full stomach. We can lower the dues. ?][? if npp_party_chair == "Nakayama" : What was all that mumbo jumbo, who the fuck cares about some LARP group. We’re here to win the election. I get motivated when I get more money, why don’t try that. ?][? if npp_party_chair == "Paisco" : I heard some people complain about the membership fees, what if we lower it this time around? ?]
+subtitle: [+ dues - 1 +] resources gained. Reduce our dues. This will decrease dissent.
+unavailable-subtitle: Theres nothing left to reduce. 
 choose-if: dues > 1
-on-arrival: dues -= 1; resources += dues; left_dissent -= 8; center_dissent -= 8; reformist_dissent -= 8; labor_dissent -= 8
+on-arrival: dues -= 1; resources += dues; youth_dissent -= 8; center_dissent -= 8; solidarist_dissent -= 8; radical_dissent -= 8
 
-Our current members appreciate this, but no one decides to join a party because of the low dues.
+<div class="container">
+<div class="image"><img src="img/event/political_crowd_1.png"></div>
+<div class="text">
+
+[? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" : After Macalintal lectures you about how the people on top have to make hard decisions, he finally allows us to lower the dues. Our members sing praises as you notice more of them talk to you more freely and with respect. The projects we’ve planned though will be in a bit of a crunch. ?]
+[? if npp_party_chair == "Macalintal" or npp_party_chair == "Clueless" or npp_party_chair == "Ka San" : “The Peoples Leader”. It’s what you’ve dreamed of ever since you were a child. Yet their praises are silent, and your afternoon is eaten up by Remma frantically trying to put up plans our new budget. Being loved is fun, but he reminds you that no one joins a party because of low dues. ?]
+[? if npp_party_chair == "Ka Fil" : As you ride the wave of praises to the halls, Remma and Macalintal are banging their heads in the other room over the new cuts. As you come back to the office, you find them contemplating on what projects to stall. ?]
+[? if npp_party_chair == "Shooter" : You’re the man of action, the one everyone needs to bring people together. But when you arrive back at HQ after a round of beers dedicated to the Great Chairperson, you find Remma and Macalintal dead on the floor contemplating about budgeting. Their minds disconnected, not feeling the euphoria of the masses. ?]
+[? if npp_party_chair == "Nakayama" : “This Mumbo Jumbo”, Clueless tiredly rants, “is how we GET things done”. While our members hang photos of you on the wall, our HQ collapses with our new budget. With the lesser funds, Remma and Clueless act like men rationing food. ?]
+[? if npp_party_chair == "Paisco" : Smiles light up the halls of HQ as our party members celebrate the reduction of dues. However, as you come by Clueless and Macalintal in the office, they only force out a small grin. With the trash can beside them overflowing with papers and reports. ?]
+
+</div></div>
 
 @increase
 title: Maintain our current dues.
-subtitle: [+ dues + 1 +] resources gained. [? if unemployed >= 15 : Given the present economic situation, this may be painful. ?][? if dues >= 4 : Dues are already rather high; increasing them might reduce our membership. ?]
-on-arrival: dues += 1; resources += dues; workers_spd -= 3; unemployed_spd -= 3; workers_spd -= 10 if unemployed >= 15; unemployed_spd -= 10 if unemployed >= 15; workers_spd -= 3*dues if dues >= 5; unemployed_spd -= 3*dues if dues >= 5
+subtitle: [+ dues + 1 +] resources gained. Increase dues. This will raise dissent. [? if unemployed >= 15 : Given the present economic situation, this may be painful. ?][? if dues >= 4 : Dues are already rather high; increasing them might reduce our membership. ?]
+on-arrival: dues += 1; resources += dues; workers_npp -= 3; unemployed_spd -= 3; workers_npp -= 10 if unemployed >= 15; unemployed_npp -= 10 if unemployed >= 15; workers_npp -= 3*dues if dues >= 5; unemployed_npp -= 3*dues if dues >= 5
 view-if: dues <= 4
 
-Our members grumble at this, and some of the less committed members leave. But now, we have access to additional resources. 
-
-[? if unemployed >= 15 : Because of the presently high unemployment, our members are feeling the extra burden hard. ?]
-
+<div class="container">
+<div class="image"><img src="img/event/political_crowd_1.png"></div>
+<div class="text">
+[? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" : After Macalintal lectures you about how the people on top have to make hard decisions, he finally allows us to lower the dues. Our members sing praises as you notice more of them talk to you more freely and with respect. The projects we’ve planned though will be in a bit of a crunch. ?]
+[? if npp_party_chair == "Macalintal" or npp_party_chair == "Clueless" or npp_party_chair == "Ka San" : “REVISIONIST” in big red bold letters appear at your front door. Someone’s mad. The SDE quarters from just across is filled with laughter as you come out. Cocksucker ?]
+[? if npp_party_chair == "Ka Fil" : As you ride the wave of praises to the halls, Remma and Macalintal are banging their heads in the other room over the new cuts. As you come back to the office, you find them contemplating on what projects to stall. ?]
+[? if npp_party_chair == "Shooter" : You’re the man of action, the one everyone needs to bring people together. But when you arrive back at HQ after a round of beers dedicated to the Great Chairperson, you find Remma and Macalintal dead on the floor contemplating about budgeting. Their minds disconnected, not feeling the euphoria of the masses. ?]
+[? if npp_party_chair == "Nakayama" : “This Mumbo Jumbo”, Clueless tiredly rants, “is how we GET things done”. While our members hang photos of you on the wall, our HQ collapses with our new budget. With the lesser funds, Remma and Clueless act like men rationing food. ?]
+[? if npp_party_chair == "Paisco" : Smiles light up the halls of HQ as our party members celebrate the reduction of dues. However, as you come by Clueless and Macalintal in the office, they only force out a small grin. With the trash can beside them overflowing with papers and reports. ?]
+</div></div>
