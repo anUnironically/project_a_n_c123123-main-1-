@@ -21,7 +21,7 @@ subtitle: [+ dues +] resources gained. Maintain our dues.
 on-arrival: resources += dues;
 
 <div class="container">
-<div class="image"><img src="img/event/political_crowd_1.png"></div>
+<div class="image"><img src="img/event/lean_1.png"></div>
 <div class="text">
 
 [? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" : Nothing special today, a few members beg for more leniency as one of them pleads that they’ll go out with friends tomorrow. That could have been you. ?]
@@ -59,7 +59,5 @@ subtitle: [+ dues + 1 +] resources gained. Increase dues. This will raise dissen
 on-arrival: dues += 1; resources += dues; workers_npp -= 3; unemployed_spd -= 3; workers_npp -= 10 if unemployed >= 15; unemployed_npp -= 10 if unemployed >= 15; workers_npp -= 3*dues if dues >= 5; unemployed_npp -= 3*dues if dues >= 5
 view-if: dues <= 4
 
-Our members grumble at this, and some of the less committed members leave. But now, we have access to additional resources. 
-
-[? if unemployed >= 15 : Because of the presently high unemployment, our members are feeling the extra burden hard. ?]
+[? if npp_party_chair == "Macalintal" or npp_party_chair == "Clueless" or npp_party_chair == "Ka San" or npp_party_chair == "Ka Fil" : ?]
 
