@@ -41,7 +41,7 @@ choose-if: dues > 1
 on-arrival: dues -= 1; resources += dues; youth_dissent -= 8; center_dissent -= 8; solidarist_dissent -= 8; radical_dissent -= 8
 
 <div class="container">
-<div class="image"><img src="img/event/political_crowd_1.png"></div>
+<div class="image"><img src="img/event/bank_1.png"></div>
 <div class="text">
 
 [? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" : After Macalintal lectures you about how the people on top have to make hard decisions, he finally allows us to lower the dues. Our members sing praises as you notice more of them talk to you more freely and with respect. The projects we’ve planned though will be in a bit of a crunch. ?]
@@ -54,18 +54,26 @@ on-arrival: dues -= 1; resources += dues; youth_dissent -= 8; center_dissent -= 
 </div></div>
 
 @increase
-title: Maintain our current dues.
+title: [? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" : Sometimes we gotta get more money to be able to get things done. ?][? if npp_party_chair == "Macalintal" or npp_party_chair == "Clueless" or npp_party_chair == "Ka San" : Projects require a lot of funds, trips from and to stores, things like that. We’ll raise the dues. We have to.  ?][? if npp_party_chair == "Ka Fil" : Raise the money, we’ll need it for some of our projects. ?][? if npp_party_chair == "Shooter" : Raise these dues. We have to have political and economic power to do our projects. ?][? if npp_party_chair == "Nakayama" : Tell them kids to spit out the blue bills the next time we collect. ?][? if npp_party_chair == "Paisco" : What if we raise it for a bit? We have all these projects right? ?]
 subtitle: [+ dues + 1 +] resources gained. Increase dues. This will raise dissent. [? if unemployed >= 15 : Given the present economic situation, this may be painful. ?][? if dues >= 4 : Dues are already rather high; increasing them might reduce our membership. ?]
 on-arrival: dues += 1; resources += dues; workers_npp -= 3; unemployed_spd -= 3; workers_npp -= 10 if unemployed >= 15; unemployed_npp -= 10 if unemployed >= 15; workers_npp -= 3*dues if dues >= 5; unemployed_npp -= 3*dues if dues >= 5
 view-if: dues <= 4
 
 <div class="container">
-<div class="image"><img src="img/event/political_crowd_1.png"></div>
+<div class="image"><img src="img/event/party_dissent_1.png"></div>
 <div class="text">
-[? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" : After Macalintal lectures you about how the people on top have to make hard decisions, he finally allows us to lower the dues. Our members sing praises as you notice more of them talk to you more freely and with respect. The projects we’ve planned though will be in a bit of a crunch. ?]
-[? if npp_party_chair == "Macalintal" or npp_party_chair == "Clueless" or npp_party_chair == "Ka San" : “REVISIONIST” in big red bold letters appear at your front door. Someone’s mad. The SDE quarters from just across is filled with laughter as you come out. Cocksucker ?]
-[? if npp_party_chair == "Ka Fil" : As you ride the wave of praises to the halls, Remma and Macalintal are banging their heads in the other room over the new cuts. As you come back to the office, you find them contemplating on what projects to stall. ?]
-[? if npp_party_chair == "Shooter" : You’re the man of action, the one everyone needs to bring people together. But when you arrive back at HQ after a round of beers dedicated to the Great Chairperson, you find Remma and Macalintal dead on the floor contemplating about budgeting. Their minds disconnected, not feeling the euphoria of the masses. ?]
-[? if npp_party_chair == "Nakayama" : “This Mumbo Jumbo”, Clueless tiredly rants, “is how we GET things done”. While our members hang photos of you on the wall, our HQ collapses with our new budget. With the lesser funds, Remma and Clueless act like men rationing food. ?]
-[? if npp_party_chair == "Paisco" : Smiles light up the halls of HQ as our party members celebrate the reduction of dues. However, as you come by Clueless and Macalintal in the office, they only force out a small grin. With the trash can beside them overflowing with papers and reports. ?]
+
+[? if unemployed >= 15: “The people are starving on the streets, our members are in dire need of help, and their first thought is to line their pockets?” The transcript from the news stares at you in the morning after you announce your dues. Outlets everywhere remark on how out of touch the NPP is when even in the worst case scenario, they drive up the dues. You only hope that they understand. It’s needed more than ever.  ?]
+
+[? if npp_party_chair == "Robbie" or npp_party_chair == "Remma" and unemployed < 15: This move that’s popular and frequently contemplated within the inner circle is the most hated one on the outside. Friends disperse outside of the halls after we give the announcement. You catch some members sneaking out in this weird Tom and Jerry type chase to avoid dues, then laugh with them after they cough it out. This could have been you guys back in the day. ?]
+
+[? if npp_party_chair == "Macalintal" or npp_party_chair == "Clueless" or npp_party_chair == "Ka San" and unemployed < 15: “REVISIONIST” in big red bold letters appear at your front door. Someone’s mad. The SDE quarters from just across is filled with laughter as you come out. Cocksucker ?]
+
+[? if npp_party_chair == "Ka Fil" and unemployed < 15 : AYou’re too popular to get mad at, at least for now. No one appears in HQ that day as you announce the hike, only Remma giggling at the new projects we can take. Is that all we have to look forward to? ?]
+
+[? if npp_party_chair == "Shooter" and unemployed < 15 : A revolutionary needs love, and you’re just not feeling it. To be cherished is to be known inside and out, but these kids paint you as this tyrannical debt collector after the hike announcements.  Ever since you were little you dreamed of being the people’s leader. If only they understood.    ?]
+
+[? if npp_party_chair == "Nakayama" unemployed < 15 : There is no one to celebrate, only angry voices. They call you an usurper, disrupting the socialist vision. As the chamber is filled with shouts, you only wish that you were invisible so you could escape it all. ?]
+
+[? if npp_party_chair == "Paisco" and unemployed < 15 : You’re too kind to get mad at, at least on the surface. No one comes out to talk to you in the hallways of HQ this time, except Remma and Macalintal talking about these new projects. As they lecture you about a new timeline of plans, you wish we didn’t have to get this money from them in the first place. ?]
 </div></div>
