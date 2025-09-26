@@ -653,7 +653,7 @@ Q.chancellor_description = "Where has the time gone?";
 Q.impossible = 0;
 
 !}
-set-bg: img/map_2.jpg
+set-bg: img/0926.gif
 new-page: true
 audio: shuffle music/2020precrash/mtamt_maintheme.mp3 music/2020precrash/dearboy.mp3 music/2020precrash/hotdogmanila.mp3 music/2020precrash/partisanssong.mp3 music/2020precrash/wavetheredflag.mp3 
 
