@@ -73,7 +73,7 @@ view-if: dues <= 4
 
 [? if npp_party_chair == "Shooter" and unemployed < 15 : A revolutionary needs love, and you’re just not feeling it. To be cherished is to be known inside and out, but these kids paint you as this tyrannical debt collector after the hike announcements.  Ever since you were little you dreamed of being the people’s leader. If only they understood.    ?]
 
-[? if npp_party_chair == "Nakayama" unemployed < 15 : There is no one to celebrate, only angry voices. They call you an usurper, disrupting the socialist vision. As the chamber is filled with shouts, you only wish that you were invisible so you could escape it all. ?]
+[? if npp_party_chair == "Nakayama" and unemployed < 15 : There is no one to celebrate, only angry voices. They call you an usurper, disrupting the socialist vision. As the chamber is filled with shouts, you only wish that you were invisible so you could escape it all. ?]
 
 [? if npp_party_chair == "Paisco" and unemployed < 15 : You’re too kind to get mad at, at least on the surface. No one comes out to talk to you in the hallways of HQ this time, except Remma and Macalintal talking about these new projects. As they lecture you about a new timeline of plans, you wish we didn’t have to get this money from them in the first place. ?]
 </div></div>
