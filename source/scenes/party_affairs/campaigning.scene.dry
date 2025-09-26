@@ -179,7 +179,12 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 view-if: peoples_party == 1
-on-arrival: catholics_npp += 6*(1-Q.dissent); resources -= 1;
+on-arrival: {!
+
+catholics_npp += 6*(1-Q.dissent); 
+resources -= 1;
+
+!}
 
 <div class="container">
 <div class="image"><img src="img/event/blooky.png"></div>
