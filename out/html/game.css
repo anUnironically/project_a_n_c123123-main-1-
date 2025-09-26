@@ -40,6 +40,7 @@ header {
   margin-bottom: 0.5em;
   padding-left: 1em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f3f3f3;
 }
 #header-links a {
   padding-right: 1em;
@@ -49,6 +50,8 @@ header h1, header h2 {
   font-weight: normal;
   margin: 0;
   font-size: 1em;
+  color: #2a3e96;
+  text-shadow: 2px 2px #0000005e;
 }
 header h1 {
   font-weight: bold;
